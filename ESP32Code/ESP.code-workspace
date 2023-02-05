@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../../Projects/Smart Smoker/SmartSmoker/ESP"
+		},
+		{
+			"name": "ESP32Code",
+			"path": "."
+		}
+	],
+	"settings": {}
+}
