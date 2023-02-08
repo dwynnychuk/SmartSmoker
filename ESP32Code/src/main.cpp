@@ -8,55 +8,6 @@ int16_t AccErrorX, AccErrorY, AccErrorZ, GyroErrorX, GyroErrorY, GyroErrorZ;
 float AccAngleX, AccAngleY, AccAngleZ, GyroAngleX, GyroAngleY, GyroAngleZ, BoardTemp;
 float ElapsedTime, CurrentTime, PreviousTime;
 
-void calculate_IMU_Error() {
-  // specified number of static readings to determine offset
-  int c = 0;
-  int num_error = 500;
-  Serial.begin(115200);
-  Wire.beginTransmission(MPU);
-  Wire.write(0x3B); // Begin with register 0x3B Accel_Xout_H
-  Wire.endTransmission(false);
-  Wire.requestFrom(MPU,14);
-  int16_t tn = Wire.read();
-
-  while (c < num_error) {
-    AccX = (tn << 8) | Wire.read();
-    tn = Wire.read();
-    AccY = (tn << 8) | Wire.read();
-    tn = Wire.read();
-    AccZ = (tn << 8) | Wire.read();
-    tn = Wire.read();
-    Tmp = (tn << 8) | Wire.read();
-    tn = Wire.read();
-    GyroX = (tn << 8) | Wire.read();
-    tn = Wire.read();
-    GyroY = (tn << 8) | Wire.read();
-    tn = Wire.read();
-    GyroZ = (tn << 8) | Wire.read();
-    tn = Wire.read();
-
-    // Sum values
-    AccErrorX = AccErrorX + AccX;
-    AccErrorY = AccErrorY + AccY;
-    AccErrorZ = AccErrorZ + AccZ;
-    GyroErrorX = GyroErrorX + GyroX;
-    GyroErrorY = GyroErrorY + GyroY;
-    GyroErrorZ = GyroErrorZ + GyroZ;
-    Serial.println(c);
-    c++;
-  }
-  // Divide
-  AccErrorX = AccErrorX / num_error;
-  AccErrorY = AccErrorY / num_error;
-  AccErrorZ = AccErrorZ / num_error;
-  GyroErrorX = GyroErrorX / num_error;
-  GyroErrorY = GyroErrorY / num_error;
-  GyroErrorZ = GyroErrorZ / num_error;
-
-  Serial.println("FIND THE ERROR");
-}
-
-
 void setup() {
   pinMode (LED, OUTPUT);
   Serial.begin(115200);
@@ -76,20 +27,14 @@ void setup() {
   Wire.write(0x1C);
   Wire.write(0);
   Wire.endTransmission(true);
-
-  calculate_IMU_Error();
-  delay(4000);
-  Serial.print("Hello");
-  delay(2000);
 }
 
 
 void loop() {
   // LED On to signal new reading
   digitalWrite(LED, HIGH);
-  delay(100);
+  delay(200);
 
-  
   Wire.beginTransmission(MPU);
   Wire.write(0x3B); // Begin with register 0x3B Accel_Xout_H
   Wire.endTransmission(false);
@@ -111,9 +56,9 @@ void loop() {
   GyroZ = (t << 8) | Wire.read();
   t = Wire.read();
 
-  AccAngleX = (AccX - AccErrorX) / 16384.0;
-  AccAngleY = (AccY - AccErrorY) / 16384.0;
-  AccAngleZ = (AccZ - AccErrorZ)/ 16384.0;
+  AccAngleX = (AccX) / 16384.0;
+  AccAngleY = (AccY) / 16384.0;
+  AccAngleZ = (AccZ)/ 16384.0;
   BoardTemp = (Tmp / 340) + 36.53;
   GyroAngleX = GyroX / 131.0;
   GyroAngleY = GyroY / 131.0;
@@ -136,7 +81,7 @@ void loop() {
   
 
   digitalWrite(LED, LOW);
-  delay(10);
+  delay(100);
   
 }
 
