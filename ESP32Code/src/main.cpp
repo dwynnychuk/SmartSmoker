@@ -13,6 +13,8 @@ void setup() {
   Serial.begin(115200);
   Wire.begin();
 
+  // IMU
+  /*
   Wire.beginTransmission(MPU);
   Wire.write(0x6B);
   Wire.write(0);
@@ -27,6 +29,18 @@ void setup() {
   Wire.write(0x1C);
   Wire.write(0);
   Wire.endTransmission(true);
+  */
+
+
+  Serial.print("MOSI: ");
+  Serial.println(MOSI);
+  Serial.print("MISO: ");
+  Serial.println(MISO);
+  Serial.print("SCK: ");
+  Serial.println(SCK);
+  Serial.print("SS: ");
+  Serial.println(SS);
+
 }
 
 
@@ -35,6 +49,8 @@ void loop() {
   digitalWrite(LED, HIGH);
   delay(200);
 
+  // IMU
+  /*
   Wire.beginTransmission(MPU);
   Wire.write(0x3B); // Begin with register 0x3B Accel_Xout_H
   Wire.endTransmission(false);
@@ -78,7 +94,7 @@ void loop() {
   Serial.print(GyroY);
   Serial.print(" / ");
   Serial.println(GyroZ);
-  
+  */
 
   digitalWrite(LED, LOW);
   delay(100);
