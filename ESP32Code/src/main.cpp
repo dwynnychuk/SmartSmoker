@@ -1,6 +1,13 @@
 #include <Arduino.h>
 #include <Wire.h>
+#include <SPI.h>
 #define LED 2
+
+#define cs D8; // cs
+#define clk D5 // sck
+#define miso D6 // so
+int v = 0;
+float ambientC; // measured ambient temperature in Celcius
 
 const int MPU = 0x68;
 int16_t AccX, AccY, AccZ, Tmp, GyroX, GyroY, GyroZ;
@@ -30,16 +37,6 @@ void setup() {
   Wire.write(0);
   Wire.endTransmission(true);
   */
-
-
-  Serial.print("MOSI: ");
-  Serial.println(MOSI);
-  Serial.print("MISO: ");
-  Serial.println(MISO);
-  Serial.print("SCK: ");
-  Serial.println(SCK);
-  Serial.print("SS: ");
-  Serial.println(SS);
 
 }
 
