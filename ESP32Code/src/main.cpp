@@ -3,22 +3,59 @@
 #include <SPI.h>
 #define LED 2
 
-#define cs D8; // cs
-#define clk D5 // sck
-#define miso D6 // so
+// ambient temperature reading
+#define cs 5 // cs
+#define clk 18 // sck
+#define miso 19 // so
 int v = 0;
 float ambientC; // measured ambient temperature in Celcius
 
+// IMU reading
 const int MPU = 0x68;
 int16_t AccX, AccY, AccZ, Tmp, GyroX, GyroY, GyroZ;
 int16_t AccErrorX, AccErrorY, AccErrorZ, GyroErrorX, GyroErrorY, GyroErrorZ;
 float AccAngleX, AccAngleY, AccAngleZ, GyroAngleX, GyroAngleY, GyroAngleZ, BoardTemp;
 float ElapsedTime, CurrentTime, PreviousTime;
 
+
+
+int spiRead() {
+  int rawtmp = 0;
+  digitalWrite(cs, LOW);
+  delay(2);
+  digitalWrite(cs, HIGH);
+  delay(200);
+
+  // bit 15
+  digitalWrite(cs,LOW); // Start conversation
+  digitalWrite(clk, HIGH);
+  delay(1);
+  digitalWrite(clk,LOW); // bit read on down
+
+  // bit 14 - 0
+  for (int i = 14; i > 0; i--){
+    digitalWrite(clk,HIGH);
+    rawtmp += digitalRead(miso) << i;
+    digitalWrite(clk,LOW);
+  }
+
+  if ((rawtmp & 0x04) == 0x04) return -1;
+  return rawtmp >> 3;
+}
+
+
+// Setup
 void setup() {
   pinMode (LED, OUTPUT);
   Serial.begin(115200);
   Wire.begin();
+
+  // ambient temperature
+  pinMode(cs, OUTPUT);
+  pinMode(clk, OUTPUT);
+  pinMode(miso,INPUT);
+  digitalWrite(cs, HIGH);
+  digitalWrite(clk, LOW);
 
   // IMU
   /*
@@ -40,11 +77,11 @@ void setup() {
 
 }
 
-
+// Loop indefinitely 
 void loop() {
   // LED On to signal new reading
   digitalWrite(LED, HIGH);
-  delay(200);
+  delay(250);
 
   // IMU
   /*
@@ -93,8 +130,19 @@ void loop() {
   Serial.println(GyroZ);
   */
 
+  // Ambient temperature reading
+  v = spiRead();
+  if (v == -1) {
+    Serial.print("Temperature sensor not found");
+  }
+  else {
+    ambientC = v * 0.25;
+    Serial.println(ambientC);
+  }
+
   digitalWrite(LED, LOW);
-  delay(100);
+  delay(250);
   
 }
+
 
