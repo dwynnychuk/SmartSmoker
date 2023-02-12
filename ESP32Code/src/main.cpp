@@ -10,6 +10,11 @@
 int v = 0;
 float ambientC; // measured ambient temperature in Celcius
 
+// Photoresistor measurement
+#define PRLED 16
+#define PRMEASURE 15
+int prValue;
+
 // IMU reading
 const int MPU = 0x68;
 int16_t AccX, AccY, AccZ, Tmp, GyroX, GyroY, GyroZ;
@@ -17,8 +22,7 @@ int16_t AccErrorX, AccErrorY, AccErrorZ, GyroErrorX, GyroErrorY, GyroErrorZ;
 float AccAngleX, AccAngleY, AccAngleZ, GyroAngleX, GyroAngleY, GyroAngleZ, BoardTemp;
 float ElapsedTime, CurrentTime, PreviousTime;
 
-
-
+// SPI reading for temperature
 int spiRead() {
   int rawtmp = 0;
   digitalWrite(cs, LOW);
@@ -51,11 +55,13 @@ void setup() {
   Wire.begin();
 
   // ambient temperature
+  /*
   pinMode(cs, OUTPUT);
   pinMode(clk, OUTPUT);
   pinMode(miso,INPUT);
   digitalWrite(cs, HIGH);
   digitalWrite(clk, LOW);
+  */
 
   // IMU
   /*
@@ -75,13 +81,17 @@ void setup() {
   Wire.endTransmission(true);
   */
 
+  // Photoresistor
+  pinMode(PRLED,OUTPUT);
+  pinMode(PRMEASURE,INPUT);
+
 }
 
 // Loop indefinitely 
 void loop() {
   // LED On to signal new reading
-  digitalWrite(LED, HIGH);
-  delay(250);
+  //digitalWrite(LED, HIGH);
+  //delay(250);
 
   // IMU
   /*
@@ -131,6 +141,7 @@ void loop() {
   */
 
   // Ambient temperature reading
+  /*
   v = spiRead();
   if (v == -1) {
     Serial.print("Temperature sensor not found");
@@ -139,8 +150,22 @@ void loop() {
     ambientC = v * 0.25;
     Serial.println(ambientC);
   }
+  */
 
-  digitalWrite(LED, LOW);
+  // Photoresistor
+  prValue = analogRead(PRMEASURE);
+  if (prValue > 100) {
+    digitalWrite(LED,HIGH);
+    Serial.print(prValue);
+    Serial.println("greater");
+  }
+  else{
+    digitalWrite(LED,LOW);
+    Serial.print(prValue);
+    Serial.println("Lessthan");
+  }
+  delay(250);
+  //digitalWrite(LED, LOW);
   delay(250);
   
 }
