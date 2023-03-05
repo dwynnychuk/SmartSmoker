@@ -1,6 +1,13 @@
 #include <Arduino.h>
 #include <Wire.h>
 #include <SPI.h>
+
+#include <BLEDevice.h>
+#include <BLEUtils.h>
+#include <BLEServer.h>
+
+#define PERIPHERAL_NAME "TestingBLE"
+#define SERVICE_UUID "1a97c940-bb7b-11ed-a901-0800200c9a66" // Randomly generated UUID
 #define LED 2
 
 // ambient temperature reading
@@ -50,6 +57,12 @@ int spiRead() {
 
 // Setup
 void setup() {
+BLEDevice::init(PERIPHERAL_NAME);
+BLEServer *pServer = BLEDevice::createServer();
+BLEService *pServer = pServer->createService(SERVICE_UUID);
+
+
+
   pinMode (LED, OUTPUT);
   Serial.begin(115200);
   Wire.begin();
