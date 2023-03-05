@@ -5,9 +5,8 @@
 #include <BLEDevice.h>
 #include <BLEUtils.h>
 #include <BLEServer.h>
+#include <BLE2902.h>
 
-#define PERIPHERAL_NAME "TestingBLE"
-#define SERVICE_UUID "1a97c940-bb7b-11ed-a901-0800200c9a66" // Randomly generated UUID
 #define LED 2
 
 // ambient temperature reading
@@ -54,17 +53,28 @@ int spiRead() {
   return rawtmp >> 3;
 }
 
+// BLE
+BLECharacteristic *pCharacteristic;
+bool deviceConnected = false;
+#define PERIPHERAL_NAME "SMOKER_ESP"
+#define SERVICE_UUID "1a97c940-bb7b-11ed-a901-0800200c9a66" // Randomly generated UUID
+#define CHARACTERITIC_UUID_TX "1a97c940-bb7b-11ed-a901-0800200c9a66" // Randomly generated UUID
+
+class ServerCallbacks: public BLEServerCallbacks{
+  void onConnect(BLEServer* pServer){
+    deviceConnected = true;
+  }
+
+  void onDisconnect(BLEServer* pServer) {
+    deviceConnected = false;
+  }
+};
 
 // Setup
 void setup() {
-BLEDevice::init(PERIPHERAL_NAME);
-BLEServer *pServer = BLEDevice::createServer();
-BLEService *pServer = pServer->createService(SERVICE_UUID);
-
-
-
   pinMode (LED, OUTPUT);
-  Serial.begin(115200);
+//  Serial.begin(115200);
+  Serial.begin(9600);
   Wire.begin();
 
   // ambient temperature
@@ -98,6 +108,23 @@ BLEService *pServer = pServer->createService(SERVICE_UUID);
   pinMode(PRLED,OUTPUT);
   pinMode(PRMEASURE,INPUT);
 
+  // BLE
+  BLEDevice::init("ESP32");
+
+  BLEServer *pServer = BLEDevice::createServer(); //create ble server
+  pServer->setCallbacks(new ServerCallbacks());
+
+  BLEService *pService = pServer->createService(SERVICE_UUID); // create ble service
+
+  pCharacteristic = pService->createCharacteristic(
+    CHARACTERITIC_UUID_TX, BLECharacteristic::PROPERTY_NOTIFY); // create ble characteristic
+
+  pCharacteristic->addDescriptor(new BLE2902()); // ble2902 needed to notify
+
+  pService->start(); // start the service
+
+  pServer->getAdvertising()->start(); // start advirtising
+  Serial.println("Waiting for a client connection...");
 }
 
 // Loop indefinitely 
@@ -165,21 +192,37 @@ void loop() {
   }
   */
 
+  // BLE
+  if (deviceConnected){
+    prValue = analogRead(PRMEASURE);
+
+    char txString[8];
+    dtostrf(prValue, 1, 2, txString); // conversion of tx value
+
+    pCharacteristic->setValue(txString); // setting value to the characteristic
+
+    pCharacteristic->notify();
+    Serial.println("Sent value: " + String(txString)); //notifying the connected client
+
+    delay(500);
+  }
   // Photoresistor
+  /*
   prValue = analogRead(PRMEASURE);
   if (prValue > 100) {
     digitalWrite(LED,HIGH);
     Serial.print(prValue);
-    Serial.println("greater");
+    Serial.println(" greater");
   }
   else{
     digitalWrite(LED,LOW);
     Serial.print(prValue);
-    Serial.println("Lessthan");
+    Serial.println(" Lessthan");
   }
   delay(250);
   //digitalWrite(LED, LOW);
   delay(250);
+  */
   
 }
 
