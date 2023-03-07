@@ -58,7 +58,8 @@ BLECharacteristic *pCharacteristic;
 bool deviceConnected = false;
 #define PERIPHERAL_NAME "SMOKER_ESP"
 #define SERVICE_UUID "1a97c940-bb7b-11ed-a901-0800200c9a66" // Randomly generated UUID
-#define CHARACTERITIC_UUID_TX "1a97c940-bb7b-11ed-a901-0800200c9a66" // Randomly generated UUID
+#define CHARACTERISTIC_UUID_TX "1a97c940-bb7b-11ed-a901-0800200c9a66" // Randomly generated UUID
+int txValue = 0;
 
 class ServerCallbacks: public BLEServerCallbacks{
   void onConnect(BLEServer* pServer){
@@ -117,7 +118,7 @@ void setup() {
   BLEService *pService = pServer->createService(SERVICE_UUID); // create ble service
 
   pCharacteristic = pService->createCharacteristic(
-    CHARACTERITIC_UUID_TX, BLECharacteristic::PROPERTY_NOTIFY); // create ble characteristic
+    CHARACTERISTIC_UUID_TX, BLECharacteristic::PROPERTY_NOTIFY); // create ble characteristic
 
   pCharacteristic->addDescriptor(new BLE2902()); // ble2902 needed to notify
 
@@ -194,10 +195,10 @@ void loop() {
 
   // BLE
   if (deviceConnected){
-    prValue = analogRead(PRMEASURE);
+    txValue = random(-10,20);
 
     char txString[8];
-    dtostrf(prValue, 1, 2, txString); // conversion of tx value
+    dtostrf(txValue, 1, 2, txString); // conversion of tx value
 
     pCharacteristic->setValue(txString); // setting value to the characteristic
 
