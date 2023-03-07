@@ -1,32 +1,26 @@
 #include <Arduino.h>
 #include <Wire.h>
 #include <SPI.h>
-
 #include <BLEDevice.h>
 #include <BLEUtils.h>
 #include <BLEServer.h>
 #include <BLE2902.h>
 
-#define LED 2
-
-// ambient temperature reading
+#define LED 2 // Internal LED
 #define cs 5 // cs
 #define clk 18 // sck
 #define miso 19 // so
-int v = 0;
-float ambientC; // measured ambient temperature in Celcius
+#define PRLED 16 // Photoresistor LED
+#define PRMEASURE 15 // Photoresistor Measurement
 
-// Photoresistor measurement
-#define PRLED 16
-#define PRMEASURE 15
-int prValue;
-
-// IMU reading
-const int MPU = 0x68;
+const int MPU = 0x68; // IMU
 int16_t AccX, AccY, AccZ, Tmp, GyroX, GyroY, GyroZ;
 int16_t AccErrorX, AccErrorY, AccErrorZ, GyroErrorX, GyroErrorY, GyroErrorZ;
 float AccAngleX, AccAngleY, AccAngleZ, GyroAngleX, GyroAngleY, GyroAngleZ, BoardTemp;
 float ElapsedTime, CurrentTime, PreviousTime;
+int v = 0;
+float ambientC; // measured ambient temperature in Celcius
+int prValue; // Photoresistor
 
 // SPI reading for temperature
 int spiRead() {
@@ -54,13 +48,15 @@ int spiRead() {
 }
 
 // BLE
-BLECharacteristic *pCharacteristic;
-bool deviceConnected = false;
-#define PERIPHERAL_NAME "SMOKER_ESP"
-#define SERVICE_UUID "1a97c940-bb7b-11ed-a901-0800200c9a66" // Randomly generated UUID
-#define CHARACTERISTIC_UUID_TX "1a97c940-bb7b-11ed-a901-0800200c9a66" // Randomly generated UUID
-int txValue = 0;
+#define environmentalService BLEUUID((uint16_t)0x181A)
+BLECharacteristic temperatureCharacteristic(
+  BLEUUID((uint16_t)0x2A6E),
+  BLECharacteristic::PROPERTY_READ  |
+  BLECharacteristic::PROPERTY_NOTIFY
+);
 
+int txValue = 0;
+bool deviceConnected = false;
 class ServerCallbacks: public BLEServerCallbacks{
   void onConnect(BLEServer* pServer){
     deviceConnected = true;
@@ -71,11 +67,16 @@ class ServerCallbacks: public BLEServerCallbacks{
   }
 };
 
+void readTemperature();
+
 // Setup
 void setup() {
-  pinMode (LED, OUTPUT);
+  pinMode(LED, OUTPUT);
+  pinMode(PRLED,OUTPUT);
+  pinMode(PRMEASURE,INPUT);
+
 //  Serial.begin(115200);
-  Serial.begin(9600);
+  Serial.begin(115200);
   Wire.begin();
 
   // ambient temperature
@@ -105,26 +106,28 @@ void setup() {
   Wire.endTransmission(true);
   */
 
-  // Photoresistor
-  pinMode(PRLED,OUTPUT);
-  pinMode(PRMEASURE,INPUT);
-
   // BLE
-  BLEDevice::init("ESP32");
+  BLEDevice::init("ESP32"); // initialize device
 
-  BLEServer *pServer = BLEDevice::createServer(); //create ble server
+  // Create BLE Server
+  BLEServer *pServer = BLEDevice::createServer();
   pServer->setCallbacks(new ServerCallbacks());
 
-  BLEService *pService = pServer->createService(SERVICE_UUID); // create ble service
+  // Create BLE Service
+  BLEService *pEnvironment = pServer->createService(environmentalService);
 
-  pCharacteristic = pService->createCharacteristic(
-    CHARACTERISTIC_UUID_TX, BLECharacteristic::PROPERTY_NOTIFY); // create ble characteristic
+  // Create BLE Characteristic
+  pEnvironment->addCharacteristic(&temperatureCharacteristic);
 
-  pCharacteristic->addDescriptor(new BLE2902()); // ble2902 needed to notify
+  // Create BLE Descriptor
+  temperatureCharacteristic.addDescriptor(new BLE2902());
+  BLEDescriptor temperatureDescriptor(BLEUUID((uint16_t)0x2901));
+  temperatureDescriptor.setValue("Temperature -40 - 40C");
+  temperatureCharacteristic.addDescriptor(&temperatureDescriptor);
 
-  pService->start(); // start the service
-
-  pServer->getAdvertising()->start(); // start advirtising
+  // Start the service
+  pServer->getAdvertising()->addServiceUUID(environmentalService);
+  pEnvironment->start();
   Serial.println("Waiting for a client connection...");
 }
 
@@ -181,29 +184,10 @@ void loop() {
   Serial.println(GyroZ);
   */
 
-  // Ambient temperature reading
-  /*
-  v = spiRead();
-  if (v == -1) {
-    Serial.print("Temperature sensor not found");
-  }
-  else {
-    ambientC = v * 0.25;
-    Serial.println(ambientC);
-  }
-  */
-
+  readTemperature();
+  Serial.println(ambientC);
   // BLE
   if (deviceConnected){
-    txValue = random(-10,20);
-
-    char txString[8];
-    dtostrf(txValue, 1, 2, txString); // conversion of tx value
-
-    pCharacteristic->setValue(txString); // setting value to the characteristic
-
-    pCharacteristic->notify();
-    Serial.println("Sent value: " + String(txString)); //notifying the connected client
 
     delay(500);
   }
@@ -227,4 +211,12 @@ void loop() {
   
 }
 
-
+void readTemperature(){
+  v = spiRead();
+  if (v == -1) {
+    Serial.print("Temperature sensor not found");
+  }
+  else {
+    ambientC = v * 0.25;
+  }
+}
