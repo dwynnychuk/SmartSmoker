@@ -949,7 +949,7 @@
   (symbol (lib_id "Mechanical:MountingHole") (at 35.56 135.89 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 65218424-0549-4444-b651-105a87047675)
-    (property "Reference" "H?" (id 0) (at 38.1 134.6199 0)
+    (property "Reference" "H1" (id 0) (at 38.1 134.6199 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MountingHole" (id 1) (at 38.1 137.1599 0)
@@ -1283,7 +1283,7 @@
   (symbol (lib_id "Mechanical:MountingHole") (at 35.56 142.24 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid dd10eb3e-603e-44ab-989e-52aaab9de688)
-    (property "Reference" "H?" (id 0) (at 38.1 140.9699 0)
+    (property "Reference" "H2" (id 0) (at 38.1 140.9699 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MountingHole" (id 1) (at 38.1 143.5099 0)
@@ -1354,10 +1354,10 @@
       (reference "D1") (unit 1) (value "RED 1.8V 2mA 0603") (footprint "LED_SMD:LED_0603_1608Metric")
     )
     (path "/65218424-0549-4444-b651-105a87047675"
-      (reference "H?") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad")
+      (reference "H1") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad")
     )
     (path "/dd10eb3e-603e-44ab-989e-52aaab9de688"
-      (reference "H?") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad")
+      (reference "H2") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad")
     )
     (path "/669b1a91-75ea-498d-98dd-913db90c9efb"
       (reference "J1") (unit 1) (value "POWER/I2C") (footprint "Connector_Molex:Molex_Micro-Fit_3.0_43045-0400_2x02_P3.00mm_Horizontal")
