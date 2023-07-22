@@ -6,7 +6,7 @@
 #include <BLEServer.h>
 #include <BLE2902.h>
 
-#define LED 2 // Internal LED
+#define LED 17 // Internal LED
 #define cs 5 // cs
 #define clk 18 // sck
 #define miso 19 // so
@@ -22,6 +22,7 @@ int v = 0;
 float ambientC; // measured ambient temperature in Celcius
 int prValue; // Photoresistor
 
+/*
 // SPI reading for temperature
 int spiRead() {
   int rawtmp = 0;
@@ -68,12 +69,14 @@ class ServerCallbacks: public BLEServerCallbacks{
 };
 
 void readTemperature();
+*/
 
 // Setup
 void setup() {
   pinMode(LED, OUTPUT);
   pinMode(PRLED,OUTPUT);
   pinMode(PRMEASURE,INPUT);
+
 
 //  Serial.begin(115200);
   Serial.begin(115200);
@@ -106,6 +109,7 @@ void setup() {
   Wire.endTransmission(true);
   */
 
+/*
   // BLE
   BLEDevice::init("ESP32"); // initialize device
 
@@ -130,6 +134,7 @@ void setup() {
   pEnvironment->start();
   Serial.println("Waiting for a client connection...");
 }
+*/
 
 // Loop indefinitely 
 void loop() {
@@ -184,6 +189,7 @@ void loop() {
   Serial.println(GyroZ);
   */
 
+  /*
   readTemperature();
   Serial.println(ambientC);
   // BLE
@@ -191,6 +197,8 @@ void loop() {
 
     delay(500);
   }
+  */
+
   // Photoresistor
   /*
   prValue = analogRead(PRMEASURE);
@@ -211,6 +219,7 @@ void loop() {
   
 }
 
+/*
 void readTemperature(){
   v = spiRead();
   if (v == -1) {
@@ -220,3 +229,4 @@ void readTemperature(){
     ambientC = v * 0.25;
   }
 }
+*/
