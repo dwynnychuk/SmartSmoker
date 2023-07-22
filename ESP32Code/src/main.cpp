@@ -7,11 +7,14 @@
 #include <BLE2902.h>
 
 #define LED 17 // Internal LED
-#define cs 5 // cs
-#define clk 18 // sck
-#define miso 19 // so
-#define PRLED 16 // Photoresistor LED
-#define PRMEASURE 15 // Photoresistor Measurement
+
+#define MPA0 2 // A0 for Multiplexer
+#define MPA1 15 // A1 for Multiplexer
+
+#define cs 5 // SPI CS
+#define clk 18 // SPI SCK
+#define miso 19 // SPI MISO
+
 
 const int MPU = 0x68; // IMU
 int16_t AccX, AccY, AccZ, Tmp, GyroX, GyroY, GyroZ;
@@ -19,10 +22,9 @@ int16_t AccErrorX, AccErrorY, AccErrorZ, GyroErrorX, GyroErrorY, GyroErrorZ;
 float AccAngleX, AccAngleY, AccAngleZ, GyroAngleX, GyroAngleY, GyroAngleZ, BoardTemp;
 float ElapsedTime, CurrentTime, PreviousTime;
 int v = 0;
-float ambientC; // measured ambient temperature in Celcius
-int prValue; // Photoresistor
+float ambientC, internalC, foodC1, foodC2; // measured temperatures in celcius
 
-/*
+
 // SPI reading for temperature
 int spiRead() {
   int rawtmp = 0;
@@ -48,6 +50,7 @@ int spiRead() {
   return rawtmp >> 3;
 }
 
+/*
 // BLE
 #define environmentalService BLEUUID((uint16_t)0x181A)
 BLECharacteristic temperatureCharacteristic(
@@ -74,8 +77,6 @@ void readTemperature();
 // Setup
 void setup() {
   pinMode(LED, OUTPUT);
-  pinMode(PRLED,OUTPUT);
-  pinMode(PRMEASURE,INPUT);
 }
 
 //  Serial.begin(115200);
@@ -138,10 +139,73 @@ void setup() {
 // Loop indefinitely 
 void loop() {
   // LED On to signal new reading
+  // Temperature 1
   digitalWrite(LED, HIGH);
-  delay(250);
+  delay(100);
   digitalWrite(LED, LOW);
-  delay(500);
+  delay(100);
+  digitalWrite(MPA0, 0);
+  digitalWrite(MPA1, 0);
+  digitalWrite(LED, HIGH);
+  delay(1000);
+  digitalWrite(LED, LOW);
+
+  // Temperature 2
+  digitalWrite(LED, HIGH);
+  delay(100);
+  digitalWrite(LED, LOW);
+  delay(100);
+  digitalWrite(LED, HIGH);
+  delay(100);
+  digitalWrite(LED, LOW);
+  delay(100);
+  digitalWrite(MPA0, 1);
+  digitalWrite(MPA1, 0);
+  digitalWrite(LED, HIGH);
+  delay(1000);
+  digitalWrite(LED, LOW);
+
+  // Temperature 3
+  digitalWrite(LED, HIGH);
+  delay(100);
+  digitalWrite(LED, LOW);
+  delay(100);
+  digitalWrite(LED, HIGH);
+  delay(100);
+  digitalWrite(LED, LOW);
+  delay(100);
+  digitalWrite(LED, HIGH);
+  delay(100);
+  digitalWrite(LED, LOW);
+  delay(100);
+  digitalWrite(MPA0, 0);
+  digitalWrite(MPA1, 1);
+  digitalWrite(LED, HIGH);
+  delay(1000);
+  digitalWrite(LED, LOW);
+
+  // Temperature 4
+  digitalWrite(LED, HIGH);
+  delay(100);
+  digitalWrite(LED, LOW);
+  delay(100);
+  digitalWrite(LED, HIGH);
+  delay(100);
+  digitalWrite(LED, LOW);
+  delay(100);
+  digitalWrite(LED, HIGH);
+  delay(100);
+  digitalWrite(LED, LOW);
+  delay(100);
+  digitalWrite(LED, HIGH);
+  delay(100);
+  digitalWrite(LED, LOW);
+  delay(100);
+  digitalWrite(MPA0, 1);
+  digitalWrite(MPA1, 1);
+  digitalWrite(LED, HIGH);
+  delay(1000);
+  digitalWrite(LED, LOW);
 
   // IMU
   /*
