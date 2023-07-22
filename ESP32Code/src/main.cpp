@@ -76,11 +76,10 @@ void setup() {
   pinMode(LED, OUTPUT);
   pinMode(PRLED,OUTPUT);
   pinMode(PRMEASURE,INPUT);
-
+}
 
 //  Serial.begin(115200);
-  Serial.begin(115200);
-  Wire.begin();
+//  Wire.begin();
 
   // ambient temperature
   /*
@@ -139,8 +138,10 @@ void setup() {
 // Loop indefinitely 
 void loop() {
   // LED On to signal new reading
-  //digitalWrite(LED, HIGH);
-  //delay(250);
+  digitalWrite(LED, HIGH);
+  delay(250);
+  digitalWrite(LED, LOW);
+  delay(500);
 
   // IMU
   /*
@@ -218,6 +219,7 @@ void loop() {
   */
   
 }
+
 
 /*
 void readTemperature(){
