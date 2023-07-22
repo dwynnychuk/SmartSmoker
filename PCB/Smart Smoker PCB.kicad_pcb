@@ -552,6 +552,11 @@
       (net 6 "/Probe1+") (pinfunction "1") (pintype "unspecified") (tstamp f4297180-cd47-4378-afee-9f0cd21e35dc))
     (pad "2" thru_hole circle (at 3.5052 0) (size 1.6002 1.6002) (drill 1.0922) (layers *.Cu *.Mask)
       (net 7 "/Probe1-") (pinfunction "2") (pintype "unspecified") (tstamp 4b4959db-0ac6-4b25-80ca-6630aeebd6fc))
+    (model "${KIPRJMOD}/CAD/393570002.stp"
+      (offset (xyz 1.75 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 180))
+    )
   )
 
   (footprint "Customs Smoker:ESP32-WROOM-32UE 16MB" (layer "F.Cu")
@@ -1083,6 +1088,16 @@
       (net 22 "Net-(F1-Pad2)") (pintype "unspecified") (tstamp 86903f0a-31ec-45d0-81f5-a87b262e2c78))
     (pad "2" thru_hole circle (at 3.75 1.1 90) (size 1.6002 1.6002) (drill 1.0922) (layers *.Cu *.Mask)
       (net 4 "/AC_N") (pintype "unspecified") (tstamp dadd18f6-d623-4531-ab82-0425830c3651))
+    (model "${KICAD6_3DMODEL_DIR}/Varistor.3dshapes/RV_Disc_D15.5mm_W7.2mm_P7.5mm.step" hide
+      (offset (xyz -4.5 1 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
+    (model "${KICAD6_3DMODEL_DIR}/Varistor.3dshapes/RV_Disc_D15.5mm_W5.2mm_P7.5mm.step"
+      (offset (xyz -4 1 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "Capacitor_SMD:C_0603_1608Metric" (layer "F.Cu")
@@ -1172,6 +1187,11 @@
       (net 3 "/AC_L") (pinfunction "1") (pintype "unspecified") (tstamp 039f0a60-acae-41c9-b26e-13eb5e75391d))
     (pad "2" thru_hole circle (at 3.5052 0) (size 1.6002 1.6002) (drill 1.0922) (layers *.Cu *.Mask)
       (net 4 "/AC_N") (pinfunction "2") (pintype "unspecified") (tstamp 14b4d095-6384-4856-a809-8f74efdf7c2d))
+    (model "${KIPRJMOD}/CAD/393570002.stp"
+      (offset (xyz 1.75 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 180))
+    )
   )
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
@@ -2094,6 +2114,11 @@
       (net 91 "/TRG_GND") (pinfunction "1") (pintype "unspecified") (tstamp 57629309-99fb-450a-86ef-e2b7eadf3517))
     (pad "2" thru_hole circle (at 3.5052 0) (size 1.6002 1.6002) (drill 1.0922) (layers *.Cu *.Mask)
       (net 92 "/AC_G") (pinfunction "2") (pintype "unspecified") (tstamp c67eccb3-d46c-447f-a6fa-ad85d7cb5a53))
+    (model "${KIPRJMOD}/CAD/393570002.stp"
+      (offset (xyz 1.75 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 180))
+    )
   )
 
   (footprint "Customs Smoker:CONN_393570002_MOL" (layer "F.Cu")
@@ -2137,6 +2162,11 @@
       (net 8 "/Probe2+") (pinfunction "1") (pintype "unspecified") (tstamp 9d7b8e81-402d-484f-86e4-3e89e29d7b7d))
     (pad "2" thru_hole circle (at 3.5052 0) (size 1.6002 1.6002) (drill 1.0922) (layers *.Cu *.Mask)
       (net 9 "/Probe2-") (pinfunction "2") (pintype "unspecified") (tstamp 5ec49777-8172-4475-91d0-d4d4e4a51e1f))
+    (model "${KIPRJMOD}/CAD/393570002.stp"
+      (offset (xyz 1.75 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 180))
+    )
   )
 
   (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" locked (layer "F.Cu")
@@ -2256,6 +2286,11 @@
       (net 1 "GND") (pinfunction "GND") (pintype "power_in") (tstamp 4bf2bfb6-d3f4-430d-84ba-dc00db2e8b0f))
     (pad "P$13" thru_hole oval locked (at 3.5 0 180) (size 0.8 1.6) (drill oval 0.6 1.3) (layers *.Cu *.Mask)
       (net 1 "GND") (pinfunction "GND") (pintype "power_in") (tstamp b091e1b4-4494-4383-9041-bbaf0f76dba6))
+    (model "${KIPRJMOD}/CAD/105017-0001.step"
+      (offset (xyz 0 0 1.5))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (footprint "Capacitor_SMD:C_0603_1608Metric" locked (layer "F.Cu")
@@ -2457,6 +2492,11 @@
       (net 10 "/Probe3+") (pinfunction "1") (pintype "unspecified") (tstamp dc4c67f1-6566-4017-a675-6c7287e403f5))
     (pad "2" thru_hole circle (at 3.5052 0) (size 1.6002 1.6002) (drill 1.0922) (layers *.Cu *.Mask)
       (net 11 "/Probe3-") (pinfunction "2") (pintype "unspecified") (tstamp daeda22e-eb78-4f1f-946e-a60b1d6fe48a))
+    (model "${KIPRJMOD}/CAD/393570002.stp"
+      (offset (xyz 1.75 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 180))
+    )
   )
 
   (footprint "Diode_SMD:D_SMB" locked (layer "F.Cu")
@@ -3850,6 +3890,11 @@
       (net 1 "GND") (pinfunction "-VO") (pintype "output") (tstamp 67582bdb-d144-46ef-b992-d191811c9eaa))
     (pad "6" thru_hole oval locked (at 15.25 0 90) (size 3.84 1.92) (drill oval 2.4 1.2) (layers *.Cu *.Mask)
       (net 89 "Net-(C17-Pad1)") (pinfunction "+VO") (pintype "output") (tstamp 7c99d385-6f23-485b-9e52-16b2c85a5c3b))
+    (model "${KIPRJMOD}/CAD/LS10-13B03R3.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (footprint "Resistor_THT:R_Box_L8.4mm_W2.5mm_P5.08mm" (layer "F.Cu")
@@ -4648,6 +4693,11 @@
       (net 12 "/Probe4+") (pinfunction "1") (pintype "unspecified") (tstamp 8196da3a-698b-4329-b6b7-2868b14ea845))
     (pad "2" thru_hole circle (at 3.5052 0) (size 1.6002 1.6002) (drill 1.0922) (layers *.Cu *.Mask)
       (net 13 "/Probe4-") (pinfunction "2") (pintype "unspecified") (tstamp 42061dad-2d54-4c1c-8fd0-77bd4c0f1cdb))
+    (model "${KIPRJMOD}/CAD/393570002.stp"
+      (offset (xyz 1.75 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 180))
+    )
   )
 
   (footprint "Customs Smoker:SOIC16_NARROW_VIS" (layer "F.Cu")
@@ -4706,6 +4756,11 @@
       (net 1 "GND") (pinfunction "GND") (pintype "power_out") (tstamp 3c9d70d6-abc8-4afd-86eb-2db66c2f8bf0))
     (pad "16" smd rect (at 2.72415 -4.445 270) (size 1.4605 0.5588) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 36 "/IO15") (pinfunction "A1") (pintype "input") (tstamp d6be39ab-8fc0-4cd5-a3fb-992e543ae19b))
+    (model "${KIPRJMOD}/CAD/SOIC16_NARROW_VIS.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "TestPoint:TestPoint_2Pads_Pitch5.08mm_Drill1.3mm" locked (layer "F.Cu")

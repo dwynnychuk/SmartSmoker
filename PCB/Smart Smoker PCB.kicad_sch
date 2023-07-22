@@ -7183,7 +7183,7 @@
     (uuid d4cc36e0-597d-4b97-98a3-66d07cb9fb5e)
     (property "Reference" "U4" (id 0) (at 306.07 110.49 0))
     (property "Value" "AMS1117-3.3" (id 1) (at 306.07 113.03 0))
-    (property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2" (id 2) (at 306.07 113.03 0)
+    (property "Footprint" "Package_TO_SOT_SMD:TO-252-3_TabPin2" (id 2) (at 306.07 113.03 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf" (id 3) (at 308.61 124.46 0)
@@ -8261,7 +8261,7 @@
       (reference "U3") (unit 1) (value "MAX31855KASA") (footprint "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
     )
     (path "/d4cc36e0-597d-4b97-98a3-66d07cb9fb5e"
-      (reference "U4") (unit 1) (value "AMS1117-3.3") (footprint "Package_TO_SOT_SMD:SOT-223-3_TabPin2")
+      (reference "U4") (unit 1) (value "AMS1117-3.3") (footprint "Package_TO_SOT_SMD:TO-252-3_TabPin2")
     )
     (path "/4ebcb3a9-02b7-497d-b880-0baa7dffd1dc"
       (reference "U5") (unit 1) (value "CP2102N-Axx-xQFN28") (footprint "Package_DFN_QFN:QFN-28-1EP_5x5mm_P0.5mm_EP3.35x3.35mm")
