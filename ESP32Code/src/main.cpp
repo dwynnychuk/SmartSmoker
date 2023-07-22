@@ -43,7 +43,7 @@ int spiRead() {
   return rawtmp >> 3;
 }
 
-void readTemperature();
+float readTemperature();
 
 // Setup
 void setup() {
@@ -54,7 +54,6 @@ void setup() {
 
 // Loop indefinitely 
 void loop() {
-  // LED On to signal new reading
   // Temperature 1
   digitalWrite(LED, HIGH);
   delay(100);
@@ -63,7 +62,7 @@ void loop() {
   digitalWrite(MPA0, 0);
   digitalWrite(MPA1, 0);
   digitalWrite(LED, HIGH);
-  readTemperature();
+  ambientC = readTemperature();
   delay(2000);
   digitalWrite(LED, LOW);
 
@@ -79,6 +78,7 @@ void loop() {
   digitalWrite(MPA0, 1);
   digitalWrite(MPA1, 0);
   digitalWrite(LED, HIGH);
+  internalC = readTemperature();
   delay(2000);
   digitalWrite(LED, LOW);
 
@@ -98,6 +98,7 @@ void loop() {
   digitalWrite(MPA0, 0);
   digitalWrite(MPA1, 1);
   digitalWrite(LED, HIGH);
+  foodC1 = readTemperature();
   delay(2000);
   digitalWrite(LED, LOW);
 
@@ -121,20 +122,23 @@ void loop() {
   digitalWrite(MPA0, 1);
   digitalWrite(MPA1, 1);
   digitalWrite(LED, HIGH);
+  foodC2 = readTemperature();
   delay(2000);
   digitalWrite(LED, LOW);
-
   
 }
 
-void readTemperature(){
+float readTemperature(){
   v = spiRead();
+  float thermocouple = 0;
   if (v == 0) {
     Serial.print("Temperature sensor not found\n");
+    return thermocouple;
   }
   else {
-    ambientC = v * 0.25;
-    Serial.println(ambientC);
+    thermocouple = v * 0.25;
+    Serial.println(thermocouple);
+    return thermocouple;
   }
 }
 
