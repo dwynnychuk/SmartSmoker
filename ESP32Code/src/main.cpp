@@ -14,6 +14,7 @@
 #define miso 19 // SPI MISO
 
 const int MPU = 0x68; // IMU
+const int LTR_329_ADDR = 0x29; // LID Light Sensor
 int16_t AccX, AccY, AccZ, Tmp, GyroX, GyroY, GyroZ;
 int16_t AccErrorX, AccErrorY, AccErrorZ, GyroErrorX, GyroErrorY, GyroErrorZ;
 float AccAngleX, AccAngleY, AccAngleZ, GyroAngleX, GyroAngleY, GyroAngleZ, BoardTemp;
@@ -42,7 +43,6 @@ int spiRead() {
   if (NC == 0x00) return 0;
   return rawtmp >> 3;
 }
-
 float readTemperature();
 
 // Setup
@@ -50,10 +50,19 @@ void setup() {
   pinMode(LED, OUTPUT);
   Serial.begin(115200);
   Wire.begin();
+
+  // Light Sensor
+  Wire.beginTransmission(LTR_329_ADDR);
+  Wire.write(0x80);
+  Wire.write(0x01);
+  Wire.endTransmission();
+  delay(500);
 }
 
 // Loop indefinitely 
 void loop() {
+  // Temperature readings
+  /*
   // Temperature 1
   digitalWrite(LED, HIGH);
   delay(100);
@@ -125,8 +134,56 @@ void loop() {
   foodC2 = readTemperature();
   delay(2000);
   digitalWrite(LED, LOW);
+  */
+
+  // LID SENSORS
+  // Light Sensor
+  byte msb = 0, lsb = 0;
+  u_int16_t l;
+
+  //channel 1
+  Wire.beginTransmission(LTR_329_ADDR);
+  Wire.write(0x88); //low
+  Wire.endTransmission();
+  Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
+  delay(1);
+  if(Wire.available())
+    lsb = Wire.read();
   
+  Wire.beginTransmission(LTR_329_ADDR);
+  Wire.write(0x89); //high
+  Wire.endTransmission();
+  Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
+  delay(1);
+  if(Wire.available())
+    msb = Wire.read();
+
+  l = (msb<<8) | lsb;
+  Serial.println(l, DEC); //output in steps (16bit)
+
+  //channel 0
+  Wire.beginTransmission(LTR_329_ADDR);
+  Wire.write(0x8A); //low
+  Wire.endTransmission();
+  Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
+  delay(1);
+  if(Wire.available())
+    lsb = Wire.read();
+
+  Wire.beginTransmission(LTR_329_ADDR);
+  Wire.write(0x8B); //high
+  Wire.endTransmission();
+  Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
+  delay(1);
+  if(Wire.available())
+    msb = Wire.read();
+
+  l = (msb<<8) | lsb;
+  Serial.println(l, DEC); //output in steps (16bit)
+
+  delay(1000);
 }
+
 
 float readTemperature(){
   v = spiRead();
