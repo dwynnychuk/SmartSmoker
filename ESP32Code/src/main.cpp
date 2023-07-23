@@ -15,6 +15,12 @@
 
 const int MPU = 0x68; // IMU
 const int LTR_329_ADDR = 0x29; // LID Light Sensor
+const int LTR_REG_CONTR = 0x80; // LTR Control Register
+const int LTR_CONTR_VAL = 0x0D; // 8x gain
+const int LTR_CH1_LOW = 0x88;
+const int LTR_CH1_HIGH = 0x89;
+const int LTR_CH0_LOW = 0x8A;
+const int LTR_CH0_HIGH = 0x8B;
 int16_t AccX, AccY, AccZ, Tmp, GyroX, GyroY, GyroZ;
 int16_t AccErrorX, AccErrorY, AccErrorZ, GyroErrorX, GyroErrorY, GyroErrorZ;
 float AccAngleX, AccAngleY, AccAngleZ, GyroAngleX, GyroAngleY, GyroAngleZ, BoardTemp;
@@ -53,8 +59,8 @@ void setup() {
 
   // Light Sensor
   Wire.beginTransmission(LTR_329_ADDR);
-  Wire.write(0x80);
-  Wire.write(0x01);
+  Wire.write(LTR_REG_CONTR);
+  Wire.write(LTR_CONTR_VAL);
   Wire.endTransmission();
   delay(500);
 }
@@ -139,11 +145,12 @@ void loop() {
   // LID SENSORS
   // Light Sensor
   byte msb = 0, lsb = 0;
-  u_int16_t l;
+  u_int16_t LTR_CH0_VALUE;
+  u_int16_t LTR_CH1_VALUE;
 
   //channel 1
   Wire.beginTransmission(LTR_329_ADDR);
-  Wire.write(0x88); //low
+  Wire.write(LTR_CH1_LOW);
   Wire.endTransmission();
   Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
   delay(1);
@@ -151,19 +158,19 @@ void loop() {
     lsb = Wire.read();
   
   Wire.beginTransmission(LTR_329_ADDR);
-  Wire.write(0x89); //high
+  Wire.write(LTR_CH1_HIGH);
   Wire.endTransmission();
   Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
   delay(1);
   if(Wire.available())
     msb = Wire.read();
 
-  l = (msb<<8) | lsb;
-  Serial.println(l, DEC); //output in steps (16bit)
+  LTR_CH1_VALUE = (msb<<8) | lsb;
+  Serial.println(LTR_CH1_VALUE, DEC); //output in steps (16bit)
 
   //channel 0
   Wire.beginTransmission(LTR_329_ADDR);
-  Wire.write(0x8A); //low
+  Wire.write(LTR_CH0_LOW);
   Wire.endTransmission();
   Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
   delay(1);
@@ -171,15 +178,15 @@ void loop() {
     lsb = Wire.read();
 
   Wire.beginTransmission(LTR_329_ADDR);
-  Wire.write(0x8B); //high
+  Wire.write(LTR_CH0_HIGH);
   Wire.endTransmission();
   Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
   delay(1);
   if(Wire.available())
     msb = Wire.read();
 
-  l = (msb<<8) | lsb;
-  Serial.println(l, DEC); //output in steps (16bit)
+  LTR_CH0_VALUE = (msb<<8) | lsb;
+  Serial.println(LTR_CH1_VALUE, DEC); //output in steps (16bit)
 
   delay(1000);
 }
