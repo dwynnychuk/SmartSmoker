@@ -35,3 +35,4 @@ Hopper PCB
 - Breakout XSHUT and INT pins on main board for easier connection to hopper
 - Footprint change on U4
 - Add control for Traeger interface to implement PID control
+- Add jumper for I2C select on IMU(s)
