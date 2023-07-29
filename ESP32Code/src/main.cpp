@@ -12,6 +12,7 @@
 #include <stdint.h>
 #include <assert.h>
 #include "Adafruit_MAX31855.h"
+#include <LSM6DSRSensor.h>
 
 #define LED 17 // Internal LED
 #define MPA0 2 // A0 for Multiplexer
@@ -19,6 +20,16 @@
 #define cs 5 // SPI CS
 #define clk 18 // SPI SCK
 #define miso 19 // SPI MISO
+
+#ifdef ARDUINO_SAM_DUE
+#define DEV_I2C Wire1
+#elif defined(ARDUINO_ARCH_STM32)
+#define DEV_I2C Wire
+#elif defined(ARDUINO_ARCH_AVR)
+#define DEV_I2C Wire
+#else
+#define DEV_I2C Wire
+#endif
 
 const int LSM_IMU_ADDR_LID = 0x6B; // LID IMU
 const int LSM_IMU_ADDR_HOP = 0x4D; // Hopper IMU
@@ -41,6 +52,9 @@ double ambientC, internalC, foodC1, foodC2; // measured temperatures in celcius
 // Initialize thermocouple
 Adafruit_MAX31855 thermocouple(clk, cs, miso);
 
+// Initialize IMU
+LSM6DSRSensor AccGyr(&Wire, LSM6DSR_I2C_ADD_L);
+
 // Setup
 void setup() {
   pinMode(LED, OUTPUT);
@@ -49,6 +63,8 @@ void setup() {
 
   Serial.begin(115200);
   Wire.begin();
+  while(!Serial) delay(10);
+
 
   // Light Sensor
   Wire.beginTransmission(LTR_329_ADDR);
@@ -63,6 +79,9 @@ void setup() {
   //sensor_vl53lx.VL53LX_StartMeasurement();
   
   // IMU
+  AccGyr.begin();
+  AccGyr.Enable_X();
+  AccGyr.Enable_G();
 
   // Temperature
   Serial.println("MAX31855 test");
@@ -144,7 +163,25 @@ void loop() {
     Serial.println(LTR_CH1_VALUE, DEC); //output in steps (16bit)
 
     // IMU
+  int32_t accelerometer[3];
+  int32_t gyroscope[3];
+  AccGyr.Get_X_Axes(accelerometer);
+  AccGyr.Get_G_Axes(gyroscope);
 
+  // Output data.
+  Serial.print("LSM6DSR: | Acc[mg]: ");
+  Serial.print(accelerometer[0]);
+  Serial.print(" ");
+  Serial.print(accelerometer[1]);
+  Serial.print(" ");
+  Serial.print(accelerometer[2]);
+  Serial.print(" | Gyr[mdps]: ");
+  Serial.print(gyroscope[0]);
+  Serial.print(" ");
+  Serial.print(gyroscope[1]);
+  Serial.print(" ");
+  Serial.print(gyroscope[2]);
+  Serial.println(" |");
 
   // HOPPER SENSORS
     // Light Sensor

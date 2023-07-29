@@ -20,7 +20,7 @@
 
 #include "Adafruit_LSM6DS.h"
 
-#define LSM6DSOX_CHIP_ID 0x6C ///< LSM6DSOX default device id from WHOAMI
+#define LSM6DSOX_CHIP_ID 0x4D ///< LSM6DSOX default device id from WHOAMI
 
 #define LSM6DSOX_FUNC_CFG_ACCESS 0x1 ///< Enable embedded functions register
 #define LSM6DSOX_PIN_CTRL 0x2        ///< Pin control register
