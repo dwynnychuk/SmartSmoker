@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/dallynwynnychuk/Documents/Projects/Smart Smoker/SmartSmoker/PCB/LID PCB/LIDPCB.kicad_sch</source>
+    <date>Wednesday, May 31, 2023 at 09:08:26 pm</date>
+    <tool>Eeschema (6.0.11-0)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>LIDPCB.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>1 uF 25V X5R 0603</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL10A105KA8NNNC</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1102-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL10A105KA8NNNC"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1102-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LIDPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a925f0b3-6586-43dd-b2aa-0e40809c7131</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>0.1 uF 50V X7R 0603</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL10B104KB8NNWC</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1935-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL10B104KB8NNWC"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1935-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LIDPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b82fb1f9-e3cd-4583-a582-c8e8a151182d</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>0.1 uF 50V X7R 0603</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL10B104KB8NNWC</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1935-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL10B104KB8NNWC"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1935-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LIDPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bfc59be9-8769-403a-81b9-2a06c2bb45df</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>RED 1.8V 2mA 0603</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Rohm Semiconductor</field>
+        <field name="Manufacturer Part Number">CSL1901UW1</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">846-CSL1901UW1CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Manufacturer" value="Rohm Semiconductor"/>
+      <property name="Manufacturer Part Number" value="CSL1901UW1"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="846-CSL1901UW1CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LIDPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2493c147-4084-4c50-9286-12fca5555ed2</tstamps>
+    </comp>
+    <comp ref="H1">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965_Pad</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LIDPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>65218424-0549-4444-b651-105a87047675</tstamps>
+    </comp>
+    <comp ref="H2">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965_Pad</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LIDPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dd10eb3e-603e-44ab-989e-52aaab9de688</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>POWER/I2C</value>
+      <footprint>Connector_Molex:Molex_Micro-Fit_3.0_43045-0400_2x02_P3.00mm_Horizontal</footprint>
+      <fields>
+        <field name="Manufacturer">Molex</field>
+        <field name="Manufacturer Part Number">0430450400</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">WM1814-ND</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_02x02_Top_Bottom" description="Generic connector, double row, 02x02, top/bottom pin numbering scheme (row 1: 1...pins_per_row, row2: pins_per_row+1 ... num_pins), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="Manufacturer Part Number" value="0430450400"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="WM1814-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LIDPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>669b1a91-75ea-498d-98dd-913db90c9efb</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>750Ohm 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Manufacturer Part Number">RC0603FR-07750RL</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">311-750HRCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Manufacturer Part Number" value="RC0603FR-07750RL"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="311-750HRCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LIDPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>06442bc1-ba03-46ca-90cb-a1cc3bf106a0</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>LTR-329ALS-01</value>
+      <footprint>Customs Smoker:LTR-329ALS-01</footprint>
+      <fields>
+        <field name="Manufacturer">Lite-On Inc.</field>
+        <field name="Manufacturer Part Number">LTR-329ALS-01</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">160-2160-1-ND</field>
+      </fields>
+      <libsource lib="LTR-329-ALS" part="LTR-329ALS-01" description=""/>
+      <property name="Manufacturer" value="Lite-On Inc."/>
+      <property name="Manufacturer Part Number" value="LTR-329ALS-01"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="160-2160-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LIDPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>162cdb63-c46e-4e83-8657-4841994d6292</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>LSM6DSMTR</value>
+      <footprint>Customs Smoker:PQFN50P300X250X86-14N</footprint>
+      <fields>
+        <field name="MANUFACTURER">STMicroelectronics</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">0.86 mm</field>
+        <field name="Manufacturer">STMicroelectronics</field>
+        <field name="Manufacturer Part Number">497-16696-1-ND</field>
+        <field name="PARTREV">Rev 7</field>
+        <field name="STANDARD">IPC 7351B</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">497-16696-1-ND</field>
+      </fields>
+      <libsource lib="LSM6DSMTR" part="LSM6DSMTR" description=""/>
+      <property name="PARTREV" value="Rev 7"/>
+      <property name="MANUFACTURER" value="STMicroelectronics"/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="0.86 mm"/>
+      <property name="STANDARD" value="IPC 7351B"/>
+      <property name="Manufacturer" value="STMicroelectronics"/>
+      <property name="Manufacturer Part Number" value="497-16696-1-ND"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="497-16696-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="LIDPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>97b9b04f-b9b2-4935-98b7-ecdefe24bdb1</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_02x02_Top_Bottom">
+      <description>Generic connector, double row, 02x02, top/bottom pin numbering scheme (row 1: 1...pins_per_row, row2: pins_per_row+1 ... num_pins), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x02_Top_Bottom</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_US">
+      <description>Resistor, US symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_US</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="LSM6DSMTR" part="LSM6DSMTR">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LSM6DSMTR</field>
+        <field name="Footprint">PQFN50P300X250X86-14N</field>
+        <field name="PARTREV">Rev 7</field>
+        <field name="MANUFACTURER">STMicroelectronics</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">0.86 mm</field>
+        <field name="STANDARD">IPC 7351B</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SDO/SA0" type="bidirectional"/>
+        <pin num="2" name="SDX" type="bidirectional"/>
+        <pin num="3" name="SCX" type="bidirectional"/>
+        <pin num="4" name="INT1" type="input"/>
+        <pin num="5" name="VDDIO" type="power_in"/>
+        <pin num="6" name="GND" type="power_in"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="VDD" type="power_in"/>
+        <pin num="9" name="INT2/DEN/MDRDY" type="input"/>
+        <pin num="10" name="OCS_AUX" type="input"/>
+        <pin num="11" name="SDO_AUX" type="bidirectional"/>
+        <pin num="12" name="CS" type="input"/>
+        <pin num="13" name="SCL/SPC" type="input"/>
+        <pin num="14" name="SDA/SDI/SDO" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="LTR-329-ALS" part="LTR-329ALS-01">
+      <footprints>
+        <fp>LTR-329ALS-01_LTO</fp>
+        <fp>LTR-329ALS-01_LTO-M</fp>
+        <fp>LTR-329ALS-01_LTO-L</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LTR-329ALS-01</field>
+        <field name="Footprint">LTR-329ALS-01_LTO</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="SDA" type="bidirectional"/>
+        <pin num="4" name="SCL" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole">
+      <description>Mounting Hole without connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole</field>
+        <field name="Datasheet">~</field>
+      </fields>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Device.kicad_sym</uri>
+    </library>
+    <library logical="LSM6DSMTR">
+      <uri>/Users/dallynwynnychuk/Documents/Projects/Smart Smoker/SmartSmoker/PCB/Symbols/LSM6DSMTR.kicad_sym</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Mechanical.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3.3V">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U2" pin="1" pinfunction="SDO/SA0" pintype="bidirectional"/>
+      <node ref="U2" pin="12" pinfunction="CS" pintype="input"/>
+      <node ref="U2" pin="5" pinfunction="VDDIO" pintype="power_in"/>
+      <node ref="U2" pin="8" pinfunction="VDD" pintype="power_in"/>
+    </net>
+    <net code="2" name="/GPIO_LSM">
+      <node ref="U2" pin="4" pinfunction="INT1" pintype="input"/>
+    </net>
+    <net code="3" name="/SCL">
+      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="SCL" pintype="input"/>
+      <node ref="U2" pin="13" pinfunction="SCL/SPC" pintype="input"/>
+    </net>
+    <net code="4" name="/SDA">
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="SDA" pintype="bidirectional"/>
+      <node ref="U2" pin="14" pinfunction="SDA/SDI/SDO" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="GND">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="2" pinfunction="SDX" pintype="bidirectional"/>
+      <node ref="U2" pin="3" pinfunction="SCX" pintype="bidirectional"/>
+      <node ref="U2" pin="6" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="7" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="6" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="7" name="unconnected-(U2-Pad9)">
+      <node ref="U2" pin="9" pinfunction="INT2/DEN/MDRDY" pintype="input+no_connect"/>
+    </net>
+    <net code="8" name="unconnected-(U2-Pad10)">
+      <node ref="U2" pin="10" pinfunction="OCS_AUX" pintype="input+no_connect"/>
+    </net>
+    <net code="9" name="unconnected-(U2-Pad11)">
+      <node ref="U2" pin="11" pinfunction="SDO_AUX" pintype="bidirectional+no_connect"/>
+    </net>
+  </nets>
+</export>

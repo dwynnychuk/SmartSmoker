@@ -1,0 +1,33 @@
+"Source:","/Users/dallynwynnychuk/Documents/Projects/Smart Smoker/SmartSmoker/PCB/LID PCB/LIDPCB.kicad_sch"
+"Date:","Wednesday, May 31, 2023 at 09:08:26 pm"
+"Tool:","Eeschema (6.0.11-0)"
+"Generator:","/Applications/KiCad/KiCad.app/Contents/SharedSupport/plugins/bom_csv_grouped_by_value.py"
+"Component Count:","10"
+
+"Individual Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet","MANUFACTURER","MAXIMUM_PACKAGE_HEIGHT","Manufacturer","Manufacturer Part Number","PARTREV","STANDARD","Vendor","Vendor Part Number"
+"","","C1","1 uF 25V X5R 0603","Device:C","Capacitor_SMD:C_0603_1608Metric","~","","","Samsung Electro-Mechanics","CL10A105KA8NNNC","","","Digikey","1276-1102-1-ND"
+"","","C2","0.1 uF 50V X7R 0603","Device:C","Capacitor_SMD:C_0603_1608Metric","~","","","Samsung Electro-Mechanics","CL10B104KB8NNWC","","","Digikey","1276-1935-1-ND"
+"","","C3","0.1 uF 50V X7R 0603","Device:C","Capacitor_SMD:C_0603_1608Metric","~","","","Samsung Electro-Mechanics","CL10B104KB8NNWC","","","Digikey","1276-1935-1-ND"
+"","","D1","RED 1.8V 2mA 0603","Device:LED","LED_SMD:LED_0603_1608Metric","~","","","Rohm Semiconductor","CSL1901UW1","","","Digikey","846-CSL1901UW1CT-ND"
+"","","H1","MountingHole","Mechanical:MountingHole","MountingHole:MountingHole_3.2mm_M3_DIN965_Pad","~","","","","","","","",""
+"","","H2","MountingHole","Mechanical:MountingHole","MountingHole:MountingHole_3.2mm_M3_DIN965_Pad","~","","","","","","","",""
+"","","J1","POWER/I2C","Connector_Generic:Conn_02x02_Top_Bottom","Connector_Molex:Molex_Micro-Fit_3.0_43045-0400_2x02_P3.00mm_Horizontal","~","","","Molex","0430450400","","","Digikey","WM1814-ND"
+"","","R1","750Ohm 1% 0603","Device:R_US","Resistor_SMD:R_0603_1608Metric","~","","","YAGEO","RC0603FR-07750RL","","","Digikey","311-750HRCT-ND"
+"","","U1","LTR-329ALS-01","LTR-329-ALS:LTR-329ALS-01","Customs Smoker:LTR-329ALS-01","","","","Lite-On Inc.","LTR-329ALS-01","","","Digikey","160-2160-1-ND"
+"","","U2","LSM6DSMTR","LSM6DSMTR:LSM6DSMTR","Customs Smoker:PQFN50P300X250X86-14N","","STMicroelectronics","0.86 mm","STMicroelectronics","497-16696-1-ND","Rev 7","IPC 7351B","Digikey","497-16696-1-ND"
+
+
+
+"Collated Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet","MANUFACTURER","MAXIMUM_PACKAGE_HEIGHT","Manufacturer","Manufacturer Part Number","PARTREV","STANDARD","Vendor","Vendor Part Number"
+"1","1","C1","1 uF 25V X5R 0603","Device:C","Capacitor_SMD:C_0603_1608Metric","~","","","Samsung Electro-Mechanics","CL10A105KA8NNNC","","","Digikey","1276-1102-1-ND"
+"2","2","C2, C3","0.1 uF 50V X7R 0603","Device:C","Capacitor_SMD:C_0603_1608Metric","~","","","Samsung Electro-Mechanics","CL10B104KB8NNWC","","","Digikey","1276-1935-1-ND"
+"3","1","D1","RED 1.8V 2mA 0603","Device:LED","LED_SMD:LED_0603_1608Metric","~","","","Rohm Semiconductor","CSL1901UW1","","","Digikey","846-CSL1901UW1CT-ND"
+"4","2","H1, H2","MountingHole","Mechanical:MountingHole","MountingHole:MountingHole_3.2mm_M3_DIN965_Pad","~","","","","","","","",""
+"5","1","J1","POWER/I2C","Connector_Generic:Conn_02x02_Top_Bottom","Connector_Molex:Molex_Micro-Fit_3.0_43045-0400_2x02_P3.00mm_Horizontal","~","","","Molex","0430450400","","","Digikey","WM1814-ND"
+"6","1","R1","750Ohm 1% 0603","Device:R_US","Resistor_SMD:R_0603_1608Metric","~","","","YAGEO","RC0603FR-07750RL","","","Digikey","311-750HRCT-ND"
+"7","1","U1","LTR-329ALS-01","LTR-329-ALS:LTR-329ALS-01","Customs Smoker:LTR-329ALS-01","","","","Lite-On Inc.","LTR-329ALS-01","","","Digikey","160-2160-1-ND"
+"8","1","U2","LSM6DSMTR","LSM6DSMTR:LSM6DSMTR","Customs Smoker:PQFN50P300X250X86-14N","","STMicroelectronics","0.86 mm","STMicroelectronics","497-16696-1-ND","Rev 7","IPC 7351B","Digikey","497-16696-1-ND"

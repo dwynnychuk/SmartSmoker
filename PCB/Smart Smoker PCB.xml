@@ -1,0 +1,2593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/dallynwynnychuk/Documents/Projects/Smart Smoker/SmartSmoker/PCB/Smart Smoker PCB.kicad_sch</source>
+    <date>Wednesday, May 31, 2023 at 09:01:56 pm</date>
+    <tool>Eeschema (6.0.11-0)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Smart Smoker PCB.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="AE1">
+      <value>Antenna</value>
+      <footprint>Symbol:KiCad-Logo2_5mm_SilkScreen</footprint>
+      <fields>
+        <field name="Manufacturer">Pulse Electronics</field>
+        <field name="Manufacturer Part Number">W3921B0100</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">553-W3921B0100-ND</field>
+      </fields>
+      <libsource lib="Device" part="Antenna" description="Antenna"/>
+      <property name="Manufacturer" value="Pulse Electronics"/>
+      <property name="Manufacturer Part Number" value="W3921B0100"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="553-W3921B0100-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>43dc6377-fbfd-4b1d-8e60-8659a54cef54</tstamps>
+    </comp>
+    <comp ref="C1">
+      <value>0.1uF 50V X7R 0603</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL10B104KB8NNWC</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1935-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL10B104KB8NNWC"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1935-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ca33380f-54d1-4b41-a718-bf1460e1bd67</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>22uF 10V X5R 0805</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL21A226MPQNNNE</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-2910-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL21A226MPQNNNE"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-2910-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>96b3f4fb-eb42-4e20-86c5-3b8d1b459b5e</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>0.1uF 50V X7R 0603</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL10B104KB8NNWC</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1935-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL10B104KB8NNWC"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1935-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f76e3df6-e08d-44e3-881a-0c35ccfb5913</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>0.01uF 50V X7R 0603</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL10B103KB8NNNC</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1009-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL10B103KB8NNNC"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1009-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>35ff9adb-02ff-4ccb-b5ef-b4caa887823d</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>0.1uF 50V X7R 0603</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL10B104KB8NNWC</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1935-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL10B104KB8NNWC"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1935-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e6e8e26e-dcf1-474e-8ee7-87296c0e58e9</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>4.7uF 25V X5R 0805</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL21A475KAQNNNE</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1244-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL21A475KAQNNNE"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1244-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fb06fe4a-2485-4dfb-b725-b15d6746ed7c</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>10uF 16V X5R 0805</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL21A106KOQNNNE</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1096-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL21A106KOQNNNE"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1096-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8c00dea7-4ffd-41e3-8315-b6939388fe8d</tstamps>
+    </comp>
+    <comp ref="C8">
+      <value>10uF 16V X5R 0805</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL21A106KOQNNNE</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1096-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL21A106KOQNNNE"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1096-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a78fec54-3d51-4f53-9728-7d3a23131a67</tstamps>
+    </comp>
+    <comp ref="C9">
+      <value>10uF 16V X5R 0805</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL21A106KOQNNNE</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1096-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL21A106KOQNNNE"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1096-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1ac0a57b-8def-4219-91ab-2e70d340fa93</tstamps>
+    </comp>
+    <comp ref="C10">
+      <value>1uF 25V X5R 0603</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL10A105KA8NNNC</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1102-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL10A105KA8NNNC"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1102-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4cfc60d9-d5f3-4a11-a980-eddb6424d7fb</tstamps>
+    </comp>
+    <comp ref="C11">
+      <value>0.1uF 50V X7R 0603</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL10B104KB8NNWC</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1935-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL10B104KB8NNWC"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1935-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>66fabeea-1fb6-4c66-81c3-e37d74c7d20c</tstamps>
+    </comp>
+    <comp ref="C12">
+      <value>0.1uF 50V X7R 0603</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL10B104KB8NNWC</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1935-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL10B104KB8NNWC"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1935-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9a44e3e4-0a32-45fc-b802-108c70331240</tstamps>
+    </comp>
+    <comp ref="C13">
+      <value>0.1uF 50V X7R 0603</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL10B104KB8NNWC</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1935-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL10B104KB8NNWC"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1935-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a0d50d48-89f5-4e7a-99ca-8fb57248c9b3</tstamps>
+    </comp>
+    <comp ref="C14">
+      <value>0.1uF 50V X7R 0603</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL10B104KB8NNWC</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1935-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL10B104KB8NNWC"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1935-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b21e6650-ff46-4f07-844a-76ed207e55b3</tstamps>
+    </comp>
+    <comp ref="C15">
+      <value>0.1uF 50V X7R 0603</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL10B104KB8NNWC</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1935-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL10B104KB8NNWC"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1935-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4c42aa9b-1713-42cd-93fa-004f6e87dbba</tstamps>
+    </comp>
+    <comp ref="C16">
+      <value>22uF 450V 20%</value>
+      <footprint>Capacitor_THT:CP_Radial_D12.5mm_P5.00mm</footprint>
+      <fields>
+        <field name="Manufacturer">Nichicon</field>
+        <field name="Manufacturer Part Number">UCY2W220MHD</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">493-6894-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Nichicon"/>
+      <property name="Manufacturer Part Number" value="UCY2W220MHD"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="493-6894-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bc2bab20-efe8-4ddb-b8ea-6e709a83fa75</tstamps>
+    </comp>
+    <comp ref="C17">
+      <value>820uF 20% 16V</value>
+      <footprint>Capacitor_THT:CP_Radial_D10.0mm_P5.00mm</footprint>
+      <fields>
+        <field name="Manufacturer">Würth Elektronik</field>
+        <field name="Manufacturer Part Number">860010375016</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">732-8608-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Würth Elektronik"/>
+      <property name="Manufacturer Part Number" value="860010375016"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="732-8608-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>68d75cf4-4f06-40b7-92eb-c9a745be7cf0</tstamps>
+    </comp>
+    <comp ref="C18">
+      <value>150uF 20% 35V</value>
+      <footprint>Capacitor_THT:CP_Radial_D8.0mm_P3.50mm</footprint>
+      <fields>
+        <field name="Manufacturer">Würth Elektronik</field>
+        <field name="Manufacturer Part Number">860020574010</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">732-8944-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Würth Elektronik"/>
+      <property name="Manufacturer Part Number" value="860020574010"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="732-8944-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b2f01a78-03e1-4243-9337-db00f30d7041</tstamps>
+    </comp>
+    <comp ref="C19">
+      <value>0.1uF 50V X7R 0603</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL10B104KB8NNWC</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1935-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL10B104KB8NNWC"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1935-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d015a581-2053-49e0-84b3-be17b6f989c0</tstamps>
+    </comp>
+    <comp ref="C20">
+      <value>1000pF 440VAC Y5P</value>
+      <footprint>Capacitor_THT:C_Disc_D9.0mm_W5.0mm_P7.50mm</footprint>
+      <fields>
+        <field name="Manufacturer">KEMET</field>
+        <field name="Manufacturer Part Number">C927U102KZYDAA7317</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">399-14107-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="KEMET"/>
+      <property name="Manufacturer Part Number" value="C927U102KZYDAA7317"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="399-14107-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>666105ab-6049-472a-a74b-f89b40e13a15</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>SP0503BAHT</value>
+      <footprint>Package_TO_SOT_SMD:SOT-143</footprint>
+      <datasheet>http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/documents/data%20sheets/sp05xxba.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Littelfuse Inc.</field>
+        <field name="Manufacturer Part Number">SP0503BAHTG</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">F2715CT-ND</field>
+      </fields>
+      <libsource lib="Power_Protection" part="SP0503BAHT" description="TVS Diode Array, 5.5V Standoff, 3 Channels, SOT-143 package"/>
+      <property name="Manufacturer" value="Littelfuse Inc."/>
+      <property name="Manufacturer Part Number" value="SP0503BAHTG"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="F2715CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>512d3e85-61ec-400c-953f-dabaa49dbe31</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>TVS DIODE 7VWM 12VC SMB</value>
+      <footprint>Diode_SMD:D_SMB</footprint>
+      <fields>
+        <field name="Manufacturer">Bourns Inc.</field>
+        <field name="Manufacturer Part Number">SMBJ7.0A</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">SMBJ7.0ABCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="D_TVS" description="Bidirectional transient-voltage-suppression diode"/>
+      <property name="Manufacturer" value="Bourns Inc."/>
+      <property name="Manufacturer Part Number" value="SMBJ7.0A"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="SMBJ7.0ABCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>beab168c-7903-4b24-a9a9-aa071bc4e7ac</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>Y 2V 20mA</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Würth Elektronik</field>
+        <field name="Manufacturer Part Number">150060YS75000</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">732-4981-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Manufacturer" value="Würth Elektronik"/>
+      <property name="Manufacturer Part Number" value="150060YS75000"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="732-4981-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1a817d58-7a97-417b-8931-87f73d08581c</tstamps>
+    </comp>
+    <comp ref="D4">
+      <value>Y/G 2.2V 20mA</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">American Bright Optoelectronics Corporation</field>
+        <field name="Manufacturer Part Number">BL-HGE36D-AV-TRB</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">BL-HGE36D-AV-TRBCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Manufacturer" value="American Bright Optoelectronics Corporation"/>
+      <property name="Manufacturer Part Number" value="BL-HGE36D-AV-TRB"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="BL-HGE36D-AV-TRBCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5303d35a-f3ed-487a-a261-67395f76b7ca</tstamps>
+    </comp>
+    <comp ref="D5">
+      <value>R 1.8V 2mA 0603</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Rohm Semiconductor</field>
+        <field name="Manufacturer Part Number">CSL1901UW1</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">846-CSL1901UW1CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Manufacturer" value="Rohm Semiconductor"/>
+      <property name="Manufacturer Part Number" value="CSL1901UW1"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="846-CSL1901UW1CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8dc59a50-4393-46cc-83aa-9aade44b42e1</tstamps>
+    </comp>
+    <comp ref="F1">
+      <value>300V 2A SlowBlow</value>
+      <footprint>Fuse:Fuse_Littelfuse_395Series</footprint>
+      <fields>
+        <field name="Manufacturer">Littelfuse Inc.</field>
+        <field name="Manufacturer Part Number">36912000000</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">F5461CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="Fuse" description="Fuse"/>
+      <property name="Manufacturer" value="Littelfuse Inc."/>
+      <property name="Manufacturer Part Number" value="36912000000"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="F5461CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b8e3c8c2-0fc5-41f8-b1cd-b2cb97db46cb</tstamps>
+    </comp>
+    <comp ref="H1">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965_Pad</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>11f56798-64c9-4a18-b09c-c35f99e3af09</tstamps>
+    </comp>
+    <comp ref="H2">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965_Pad</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cb4ab258-5854-4963-9a8d-25ffc4a3dac6</tstamps>
+    </comp>
+    <comp ref="H3">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965_Pad</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>851ff2bd-f0b6-431c-9e88-61a5dfb1d408</tstamps>
+    </comp>
+    <comp ref="H4">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965_Pad</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3394ca41-916c-4e5e-ba80-80a49a1b5755</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>105017-0001</value>
+      <footprint>MOLEX_105017-0001</footprint>
+      <fields>
+        <field name="Manufacturer">Molex</field>
+        <field name="Manufacturer Part Number">1050170001</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">WM1399CT-ND</field>
+      </fields>
+      <libsource lib="105017-0001" part="105017-0001" description=""/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="Manufacturer Part Number" value="1050170001"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="WM1399CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>057b86ef-84f7-454a-9f89-570e53dcce56</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>393570002</value>
+      <footprint>CONN_393570002_MOL</footprint>
+      <fields>
+        <field name="Manufacturer">Molex</field>
+        <field name="Manufacturer Part Number">393570002</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">WM7877-ND</field>
+      </fields>
+      <libsource lib="0393570002" part="393570002" description=""/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="Manufacturer Part Number" value="393570002"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="WM7877-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>584dba88-0b7f-4d42-9e7e-b9d6b4250a0b</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>393570002</value>
+      <footprint>CONN_393570002_MOL</footprint>
+      <fields>
+        <field name="Manufacturer">Molex</field>
+        <field name="Manufacturer Part Number">393570002</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">WM7877-ND</field>
+      </fields>
+      <libsource lib="0393570002" part="393570002" description=""/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="Manufacturer Part Number" value="393570002"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="WM7877-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0f8ec175-e6a2-4d17-9ebb-fa13368444fb</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>393570002</value>
+      <footprint>CONN_393570002_MOL</footprint>
+      <fields>
+        <field name="Manufacturer">Molex</field>
+        <field name="Manufacturer Part Number">393570002</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">WM7877-ND</field>
+      </fields>
+      <libsource lib="0393570002" part="393570002" description=""/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="Manufacturer Part Number" value="393570002"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="WM7877-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3818065e-cb8b-48ee-9db9-a1ac5acd0987</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>393570002</value>
+      <footprint>CONN_393570002_MOL</footprint>
+      <fields>
+        <field name="Manufacturer">Molex</field>
+        <field name="Manufacturer Part Number">393570002</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">WM7877-ND</field>
+      </fields>
+      <libsource lib="0393570002" part="393570002" description=""/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="Manufacturer Part Number" value="393570002"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="WM7877-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0533ba67-eb7d-4b3f-9e85-4680ffeb4bbe</tstamps>
+    </comp>
+    <comp ref="J6">
+      <value>393570002</value>
+      <footprint>CONN_393570002_MOL</footprint>
+      <fields>
+        <field name="Manufacturer">Molex</field>
+        <field name="Manufacturer Part Number">393570002</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">WM7877-ND</field>
+      </fields>
+      <libsource lib="0393570002" part="393570002" description=""/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="Manufacturer Part Number" value="393570002"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="WM7877-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e0235a3c-7393-4c55-89bd-5adc6e0c8ae9</tstamps>
+    </comp>
+    <comp ref="J7">
+      <value>393570002</value>
+      <footprint>CONN_393570002_MOL</footprint>
+      <fields>
+        <field name="Manufacturer">Molex</field>
+        <field name="Manufacturer Part Number">393570002</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">WM7877-ND</field>
+      </fields>
+      <libsource lib="0393570002" part="393570002" description=""/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="Manufacturer Part Number" value="393570002"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="WM7877-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c9c0c9a9-af4a-4279-88f6-15457a17bd0e</tstamps>
+    </comp>
+    <comp ref="J8">
+      <value>Hopper</value>
+      <footprint>Connector_Molex:Molex_Micro-Fit_3.0_43045-0400_2x02_P3.00mm_Horizontal</footprint>
+      <fields>
+        <field name="Manufacturer">Molex</field>
+        <field name="Manufacturer Part Number">0430450400</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">WM1814-ND</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_02x02_Top_Bottom" description="Generic connector, double row, 02x02, top/bottom pin numbering scheme (row 1: 1...pins_per_row, row2: pins_per_row+1 ... num_pins), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="Manufacturer Part Number" value="0430450400"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="WM1814-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>57287761-a7ca-431c-8c4f-fe5b41c220ac</tstamps>
+    </comp>
+    <comp ref="J9">
+      <value>Lid</value>
+      <footprint>Connector_Molex:Molex_Micro-Fit_3.0_43045-0400_2x02_P3.00mm_Horizontal</footprint>
+      <fields>
+        <field name="Manufacturer">Molex</field>
+        <field name="Manufacturer Part Number">0430450400</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">WM1814-ND</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_02x02_Top_Bottom" description="Generic connector, double row, 02x02, top/bottom pin numbering scheme (row 1: 1...pins_per_row, row2: pins_per_row+1 ... num_pins), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="Manufacturer Part Number" value="0430450400"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="WM1814-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dfa36077-7efd-4288-9ab0-1ce53fccdb9c</tstamps>
+    </comp>
+    <comp ref="JP1">
+      <value>Jumper_2_Open</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Jumper" part="Jumper_2_Open" description="Jumper, 2-pole, open"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>adefa049-f0c3-4268-bfcf-ebb96ac7e8a6</tstamps>
+    </comp>
+    <comp ref="JP2">
+      <value>Jumper_3_Open</value>
+      <footprint>Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm</footprint>
+      <libsource lib="Jumper" part="Jumper_3_Open" description="Jumper, 3-pole, both open"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d4df6a69-7bf0-4f30-8d93-bf162d5ddbca</tstamps>
+    </comp>
+    <comp ref="L1">
+      <value>2.2mH 500mA 2.5Ohm TH</value>
+      <footprint>Inductor_THT:L_Radial_D10.5mm_P5.00mm_Abacron_AISR-01</footprint>
+      <fields>
+        <field name="Manufacturer">Würth Elektronik</field>
+        <field name="Manufacturer Part Number">7687480222</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">732-7687480222-ND</field>
+      </fields>
+      <libsource lib="pspice" part="INDUCTOR" description="Inductor symbol for simulation only"/>
+      <property name="Manufacturer" value="Würth Elektronik"/>
+      <property name="Manufacturer Part Number" value="7687480222"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="732-7687480222-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8f95f702-c3a8-4aa8-a232-7a656f29f6fd</tstamps>
+    </comp>
+    <comp ref="L2">
+      <value>2.2uH 7.2A 11.5mOhm</value>
+      <footprint>Inductor_SMD:L_Taiyo-Yuden_NR-80xx</footprint>
+      <fields>
+        <field name="Manufacturer">Pulse Electronics</field>
+        <field name="Manufacturer Part Number">BWVS008080402R2M00</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">553-BWVS008080402R2M00CT-ND</field>
+      </fields>
+      <libsource lib="pspice" part="INDUCTOR" description="Inductor symbol for simulation only"/>
+      <property name="Manufacturer" value="Pulse Electronics"/>
+      <property name="Manufacturer Part Number" value="BWVS008080402R2M00"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="553-BWVS008080402R2M00CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f7fa6e5a-b888-41e2-b4ee-bdf7b521bb2c</tstamps>
+    </comp>
+    <comp ref="PS1">
+      <value>LS10-13B03R3</value>
+      <footprint>CONV_LS10-13B03R3</footprint>
+      <datasheet>https://www.mornsun-power.com/html/pdf/LS10-13B03R3.html</datasheet>
+      <fields>
+        <field name="MANUFACTURER">MORNSUN</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">18.2 mm</field>
+        <field name="Manufacturer">Mornsun America, LLC</field>
+        <field name="Manufacturer Part Number">LS10-13B03R3</field>
+        <field name="PARTREV">2020.12.14-A/5</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">2725-LS10-13B03R3-ND</field>
+      </fields>
+      <libsource lib="LS10-13B03R3" part="LS10-13B03R3" description=""/>
+      <property name="PARTREV" value="2020.12.14-A/5"/>
+      <property name="STANDARD" value="Manufacturer Recommendations"/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="18.2 mm"/>
+      <property name="MANUFACTURER" value="MORNSUN"/>
+      <property name="Manufacturer" value="Mornsun America, LLC"/>
+      <property name="Manufacturer Part Number" value="LS10-13B03R3"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="2725-LS10-13B03R3-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>17121fc3-3737-4cf7-ad77-30062958432e</tstamps>
+    </comp>
+    <comp ref="Q1">
+      <value>Q_PMOS_GSD</value>
+      <footprint>Customs Smoker:VESM_TOS</footprint>
+      <fields>
+        <field name="Manufacturer">Toshiba Semiconductor and Storage</field>
+        <field name="Manufacturer Part Number">SSM3J56MFV,L3F</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">SSM3J56MFVL3FCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="Q_PMOS_GSD" description="P-MOSFET transistor, gate/source/drain"/>
+      <property name="Manufacturer" value="Toshiba Semiconductor and Storage"/>
+      <property name="Manufacturer Part Number" value="SSM3J56MFV,L3F"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="SSM3J56MFVL3FCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d03d4ea7-cecd-44f6-8033-20a2b9519e1b</tstamps>
+    </comp>
+    <comp ref="Q2">
+      <value>25V 1.5A Trans</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-3</footprint>
+      <fields>
+        <field name="Manufacturer">Comchip Technology</field>
+        <field name="Manufacturer Part Number">SS8050-G</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">641-1790-1-ND</field>
+      </fields>
+      <libsource lib="Transistor_BJT" part="S8050" description="0.7A Ic, 20V Vce, Low Voltage High Current NPN Transistor, TO-92"/>
+      <property name="Manufacturer" value="Comchip Technology"/>
+      <property name="Manufacturer Part Number" value="SS8050-G"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="641-1790-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7d7de796-0e88-4304-9c79-2784b04fe59e</tstamps>
+    </comp>
+    <comp ref="Q3">
+      <value>25V 1.5A Trans</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-3</footprint>
+      <fields>
+        <field name="Manufacturer">Comchip Technology</field>
+        <field name="Manufacturer Part Number">SS8050-G</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">641-1790-1-ND</field>
+      </fields>
+      <libsource lib="Transistor_BJT" part="S8050" description="0.7A Ic, 20V Vce, Low Voltage High Current NPN Transistor, TO-92"/>
+      <property name="Manufacturer" value="Comchip Technology"/>
+      <property name="Manufacturer Part Number" value="SS8050-G"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="641-1790-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>eca5a514-b33b-44b9-a560-7ac89005c7fd</tstamps>
+    </comp>
+    <comp ref="Q4">
+      <value>Q_PMOS_GSD</value>
+      <footprint>Customs Smoker:VESM_TOS</footprint>
+      <fields>
+        <field name="Manufacturer">Toshiba Semiconductor and Storage</field>
+        <field name="Manufacturer Part Number">SSM3J56MFV,L3F</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">SSM3J56MFVL3FCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="Q_PMOS_GSD" description="P-MOSFET transistor, gate/source/drain"/>
+      <property name="Manufacturer" value="Toshiba Semiconductor and Storage"/>
+      <property name="Manufacturer Part Number" value="SSM3J56MFV,L3F"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="SSM3J56MFVL3FCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1ec6c437-007d-4295-9160-a6ff05e4a99c</tstamps>
+    </comp>
+    <comp ref="Q5">
+      <value>2N7002T-7-F</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF</datasheet>
+      <fields>
+        <field name="Manufacturer">Diodes Incorporated</field>
+        <field name="Manufacturer Part Number">2N7002T-7-F</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">2N7002T-FDICT-ND</field>
+      </fields>
+      <libsource lib="Transistor_FET" part="2N7002" description="0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"/>
+      <property name="Manufacturer" value="Diodes Incorporated"/>
+      <property name="Manufacturer Part Number" value="2N7002T-7-F"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="2N7002T-FDICT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0c71390e-0105-471f-8d29-9339bea9a639</tstamps>
+    </comp>
+    <comp ref="Q6">
+      <value>2N7002T-7-F</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF</datasheet>
+      <fields>
+        <field name="Manufacturer">Diodes Incorporated</field>
+        <field name="Manufacturer Part Number">2N7002T-7-F</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">2N7002T-FDICT-ND</field>
+      </fields>
+      <libsource lib="Transistor_FET" part="2N7002" description="0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"/>
+      <property name="Manufacturer" value="Diodes Incorporated"/>
+      <property name="Manufacturer Part Number" value="2N7002T-7-F"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="2N7002T-FDICT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b6aacfef-e02c-407e-b188-26070fb71232</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>1.8kOhm 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">TE Connectivity Passive Product</field>
+        <field name="Manufacturer Part Number">CRGCQ0603F1K8</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">A129691CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="TE Connectivity Passive Product"/>
+      <property name="Manufacturer Part Number" value="CRGCQ0603F1K8"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="A129691CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e4ecb6d7-1182-4686-9857-dfce373566a8</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>1.8kOhm 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">TE Connectivity Passive Product</field>
+        <field name="Manufacturer Part Number">CRGCQ0603F1K8</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">A129691CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="TE Connectivity Passive Product"/>
+      <property name="Manufacturer Part Number" value="CRGCQ0603F1K8"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="A129691CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>81b70cdc-fabf-4c53-a6c8-e0a49716e914</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>1kOhm 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Part Number">RNCP0603FTD1K00</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">RNCP0603FTD1K00CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="Stackpole Electronics Inc"/>
+      <property name="Manufacturer Part Number" value="RNCP0603FTD1K00"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="RNCP0603FTD1K00CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>46bf0c80-63a4-44ba-ada9-dbdcdbc6fa27</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>10K 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Part Number">RNCP0603FTD10K0</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">RNCP0603FTD10K0CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="Stackpole Electronics Inc"/>
+      <property name="Manufacturer Part Number" value="RNCP0603FTD10K0"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="RNCP0603FTD10K0CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f1ba80ad-a5b3-40f0-add3-7610623a715e</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>22.1kOhm 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Manufacturer Part Number">RC0603FR-0722K1L</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">311-22.1KHRCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Manufacturer Part Number" value="RC0603FR-0722K1L"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="311-22.1KHRCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>207f1f82-c132-48a8-b5aa-332a260146f1</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>10K 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Part Number">RNCP0603FTD10K0</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">RNCP0603FTD10K0CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="Stackpole Electronics Inc"/>
+      <property name="Manufacturer Part Number" value="RNCP0603FTD10K0"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="RNCP0603FTD10K0CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c8552e54-ff20-434d-bbca-41d1ed427715</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>10K 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Part Number">RNCP0603FTD10K0</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">RNCP0603FTD10K0CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="Stackpole Electronics Inc"/>
+      <property name="Manufacturer Part Number" value="RNCP0603FTD10K0"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="RNCP0603FTD10K0CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6afedb0c-07f7-4036-8065-907a6affd538</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>0Ohm 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Part Number">RMCF0603ZT0R00</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">RMCF0603ZT0R00CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="Stackpole Electronics Inc"/>
+      <property name="Manufacturer Part Number" value="RMCF0603ZT0R00"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="RMCF0603ZT0R00CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>920cad4e-aaa4-4443-8625-bfad8dc4ad72</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>0Ohm 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Part Number">RMCF0603ZT0R00</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">RMCF0603ZT0R00CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="Stackpole Electronics Inc"/>
+      <property name="Manufacturer Part Number" value="RMCF0603ZT0R00"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="RMCF0603ZT0R00CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>48bc2e1e-7ffd-4241-b91d-7417c1bdd57e</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>47.5kOhm 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Manufacturer Part Number">RC0603FR-0747K5L</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">311-47.5KHRCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Manufacturer Part Number" value="RC0603FR-0747K5L"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="311-47.5KHRCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9113006a-e9cb-4837-bd35-bc3574b40c02</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>470Ohm 5% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Manufacturer Part Number">RC0603JR-07470RL</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">311-470GRCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Manufacturer Part Number" value="RC0603JR-07470RL"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="311-470GRCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cd8c02ed-1317-4dac-9dc0-b68ecb47a8a6</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>1kOhm 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Part Number">RNCP0603FTD1K00</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">RNCP0603FTD1K00CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="Stackpole Electronics Inc"/>
+      <property name="Manufacturer Part Number" value="RNCP0603FTD1K00"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="RNCP0603FTD1K00CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>83e13880-1f1b-4a43-b278-64c5b7035df1</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>10K 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Part Number">RNCP0603FTD10K0</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">RNCP0603FTD10K0CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="Stackpole Electronics Inc"/>
+      <property name="Manufacturer Part Number" value="RNCP0603FTD10K0"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="RNCP0603FTD10K0CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3510c37a-499f-44fe-a5f1-c21e64cd88c8</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>10K 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Part Number">RNCP0603FTD10K0</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">RNCP0603FTD10K0CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="Stackpole Electronics Inc"/>
+      <property name="Manufacturer Part Number" value="RNCP0603FTD10K0"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="RNCP0603FTD10K0CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2c98f1e5-e025-4c56-a338-43fae3148035</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>6.8Ohm 3W 5% 2512</value>
+      <footprint>Resistor_THT:R_Box_L8.4mm_W2.5mm_P5.08mm</footprint>
+      <fields>
+        <field name="Manufacturer">Vishay Beyschlag/Draloric/BC Components</field>
+        <field name="Manufacturer Part Number">AC03000006808JAC00</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">749-AC03000006808JAC00CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Vishay Beyschlag/Draloric/BC Components"/>
+      <property name="Manufacturer Part Number" value="AC03000006808JAC00"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="749-AC03000006808JAC00CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>41e6242b-3878-4022-9573-0eb19177789b</tstamps>
+    </comp>
+    <comp ref="R16">
+      <value>B72214S0351K101</value>
+      <footprint>VARS_B72214S_15P5X5P6-7P5-2P2_TDK</footprint>
+      <datasheet>B72214S0351K101</datasheet>
+      <fields>
+        <field name="Manufacturer">EPCOS - TDK Electronics</field>
+        <field name="Manufacturer Part Number">B72214S0351K101</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">495-6464-ND</field>
+      </fields>
+      <libsource lib="B72214S0351K101" part="B72214S0351K101" description=""/>
+      <property name="Manufacturer" value="EPCOS - TDK Electronics"/>
+      <property name="Manufacturer Part Number" value="B72214S0351K101"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="495-6464-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dc26beb7-890d-453c-82fe-a682329f53ff</tstamps>
+    </comp>
+    <comp ref="R17">
+      <value>470Ohm 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Manufacturer Part Number">RC0603FR-13470RL</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">13-RC0603FR-13470RLCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Manufacturer Part Number" value="RC0603FR-13470RL"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="13-RC0603FR-13470RLCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1bcdfaa2-afdf-4961-b2c6-d347ee9e25c3</tstamps>
+    </comp>
+    <comp ref="R18">
+      <value>140Ohm 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Manufacturer Part Number">RC0603FR-07140RL</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">311-140HRCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Manufacturer Part Number" value="RC0603FR-07140RL"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="311-140HRCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8014147f-3cab-45c9-bcd2-e539832978a4</tstamps>
+    </comp>
+    <comp ref="R19">
+      <value>750Ohm 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Manufacturer Part Number">RC0603FR-07750RL</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">311-750HRCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Manufacturer Part Number" value="RC0603FR-07750RL"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="311-750HRCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fda9c75f-8ea6-41e7-a58f-2de1abadd2f4</tstamps>
+    </comp>
+    <comp ref="S1">
+      <value>TL1015AF160QG</value>
+      <footprint>Customs Smoker:SW_TL1015AF160QG</footprint>
+      <fields>
+        <field name="MANUFACTURER">E-Switch</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">2.1 mm</field>
+        <field name="Manufacturer">E-Switch</field>
+        <field name="Manufacturer Part Number">TL1015AF160QG</field>
+        <field name="PARTREV">F</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">EG4344CT-ND</field>
+      </fields>
+      <libsource lib="TL1015AF160QG" part="TL1015AF160QG" description=""/>
+      <property name="PARTREV" value="F"/>
+      <property name="STANDARD" value="Manufacturer Recommendations"/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="2.1 mm"/>
+      <property name="MANUFACTURER" value="E-Switch"/>
+      <property name="Manufacturer" value="E-Switch"/>
+      <property name="Manufacturer Part Number" value="TL1015AF160QG"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="EG4344CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>df34b278-26b6-42a8-bf1e-3079bd8210eb</tstamps>
+    </comp>
+    <comp ref="S2">
+      <value>TL1015AF160QG</value>
+      <footprint>Customs Smoker:SW_TL1015AF160QG</footprint>
+      <fields>
+        <field name="MANUFACTURER">E-Switch</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">2.1 mm</field>
+        <field name="Manufacturer">E-Switch</field>
+        <field name="Manufacturer Part Number">TL1015AF160QG</field>
+        <field name="PARTREV">F</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">EG4344CT-ND</field>
+      </fields>
+      <libsource lib="TL1015AF160QG" part="TL1015AF160QG" description=""/>
+      <property name="PARTREV" value="F"/>
+      <property name="STANDARD" value="Manufacturer Recommendations"/>
+      <property name="MAXIMUM_PACKAGE_HEIGHT" value="2.1 mm"/>
+      <property name="MANUFACTURER" value="E-Switch"/>
+      <property name="Manufacturer" value="E-Switch"/>
+      <property name="Manufacturer Part Number" value="TL1015AF160QG"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="EG4344CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ebf21bf1-a2ae-4942-acf5-e9bede86ed81</tstamps>
+    </comp>
+    <comp ref="TP1">
+      <value>TestPoint_2Pole</value>
+      <footprint>TestPoint:TestPoint_2Pads_Pitch5.08mm_Drill1.3mm</footprint>
+      <libsource lib="Connector" part="TestPoint_2Pole" description="2-polar test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5ad038c3-be03-44fa-b069-fb5503dff024</tstamps>
+    </comp>
+    <comp ref="TP2">
+      <value>TestPoint_2Pole</value>
+      <footprint>TestPoint:TestPoint_2Pads_Pitch5.08mm_Drill1.3mm</footprint>
+      <libsource lib="Connector" part="TestPoint_2Pole" description="2-polar test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>43403bdf-0a83-4d92-b108-324d52542abe</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>ESP32-WROOM-32UE_16MB</value>
+      <footprint>Customs Smoker:ESP32-WROOM-32UE 16MB</footprint>
+      <datasheet>https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Espressif Systems</field>
+        <field name="Manufacturer Part Number">ESP32-WROOM-32UE-N4</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1965-ESP32-WROOM-32UE-N4CT-ND</field>
+      </fields>
+      <libsource lib="2023-02-16_02-57-43" part="ESP32-WROOM-32UE_16MB" description=""/>
+      <property name="Manufacturer" value="Espressif Systems"/>
+      <property name="Manufacturer Part Number" value="ESP32-WROOM-32UE-N4"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1965-ESP32-WROOM-32UE-N4CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d8416f4d-fa26-4469-82c2-72bf248eed60</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>DG409LEDY-T1-GE3</value>
+      <footprint>SOIC16_NARROW_VIS</footprint>
+      <datasheet>DG409LEDY-T1-GE3</datasheet>
+      <fields>
+        <field name="Manufacturer">Vishay Siliconix</field>
+        <field name="Manufacturer Part Number">DG409LEDY-T1-GE3</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">DG409LEDY-T1-GE3CT-ND</field>
+      </fields>
+      <libsource lib="dg409" part="DG409LEDY-T1-GE3" description=""/>
+      <property name="Manufacturer" value="Vishay Siliconix"/>
+      <property name="Manufacturer Part Number" value="DG409LEDY-T1-GE3"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="DG409LEDY-T1-GE3CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>adacdd93-3aa9-4ed3-be3a-0731e566837e</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>MAX31855KASA</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://datasheets.maximintegrated.com/en/ds/MAX31855.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Analog Devices Inc./Maxim Integrated</field>
+        <field name="Manufacturer Part Number">MAX31855KASA+T</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">MAX31855KASA+TCT-ND</field>
+      </fields>
+      <libsource lib="Sensor_Temperature" part="MAX31855KASA" description="Cold Junction K-type Termocouple Interface, SPI, SO8"/>
+      <property name="Manufacturer" value="Analog Devices Inc./Maxim Integrated"/>
+      <property name="Manufacturer Part Number" value="MAX31855KASA+T"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="MAX31855KASA+TCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1eb92505-bc2a-49ee-a474-87fb7fbc0ac7</tstamps>
+    </comp>
+    <comp ref="U4">
+      <value>AMS1117-3.3</value>
+      <footprint>Package_TO_SOT_SMD:SOT-223-3_TabPin2</footprint>
+      <datasheet>http://www.advanced-monolithic.com/pdf/ds1117.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">UMW</field>
+        <field name="Manufacturer Part Number">AMS1117CD-3.3</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">4518-AMS1117CD-3.3CT-ND</field>
+      </fields>
+      <libsource lib="Regulator_Linear" part="AMS1117-3.3" description="1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"/>
+      <property name="Manufacturer" value="UMW"/>
+      <property name="Manufacturer Part Number" value="AMS1117CD-3.3"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="4518-AMS1117CD-3.3CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d4cc36e0-597d-4b97-98a3-66d07cb9fb5e</tstamps>
+    </comp>
+    <comp ref="U5">
+      <value>CP2102N-Axx-xQFN28</value>
+      <footprint>Package_DFN_QFN:QFN-28-1EP_5x5mm_P0.5mm_EP3.35x3.35mm</footprint>
+      <datasheet>https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf</datasheet>
+      <libsource lib="Interface_USB" part="CP2102N-Axx-xQFN28" description="USB to UART master bridge, QFN-28"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4ebcb3a9-02b7-497d-b880-0baa7dffd1dc</tstamps>
+    </comp>
+    <comp ref="U6">
+      <value>LTC4412xS6</value>
+      <footprint>Package_TO_SOT_SMD:TSOT-23-6</footprint>
+      <datasheet>https://www.analog.com/media/en/technical-documentation/data-sheets/4412fb.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Analog Devices Inc.</field>
+        <field name="Manufacturer Part Number">LTC4412ES6#TRMPBF</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">505-LTC4412ES6#TRMPBFCT-ND</field>
+      </fields>
+      <libsource lib="Power_Management" part="LTC4412xS6" description="Low Loss PowerPath Controller, TSOT-23-6"/>
+      <property name="Manufacturer" value="Analog Devices Inc."/>
+      <property name="Manufacturer Part Number" value="LTC4412ES6#TRMPBF"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="505-LTC4412ES6#TRMPBFCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Smart Smoker PCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>45625856-ccd2-4bdf-b132-0c1a6bc8ede6</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="0393570002" part="393570002">
+      <docs>393570002</docs>
+      <footprints>
+        <fp>CONN_393570002_MOL</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">393570002</field>
+        <field name="Footprint">CONN_393570002_MOL</field>
+        <field name="Datasheet">393570002</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="unspecified"/>
+        <pin num="2" name="2" type="unspecified"/>
+      </pins>
+    </libpart>
+    <libpart lib="105017-0001" part="105017-0001">
+      <fields>
+        <field name="Reference">J1</field>
+        <field name="Value">105017-0001</field>
+        <field name="Footprint">MOLEX_105017-0001</field>
+        <field name="Manufacturer">Molex</field>
+        <field name="Manufacturer Part Number">1050170001</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">WM1399CT-ND</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="D-" type="bidirectional"/>
+        <pin num="3" name="D+" type="bidirectional"/>
+        <pin num="4" name="ID" type="passive"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="P$1" name="GND" type="power_in"/>
+        <pin num="P$2" name="GND" type="power_in"/>
+        <pin num="P$8" name="GND" type="power_in"/>
+        <pin num="P$9" name="GND" type="power_in"/>
+        <pin num="P$10" name="GND" type="power_in"/>
+        <pin num="P$11" name="GND" type="power_in"/>
+        <pin num="P$12" name="GND" type="power_in"/>
+        <pin num="P$13" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="2023-02-16_02-57-43" part="ESP32-WROOM-32UE_16MB">
+      <docs>https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf</docs>
+      <footprints>
+        <fp>IC38_ESP32-WROOM-32UE</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U1</field>
+        <field name="Value">ESP32-WROOM-32UE_16MB</field>
+        <field name="Footprint">Customs Smoker:ESP32-WROOM-32UE 16MB</field>
+        <field name="Datasheet">https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf</field>
+        <field name="Manufacturer">Espressif Systems</field>
+        <field name="Manufacturer Part Number">ESP32-WROOM-32UE-N4</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1965-ESP32-WROOM-32UE-N4CT-ND</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="unspecified"/>
+        <pin num="2" name="3V3" type="unspecified"/>
+        <pin num="3" name="EN" type="unspecified"/>
+        <pin num="4" name="SENSOR_VP" type="unspecified"/>
+        <pin num="5" name="SENSOR_VN" type="unspecified"/>
+        <pin num="6" name="IO34" type="unspecified"/>
+        <pin num="7" name="IO35" type="unspecified"/>
+        <pin num="8" name="IO32" type="unspecified"/>
+        <pin num="9" name="IO33" type="unspecified"/>
+        <pin num="10" name="IO25" type="unspecified"/>
+        <pin num="11" name="IO26" type="unspecified"/>
+        <pin num="12" name="IO27" type="unspecified"/>
+        <pin num="13" name="IO14" type="unspecified"/>
+        <pin num="14" name="IO12" type="unspecified"/>
+        <pin num="15" name="GND" type="unspecified"/>
+        <pin num="16" name="IO13" type="unspecified"/>
+        <pin num="17" name="NC" type="unspecified"/>
+        <pin num="18" name="NC" type="unspecified"/>
+        <pin num="19" name="NC" type="unspecified"/>
+        <pin num="20" name="NC" type="unspecified"/>
+        <pin num="21" name="NC" type="unspecified"/>
+        <pin num="22" name="NC" type="unspecified"/>
+        <pin num="23" name="IO15" type="unspecified"/>
+        <pin num="24" name="IO2" type="unspecified"/>
+        <pin num="25" name="IO0" type="unspecified"/>
+        <pin num="26" name="IO4" type="unspecified"/>
+        <pin num="27" name="IO16" type="unspecified"/>
+        <pin num="28" name="IO17" type="unspecified"/>
+        <pin num="29" name="IO5" type="unspecified"/>
+        <pin num="30" name="IO18" type="unspecified"/>
+        <pin num="31" name="IO19" type="unspecified"/>
+        <pin num="32" name="NC" type="unspecified"/>
+        <pin num="33" name="IO21" type="unspecified"/>
+        <pin num="34" name="RXD0" type="unspecified"/>
+        <pin num="35" name="TXD0" type="unspecified"/>
+        <pin num="36" name="IO22" type="unspecified"/>
+        <pin num="37" name="IO23" type="unspecified"/>
+        <pin num="38" name="GND" type="unspecified"/>
+        <pin num="39" name="GND" type="unspecified"/>
+        <pin num="40" name="GND" type="unspecified"/>
+        <pin num="41" name="GND" type="unspecified"/>
+        <pin num="42" name="GND" type="unspecified"/>
+        <pin num="43" name="GND" type="unspecified"/>
+        <pin num="44" name="GND" type="unspecified"/>
+        <pin num="45" name="GND" type="unspecified"/>
+        <pin num="46" name="GND" type="unspecified"/>
+        <pin num="47" name="GND" type="unspecified"/>
+      </pins>
+    </libpart>
+    <libpart lib="B72214S0351K101" part="B72214S0351K101">
+      <docs>B72214S0351K101</docs>
+      <footprints>
+        <fp>VARS_B72214S_15P5X5P6-7P5-2P2_TDK</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">B72214S0351K101</field>
+        <field name="Footprint">VARS_B72214S_15P5X5P6-7P5-2P2_TDK</field>
+        <field name="Datasheet">B72214S0351K101</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="unspecified"/>
+        <pin num="2" name="" type="unspecified"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="TestPoint_2Pole">
+      <description>2-polar test point</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint_2Pole</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x02_Top_Bottom">
+      <description>Generic connector, double row, 02x02, top/bottom pin numbering scheme (row 1: 1...pins_per_row, row2: pins_per_row+1 ... num_pins), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x02_Top_Bottom</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Antenna">
+      <description>Antenna</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">AE</field>
+        <field name="Value">Antenna</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_TVS">
+      <description>Bidirectional transient-voltage-suppression diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_TVS</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A1" type="passive"/>
+        <pin num="2" name="A2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Fuse">
+      <description>Fuse</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>*Fuse*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Fuse</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Q_PMOS_GSD">
+      <description>P-MOSFET transistor, gate/source/drain</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_PMOS_GSD</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_US">
+      <description>Resistor, US symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_US</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Interface_USB" part="CP2102N-Axx-xQFN28">
+      <description>USB to UART master bridge, QFN-28</description>
+      <docs>https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf</docs>
+      <footprints>
+        <fp>QFN*1EP*5x5mm*P0.5mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">CP2102N-Axx-xQFN28</field>
+        <field name="Footprint">Package_DFN_QFN:QFN-28-1EP_5x5mm_P0.5mm_EP3.35x3.35mm</field>
+        <field name="Datasheet">https://www.silabs.com/documents/public/data-sheets/cp2102n-datasheet.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~{DCD}" type="input"/>
+        <pin num="2" name="~{RI}/CLK" type="bidirectional"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="D+" type="bidirectional"/>
+        <pin num="5" name="D-" type="bidirectional"/>
+        <pin num="6" name="VDD" type="power_in"/>
+        <pin num="7" name="VREGIN" type="power_in"/>
+        <pin num="8" name="VBUS" type="input"/>
+        <pin num="9" name="~{RST}" type="input"/>
+        <pin num="10" name="NC" type="no_connect"/>
+        <pin num="11" name="~{SUSPEND}" type="output"/>
+        <pin num="12" name="SUSPEND" type="output"/>
+        <pin num="13" name="CHREN" type="output"/>
+        <pin num="14" name="CHR1" type="output"/>
+        <pin num="15" name="CHR0" type="output"/>
+        <pin num="16" name="~{WAKEUP}/GPIO.3" type="bidirectional"/>
+        <pin num="17" name="RS485/GPIO.2" type="bidirectional"/>
+        <pin num="18" name="~{RXT}/GPIO.1" type="bidirectional"/>
+        <pin num="19" name="~{TXT}/GPIO.0" type="bidirectional"/>
+        <pin num="20" name="GPIO.6" type="bidirectional"/>
+        <pin num="21" name="GPIO.5" type="bidirectional"/>
+        <pin num="22" name="GPIO.4" type="bidirectional"/>
+        <pin num="23" name="~{CTS}" type="input"/>
+        <pin num="24" name="~{RTS}" type="output"/>
+        <pin num="25" name="RXD" type="input"/>
+        <pin num="26" name="TXD" type="output"/>
+        <pin num="27" name="~{DSR}" type="input"/>
+        <pin num="28" name="~{DTR}" type="output"/>
+        <pin num="29" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Jumper" part="Jumper_2_Open">
+      <description>Jumper, 2-pole, open</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Jumper*</fp>
+        <fp>TestPoint*2Pads*</fp>
+        <fp>TestPoint*Bridge*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">Jumper_2_Open</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Jumper" part="Jumper_3_Open">
+      <description>Jumper, 3-pole, both open</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Jumper*</fp>
+        <fp>TestPoint*3Pads*</fp>
+        <fp>TestPoint*Bridge*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">Jumper_3_Open</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="LS10-13B03R3" part="LS10-13B03R3">
+      <fields>
+        <field name="Reference">PS</field>
+        <field name="Value">LS10-13B03R3</field>
+        <field name="Footprint">CONV_LS10-13B03R3</field>
+        <field name="PARTREV">2020.12.14-A/5</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">18.2 mm</field>
+        <field name="MANUFACTURER">MORNSUN</field>
+      </fields>
+      <pins>
+        <pin num="1" name="AC(N)" type="input"/>
+        <pin num="2" name="AC(L)" type="input"/>
+        <pin num="3" name="+V(CAP)" type="passive"/>
+        <pin num="4" name="-V(CAP)" type="passive"/>
+        <pin num="5" name="-VO" type="output"/>
+        <pin num="6" name="+VO" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole">
+      <description>Mounting Hole without connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole</field>
+        <field name="Datasheet">~</field>
+      </fields>
+    </libpart>
+    <libpart lib="Power_Management" part="LTC4412xS6">
+      <description>Low Loss PowerPath Controller, TSOT-23-6</description>
+      <docs>https://www.analog.com/media/en/technical-documentation/data-sheets/4412fb.pdf</docs>
+      <footprints>
+        <fp>TSOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LTC4412xS6</field>
+        <field name="Footprint">Package_TO_SOT_SMD:TSOT-23-6</field>
+        <field name="Datasheet">https://www.analog.com/media/en/technical-documentation/data-sheets/4412fb.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VIN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="CTL" type="input"/>
+        <pin num="4" name="STAT" type="open_collector"/>
+        <pin num="5" name="GATE" type="output"/>
+        <pin num="6" name="SENSE" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Power_Protection" part="SP0503BAHT">
+      <description>TVS Diode Array, 5.5V Standoff, 3 Channels, SOT-143 package</description>
+      <docs>http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/documents/data%20sheets/sp05xxba.pdf</docs>
+      <footprints>
+        <fp>SOT?143*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">SP0503BAHT</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-143</field>
+        <field name="Datasheet">http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/documents/data%20sheets/sp05xxba.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+        <pin num="3" name="K" type="passive"/>
+        <pin num="4" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="AMS1117-3.3">
+      <description>1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223</description>
+      <docs>http://www.advanced-monolithic.com/pdf/ds1117.pdf</docs>
+      <footprints>
+        <fp>SOT?223*TabPin2*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AMS1117-3.3</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-223-3_TabPin2</field>
+        <field name="Datasheet">http://www.advanced-monolithic.com/pdf/ds1117.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VO" type="power_out"/>
+        <pin num="3" name="VI" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Sensor_Temperature" part="MAX31855KASA">
+      <description>Cold Junction K-type Termocouple Interface, SPI, SO8</description>
+      <docs>http://datasheets.maximintegrated.com/en/ds/MAX31855.pdf</docs>
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MAX31855KASA</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet">http://datasheets.maximintegrated.com/en/ds/MAX31855.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="T-" type="passive"/>
+        <pin num="3" name="T+" type="passive"/>
+        <pin num="4" name="VCC" type="power_in"/>
+        <pin num="5" name="SCK" type="input"/>
+        <pin num="6" name="~{CS}" type="input"/>
+        <pin num="7" name="SO" type="tri_state"/>
+      </pins>
+    </libpart>
+    <libpart lib="TL1015AF160QG" part="TL1015AF160QG">
+      <fields>
+        <field name="Reference">S</field>
+        <field name="Value">TL1015AF160QG</field>
+        <field name="Footprint">SW_TL1015AF160QG</field>
+        <field name="PARTREV">F</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">2.1 mm</field>
+        <field name="MANUFACTURER">E-Switch</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_BJT" part="S8050">
+      <description>0.7A Ic, 20V Vce, Low Voltage High Current NPN Transistor, TO-92</description>
+      <docs>http://www.unisonic.com.tw/datasheet/S8050.pdf</docs>
+      <footprints>
+        <fp>TO?92*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">S8050</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-92_Inline</field>
+        <field name="Datasheet">http://www.unisonic.com.tw/datasheet/S8050.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="E" type="passive"/>
+        <pin num="2" name="B" type="input"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_FET" part="2N7002">
+      <description>0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23</description>
+      <docs>https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">2N7002</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="dg409" part="DG409LEDY-T1-GE3">
+      <docs>DG409LEDY-T1-GE3</docs>
+      <footprints>
+        <fp>SOIC16_NARROW_VIS</fp>
+        <fp>SOIC16_NARROW_VIS-M</fp>
+        <fp>SOIC16_NARROW_VIS-L</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">DG409LEDY-T1-GE3</field>
+        <field name="Footprint">SOIC16_NARROW_VIS</field>
+        <field name="Datasheet">DG409LEDY-T1-GE3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A0" type="input"/>
+        <pin num="2" name="EN" type="input"/>
+        <pin num="3" name="V-" type="power_in"/>
+        <pin num="4" name="S1A" type="bidirectional"/>
+        <pin num="5" name="S2A" type="bidirectional"/>
+        <pin num="6" name="S3A" type="bidirectional"/>
+        <pin num="7" name="S4A" type="bidirectional"/>
+        <pin num="8" name="DA" type="unspecified"/>
+        <pin num="9" name="DB" type="unspecified"/>
+        <pin num="10" name="S4B" type="bidirectional"/>
+        <pin num="11" name="S3B" type="bidirectional"/>
+        <pin num="12" name="S2B" type="bidirectional"/>
+        <pin num="13" name="S1B" type="bidirectional"/>
+        <pin num="14" name="V+" type="power_in"/>
+        <pin num="15" name="GND" type="power_out"/>
+        <pin num="16" name="A1" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="pspice" part="INDUCTOR">
+      <description>Inductor symbol for simulation only</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">INDUCTOR</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="0393570002">
+      <uri>/Users/dallynwynnychuk/Documents/Projects/Smart Smoker/SmartSmoker/PCB/Symbols/2023-05-22_14-47-12.kicad_sym</uri>
+    </library>
+    <library logical="105017-0001">
+      <uri>/Users/dallynwynnychuk/Documents/Projects/Smart Smoker/SmartSmoker/PCB/Symbols/105017-0001.kicad_sym</uri>
+    </library>
+    <library logical="2023-02-16_02-57-43">
+      <uri>/Users/dallynwynnychuk/Documents/Projects/Smart Smoker/SmartSmoker/PCB/Symbols/2023-02-16_02-57-43.lib</uri>
+    </library>
+    <library logical="B72214S0351K101">
+      <uri>/Users/dallynwynnychuk/Documents/Projects/Smart Smoker/SmartSmoker/PCB/Symbols/2023-05-31_03-08-47.kicad_sym</uri>
+    </library>
+    <library logical="Connector">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Connector.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Device.kicad_sym</uri>
+    </library>
+    <library logical="Interface_USB">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Interface_USB.kicad_sym</uri>
+    </library>
+    <library logical="Jumper">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Jumper.kicad_sym</uri>
+    </library>
+    <library logical="LS10-13B03R3">
+      <uri>/Users/dallynwynnychuk/Documents/Projects/Smart Smoker/SmartSmoker/PCB/Symbols/LS10-13B03R3.kicad_sym</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Mechanical.kicad_sym</uri>
+    </library>
+    <library logical="Power_Management">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Power_Management.kicad_sym</uri>
+    </library>
+    <library logical="Power_Protection">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Power_Protection.kicad_sym</uri>
+    </library>
+    <library logical="Regulator_Linear">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Regulator_Linear.kicad_sym</uri>
+    </library>
+    <library logical="Sensor_Temperature">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Sensor_Temperature.kicad_sym</uri>
+    </library>
+    <library logical="TL1015AF160QG">
+      <uri>/Users/dallynwynnychuk/Documents/Projects/Smart Smoker/SmartSmoker/PCB/Symbols/TL1015AF160QG.kicad_sym</uri>
+    </library>
+    <library logical="Transistor_BJT">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Transistor_BJT.kicad_sym</uri>
+    </library>
+    <library logical="Transistor_FET">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Transistor_FET.kicad_sym</uri>
+    </library>
+    <library logical="dg409">
+      <uri>/Users/dallynwynnychuk/Documents/Projects/Smart Smoker/SmartSmoker/PCB/Symbols/2023-05-22_02-43-06.kicad_sym</uri>
+    </library>
+    <library logical="pspice">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//pspice.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3.3V">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="J8" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J9" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="JP1" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="Q4" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+      <node ref="R19" pin="1" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="3V3" pintype="unspecified"/>
+      <node ref="U2" pin="14" pinfunction="V+" pintype="power_in"/>
+      <node ref="U2" pin="2" pinfunction="EN" pintype="input"/>
+      <node ref="U3" pin="4" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U5" pin="6" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U5" pin="7" pinfunction="VREGIN" pintype="power_in"/>
+      <node ref="U6" pin="6" pinfunction="SENSE" pintype="input"/>
+    </net>
+    <net code="2" name="+3.3VA">
+      <node ref="C12" pin="1" pintype="passive"/>
+      <node ref="C18" pin="1" pintype="passive"/>
+      <node ref="C19" pin="1" pintype="passive"/>
+      <node ref="D2" pin="2" pinfunction="A2" pintype="passive"/>
+      <node ref="L2" pin="2" pinfunction="2" pintype="input"/>
+      <node ref="Q4" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="U6" pin="1" pinfunction="VIN" pintype="power_in"/>
+    </net>
+    <net code="3" name="+3.3VP">
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="Q1" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="U4" pin="2" pinfunction="VO" pintype="power_out"/>
+    </net>
+    <net code="4" name="+5V">
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="D1" pin="4" pinfunction="K" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="VDD" pintype="power_in"/>
+      <node ref="R18" pin="1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="U4" pin="3" pinfunction="VI" pintype="power_in"/>
+    </net>
+    <net code="5" name="/AC_G">
+      <node ref="J2" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="JP2" pin="1" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="6" name="/AC_L">
+      <node ref="F1" pin="1" pintype="passive"/>
+      <node ref="J4" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="TP1" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="7" name="/AC_N">
+      <node ref="J4" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="PS1" pin="1" pinfunction="AC(N)" pintype="input"/>
+      <node ref="R16" pin="2" pintype="unspecified"/>
+      <node ref="TP1" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="8" name="/CTS">
+      <node ref="U5" pin="23" pinfunction="~{CTS}" pintype="input"/>
+    </net>
+    <net code="9" name="/DTR">
+      <node ref="Q3" pin="1" pinfunction="E" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="U5" pin="28" pinfunction="~{DTR}" pintype="output"/>
+    </net>
+    <net code="10" name="/EN">
+      <node ref="C15" pin="1" pintype="passive"/>
+      <node ref="Q2" pin="3" pinfunction="C" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+      <node ref="S2" pin="2" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="EN" pintype="unspecified"/>
+    </net>
+    <net code="11" name="/I2C_SCL">
+      <node ref="J8" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J9" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="U1" pin="36" pinfunction="IO22" pintype="unspecified"/>
+    </net>
+    <net code="12" name="/I2C_SDA">
+      <node ref="J8" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J9" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="U1" pin="33" pinfunction="IO21" pintype="unspecified"/>
+    </net>
+    <net code="13" name="/I34">
+      <node ref="U1" pin="6" pinfunction="IO34" pintype="unspecified"/>
+    </net>
+    <net code="14" name="/I35">
+      <node ref="U1" pin="7" pinfunction="IO35" pintype="unspecified"/>
+    </net>
+    <net code="15" name="/I36">
+      <node ref="U1" pin="4" pinfunction="SENSOR_VP" pintype="unspecified"/>
+    </net>
+    <net code="16" name="/I39">
+      <node ref="U1" pin="5" pinfunction="SENSOR_VN" pintype="unspecified"/>
+    </net>
+    <net code="17" name="/IO0">
+      <node ref="C14" pin="2" pintype="passive"/>
+      <node ref="Q3" pin="3" pinfunction="C" pintype="passive"/>
+      <node ref="S1" pin="2" pintype="passive"/>
+      <node ref="U1" pin="25" pinfunction="IO0" pintype="unspecified"/>
+    </net>
+    <net code="18" name="/IO2">
+      <node ref="U1" pin="24" pinfunction="IO2" pintype="unspecified"/>
+      <node ref="U2" pin="1" pinfunction="A0" pintype="input"/>
+    </net>
+    <net code="19" name="/IO4">
+      <node ref="Q1" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="U1" pin="26" pinfunction="IO4" pintype="unspecified"/>
+      <node ref="U6" pin="4" pinfunction="STAT" pintype="open_collector"/>
+    </net>
+    <net code="20" name="/IO12">
+      <node ref="U1" pin="14" pinfunction="IO12" pintype="unspecified"/>
+    </net>
+    <net code="21" name="/IO13">
+      <node ref="U1" pin="16" pinfunction="IO13" pintype="unspecified"/>
+    </net>
+    <net code="22" name="/IO14">
+      <node ref="U1" pin="13" pinfunction="IO14" pintype="unspecified"/>
+    </net>
+    <net code="23" name="/IO15">
+      <node ref="U1" pin="23" pinfunction="IO15" pintype="unspecified"/>
+      <node ref="U2" pin="16" pinfunction="A1" pintype="input"/>
+    </net>
+    <net code="24" name="/IO16">
+      <node ref="U1" pin="27" pinfunction="IO16" pintype="unspecified"/>
+    </net>
+    <net code="25" name="/IO17">
+      <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="U1" pin="28" pinfunction="IO17" pintype="unspecified"/>
+    </net>
+    <net code="26" name="/IO23">
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="U1" pin="37" pinfunction="IO23" pintype="unspecified"/>
+    </net>
+    <net code="27" name="/IO25">
+      <node ref="U1" pin="10" pinfunction="IO25" pintype="unspecified"/>
+    </net>
+    <net code="28" name="/IO26">
+      <node ref="U1" pin="11" pinfunction="IO26" pintype="unspecified"/>
+    </net>
+    <net code="29" name="/IO27">
+      <node ref="U1" pin="12" pinfunction="IO27" pintype="unspecified"/>
+    </net>
+    <net code="30" name="/IO32">
+      <node ref="U1" pin="8" pinfunction="IO32" pintype="unspecified"/>
+    </net>
+    <net code="31" name="/IO33">
+      <node ref="U1" pin="9" pinfunction="IO33" pintype="unspecified"/>
+    </net>
+    <net code="32" name="/MUX_OUT_+">
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="U2" pin="9" pinfunction="DB" pintype="unspecified"/>
+      <node ref="U3" pin="3" pinfunction="T+" pintype="passive"/>
+    </net>
+    <net code="33" name="/MUX_OUT_-">
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="U2" pin="8" pinfunction="DA" pintype="unspecified"/>
+      <node ref="U3" pin="2" pinfunction="T-" pintype="passive"/>
+    </net>
+    <net code="34" name="/Probe1+">
+      <node ref="J5" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="U2" pin="13" pinfunction="S1B" pintype="bidirectional"/>
+    </net>
+    <net code="35" name="/Probe1-">
+      <node ref="J5" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="U2" pin="4" pinfunction="S1A" pintype="bidirectional"/>
+    </net>
+    <net code="36" name="/Probe2+">
+      <node ref="J6" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="U2" pin="12" pinfunction="S2B" pintype="bidirectional"/>
+    </net>
+    <net code="37" name="/Probe2-">
+      <node ref="J6" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="U2" pin="5" pinfunction="S2A" pintype="bidirectional"/>
+    </net>
+    <net code="38" name="/Probe3+">
+      <node ref="J7" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="U2" pin="11" pinfunction="S3B" pintype="bidirectional"/>
+    </net>
+    <net code="39" name="/Probe3-">
+      <node ref="J7" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="U2" pin="6" pinfunction="S3A" pintype="bidirectional"/>
+    </net>
+    <net code="40" name="/Probe4+">
+      <node ref="J3" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="U2" pin="10" pinfunction="S4B" pintype="bidirectional"/>
+    </net>
+    <net code="41" name="/Probe4-">
+      <node ref="J3" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="U2" pin="7" pinfunction="S4A" pintype="bidirectional"/>
+    </net>
+    <net code="42" name="/RTS">
+      <node ref="Q2" pin="1" pinfunction="E" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="U5" pin="24" pinfunction="~{RTS}" pintype="output"/>
+    </net>
+    <net code="43" name="/RXD">
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="U5" pin="25" pinfunction="RXD" pintype="input"/>
+    </net>
+    <net code="44" name="/RXD0">
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="U1" pin="34" pinfunction="RXD0" pintype="unspecified"/>
+    </net>
+    <net code="45" name="/SPI_CS">
+      <node ref="U1" pin="29" pinfunction="IO5" pintype="unspecified"/>
+      <node ref="U3" pin="6" pinfunction="~{CS}" pintype="input"/>
+    </net>
+    <net code="46" name="/SPI_MISO">
+      <node ref="U1" pin="31" pinfunction="IO19" pintype="unspecified"/>
+      <node ref="U3" pin="7" pinfunction="SO" pintype="tri_state"/>
+    </net>
+    <net code="47" name="/SPI_SCK">
+      <node ref="U1" pin="30" pinfunction="IO18" pintype="unspecified"/>
+      <node ref="U3" pin="5" pinfunction="SCK" pintype="input"/>
+    </net>
+    <net code="48" name="/TRG_GND">
+      <node ref="J2" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="JP2" pin="3" pinfunction="B" pintype="passive"/>
+    </net>
+    <net code="49" name="/TXD">
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="U5" pin="26" pinfunction="TXD" pintype="output"/>
+    </net>
+    <net code="50" name="/TXD0">
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="U1" pin="35" pinfunction="TXD0" pintype="unspecified"/>
+    </net>
+    <net code="51" name="/USB_DN">
+      <node ref="D1" pin="3" pinfunction="K" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="D-" pintype="bidirectional"/>
+      <node ref="Q6" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="U5" pin="5" pinfunction="D-" pintype="bidirectional"/>
+    </net>
+    <net code="52" name="/USB_DP">
+      <node ref="D1" pin="2" pinfunction="K" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="D+" pintype="bidirectional"/>
+      <node ref="Q5" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="U5" pin="4" pinfunction="D+" pintype="bidirectional"/>
+    </net>
+    <net code="53" name="GND">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="C12" pin="2" pintype="passive"/>
+      <node ref="C13" pin="1" pintype="passive"/>
+      <node ref="C14" pin="1" pintype="passive"/>
+      <node ref="C15" pin="2" pintype="passive"/>
+      <node ref="C17" pin="2" pintype="passive"/>
+      <node ref="C18" pin="2" pintype="passive"/>
+      <node ref="C19" pin="2" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C20" pin="2" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="A1" pintype="passive"/>
+      <node ref="D4" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D5" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J1" pin="5" pinfunction="GND" pintype="power_in"/>
+      <node ref="J1" pin="P$1" pinfunction="GND" pintype="power_in"/>
+      <node ref="J1" pin="P$10" pinfunction="GND" pintype="power_in"/>
+      <node ref="J1" pin="P$11" pinfunction="GND" pintype="power_in"/>
+      <node ref="J1" pin="P$12" pinfunction="GND" pintype="power_in"/>
+      <node ref="J1" pin="P$13" pinfunction="GND" pintype="power_in"/>
+      <node ref="J1" pin="P$2" pinfunction="GND" pintype="power_in"/>
+      <node ref="J1" pin="P$8" pinfunction="GND" pintype="power_in"/>
+      <node ref="J1" pin="P$9" pinfunction="GND" pintype="power_in"/>
+      <node ref="J8" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J9" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="JP2" pin="2" pinfunction="C" pintype="passive"/>
+      <node ref="PS1" pin="5" pinfunction="-VO" pintype="output"/>
+      <node ref="Q5" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="Q6" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="S1" pin="1" pintype="passive"/>
+      <node ref="S2" pin="1" pintype="passive"/>
+      <node ref="TP2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="GND" pintype="unspecified"/>
+      <node ref="U1" pin="15" pinfunction="GND" pintype="unspecified"/>
+      <node ref="U1" pin="38" pinfunction="GND" pintype="unspecified"/>
+      <node ref="U1" pin="39" pinfunction="GND" pintype="unspecified"/>
+      <node ref="U1" pin="40" pinfunction="GND" pintype="unspecified"/>
+      <node ref="U1" pin="41" pinfunction="GND" pintype="unspecified"/>
+      <node ref="U1" pin="42" pinfunction="GND" pintype="unspecified"/>
+      <node ref="U1" pin="43" pinfunction="GND" pintype="unspecified"/>
+      <node ref="U1" pin="44" pinfunction="GND" pintype="unspecified"/>
+      <node ref="U1" pin="45" pinfunction="GND" pintype="unspecified"/>
+      <node ref="U1" pin="46" pinfunction="GND" pintype="unspecified"/>
+      <node ref="U1" pin="47" pinfunction="GND" pintype="unspecified"/>
+      <node ref="U2" pin="15" pinfunction="GND" pintype="power_out"/>
+      <node ref="U2" pin="3" pinfunction="V-" pintype="power_in"/>
+      <node ref="U3" pin="1" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="1" pinfunction="GND" pintype="power_in"/>
+      <node ref="U5" pin="29" pinfunction="GND" pintype="passive"/>
+      <node ref="U5" pin="3" pinfunction="GND" pintype="power_in"/>
+      <node ref="U6" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U6" pin="3" pinfunction="CTL" pintype="input"/>
+    </net>
+    <net code="54" name="Net-(C13-Pad2)">
+      <node ref="C13" pin="2" pintype="passive"/>
+      <node ref="JP1" pin="2" pinfunction="B" pintype="passive"/>
+      <node ref="Q5" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="Q6" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+    </net>
+    <net code="55" name="Net-(C16-Pad1)">
+      <node ref="C16" pin="1" pintype="passive"/>
+      <node ref="PS1" pin="3" pinfunction="+V(CAP)" pintype="passive"/>
+    </net>
+    <net code="56" name="Net-(C16-Pad2)">
+      <node ref="C16" pin="2" pintype="passive"/>
+      <node ref="C20" pin="1" pintype="passive"/>
+      <node ref="PS1" pin="4" pinfunction="-V(CAP)" pintype="passive"/>
+    </net>
+    <net code="57" name="Net-(C17-Pad1)">
+      <node ref="C17" pin="1" pintype="passive"/>
+      <node ref="L2" pin="1" pinfunction="1" pintype="input"/>
+      <node ref="PS1" pin="6" pinfunction="+VO" pintype="output"/>
+    </net>
+    <net code="58" name="Net-(D3-Pad2)">
+      <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R17" pin="2" pintype="passive"/>
+    </net>
+    <net code="59" name="Net-(D4-Pad2)">
+      <node ref="D4" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R18" pin="2" pintype="passive"/>
+    </net>
+    <net code="60" name="Net-(D5-Pad2)">
+      <node ref="D5" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R19" pin="2" pintype="passive"/>
+    </net>
+    <net code="61" name="Net-(F1-Pad2)">
+      <node ref="F1" pin="2" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="R16" pin="1" pintype="unspecified"/>
+    </net>
+    <net code="62" name="Net-(L1-Pad1)">
+      <node ref="L1" pin="1" pinfunction="1" pintype="input"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+    </net>
+    <net code="63" name="Net-(L1-Pad2)">
+      <node ref="L1" pin="2" pinfunction="2" pintype="input"/>
+      <node ref="PS1" pin="2" pinfunction="AC(L)" pintype="input"/>
+    </net>
+    <net code="64" name="Net-(Q2-Pad2)">
+      <node ref="Q2" pin="2" pinfunction="B" pintype="input"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+    </net>
+    <net code="65" name="Net-(Q3-Pad2)">
+      <node ref="Q3" pin="2" pinfunction="B" pintype="input"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+    </net>
+    <net code="66" name="Net-(Q4-Pad1)">
+      <node ref="Q4" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="U6" pin="5" pinfunction="GATE" pintype="output"/>
+    </net>
+    <net code="67" name="Net-(R3-Pad1)">
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U5" pin="9" pinfunction="~{RST}" pintype="input"/>
+    </net>
+    <net code="68" name="Net-(R7-Pad2)">
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="U5" pin="11" pinfunction="~{SUSPEND}" pintype="output"/>
+    </net>
+    <net code="69" name="Net-(R10-Pad2)">
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="U5" pin="8" pinfunction="VBUS" pintype="input"/>
+    </net>
+    <net code="70" name="unconnected-(AE1-Pad1)">
+      <node ref="AE1" pin="1" pinfunction="A" pintype="input"/>
+    </net>
+    <net code="71" name="unconnected-(J1-Pad4)">
+      <node ref="J1" pin="4" pinfunction="ID" pintype="passive+no_connect"/>
+    </net>
+    <net code="72" name="unconnected-(U1-Pad17)">
+      <node ref="U1" pin="17" pinfunction="NC" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="73" name="unconnected-(U1-Pad18)">
+      <node ref="U1" pin="18" pinfunction="NC" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="74" name="unconnected-(U1-Pad19)">
+      <node ref="U1" pin="19" pinfunction="NC" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="75" name="unconnected-(U1-Pad20)">
+      <node ref="U1" pin="20" pinfunction="NC" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="76" name="unconnected-(U1-Pad21)">
+      <node ref="U1" pin="21" pinfunction="NC" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="77" name="unconnected-(U1-Pad22)">
+      <node ref="U1" pin="22" pinfunction="NC" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="78" name="unconnected-(U1-Pad32)">
+      <node ref="U1" pin="32" pinfunction="NC" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="79" name="unconnected-(U5-Pad1)">
+      <node ref="U5" pin="1" pinfunction="~{DCD}" pintype="input+no_connect"/>
+    </net>
+    <net code="80" name="unconnected-(U5-Pad2)">
+      <node ref="U5" pin="2" pinfunction="~{RI}/CLK" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="81" name="unconnected-(U5-Pad10)">
+      <node ref="U5" pin="10" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="82" name="unconnected-(U5-Pad12)">
+      <node ref="U5" pin="12" pinfunction="SUSPEND" pintype="output+no_connect"/>
+    </net>
+    <net code="83" name="unconnected-(U5-Pad13)">
+      <node ref="U5" pin="13" pinfunction="CHREN" pintype="output+no_connect"/>
+    </net>
+    <net code="84" name="unconnected-(U5-Pad14)">
+      <node ref="U5" pin="14" pinfunction="CHR1" pintype="output+no_connect"/>
+    </net>
+    <net code="85" name="unconnected-(U5-Pad15)">
+      <node ref="U5" pin="15" pinfunction="CHR0" pintype="output+no_connect"/>
+    </net>
+    <net code="86" name="unconnected-(U5-Pad16)">
+      <node ref="U5" pin="16" pinfunction="~{WAKEUP}/GPIO.3" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="87" name="unconnected-(U5-Pad17)">
+      <node ref="U5" pin="17" pinfunction="RS485/GPIO.2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="88" name="unconnected-(U5-Pad18)">
+      <node ref="U5" pin="18" pinfunction="~{RXT}/GPIO.1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="89" name="unconnected-(U5-Pad19)">
+      <node ref="U5" pin="19" pinfunction="~{TXT}/GPIO.0" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="90" name="unconnected-(U5-Pad20)">
+      <node ref="U5" pin="20" pinfunction="GPIO.6" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="91" name="unconnected-(U5-Pad21)">
+      <node ref="U5" pin="21" pinfunction="GPIO.5" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="92" name="unconnected-(U5-Pad22)">
+      <node ref="U5" pin="22" pinfunction="GPIO.4" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="93" name="unconnected-(U5-Pad27)">
+      <node ref="U5" pin="27" pinfunction="~{DSR}" pintype="input+no_connect"/>
+    </net>
+  </nets>
+</export>
