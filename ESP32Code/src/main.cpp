@@ -13,7 +13,9 @@
 #define clk 18 // SPI SCK
 #define miso 19 // SPI MISO
 
-const int MPU = 0x68; // IMU
+const int LSM_IMU_ADDR_LID = 0x6B; // LID IMU
+const int LSM_IMU_ADDR_HOP = 0x4D; // Hopper IMU
+
 const int LTR_329_ADDR = 0x29; // LID Light Sensor
 const int LTR_REG_CONTR = 0x80; // LTR Control Register
 const int LTR_CONTR_VAL = 0x0D; // 8x gain
@@ -21,6 +23,7 @@ const int LTR_CH1_LOW = 0x88;
 const int LTR_CH1_HIGH = 0x89;
 const int LTR_CH0_LOW = 0x8A;
 const int LTR_CH0_HIGH = 0x8B;
+
 int16_t AccX, AccY, AccZ, Tmp, GyroX, GyroY, GyroZ;
 int16_t AccErrorX, AccErrorY, AccErrorZ, GyroErrorX, GyroErrorY, GyroErrorZ;
 float AccAngleX, AccAngleY, AccAngleZ, GyroAngleX, GyroAngleY, GyroAngleZ, BoardTemp;
@@ -63,6 +66,9 @@ void setup() {
   Wire.write(LTR_CONTR_VAL);
   Wire.endTransmission();
   delay(500);
+
+  // IMU
+
 }
 
 // Loop indefinitely 
@@ -191,7 +197,6 @@ void loop() {
   delay(1000);
 }
 
-
 float readTemperature(){
   v = spiRead();
   float thermocouple = 0;
@@ -205,8 +210,6 @@ float readTemperature(){
     return thermocouple;
   }
 }
-
-
 
 // IMU
   /*
