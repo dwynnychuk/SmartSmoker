@@ -5,6 +5,12 @@
 #include <BLEUtils.h>
 #include <BLEServer.h>
 #include <BLE2902.h>
+#include <vl53lx_class.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdint.h>
+#include <assert.h>
 
 #define LED 17 // Internal LED
 #define MPA0 2 // A0 for Multiplexer
@@ -65,10 +71,17 @@ void setup() {
   Wire.write(LTR_REG_CONTR);
   Wire.write(LTR_CONTR_VAL);
   Wire.endTransmission();
-  delay(500);
 
+  // ToF Sensor
+  //sensor_vl53lx.begin();
+  //sensor_vl53lx.VL53LX_Off();
+  //sensor_vl53lx.InitSensor(0x12);
+  //sensor_vl53lx.VL53LX_StartMeasurement();
+  
   // IMU
 
+
+  delay(500);
 }
 
 // Loop indefinitely 
@@ -149,51 +162,60 @@ void loop() {
   */
 
   // LID SENSORS
-  // Light Sensor
-  byte msb = 0, lsb = 0;
-  u_int16_t LTR_CH0_VALUE;
-  u_int16_t LTR_CH1_VALUE;
+    // Light Sensor
+    byte msb = 0, lsb = 0;
+    u_int16_t LTR_CH0_VALUE;
+    u_int16_t LTR_CH1_VALUE;
 
-  //channel 1
-  Wire.beginTransmission(LTR_329_ADDR);
-  Wire.write(LTR_CH1_LOW);
-  Wire.endTransmission();
-  Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
-  delay(1);
-  if(Wire.available())
-    lsb = Wire.read();
-  
-  Wire.beginTransmission(LTR_329_ADDR);
-  Wire.write(LTR_CH1_HIGH);
-  Wire.endTransmission();
-  Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
-  delay(1);
-  if(Wire.available())
-    msb = Wire.read();
+    //channel 1
+    Wire.beginTransmission(LTR_329_ADDR);
+    Wire.write(LTR_CH1_LOW);
+    Wire.endTransmission();
+    Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
+    delay(1);
+    if(Wire.available())
+      lsb = Wire.read();
+    
+    Wire.beginTransmission(LTR_329_ADDR);
+    Wire.write(LTR_CH1_HIGH);
+    Wire.endTransmission();
+    Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
+    delay(1);
+    if(Wire.available())
+      msb = Wire.read();
 
-  LTR_CH1_VALUE = (msb<<8) | lsb;
-  Serial.println(LTR_CH1_VALUE, DEC); //output in steps (16bit)
+    LTR_CH1_VALUE = (msb<<8) | lsb;
+    Serial.println(LTR_CH1_VALUE, DEC); //output in steps (16bit)
 
-  //channel 0
-  Wire.beginTransmission(LTR_329_ADDR);
-  Wire.write(LTR_CH0_LOW);
-  Wire.endTransmission();
-  Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
-  delay(1);
-  if(Wire.available())
-    lsb = Wire.read();
+    //channel 0
+    Wire.beginTransmission(LTR_329_ADDR);
+    Wire.write(LTR_CH0_LOW);
+    Wire.endTransmission();
+    Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
+    delay(1);
+    if(Wire.available())
+      lsb = Wire.read();
 
-  Wire.beginTransmission(LTR_329_ADDR);
-  Wire.write(LTR_CH0_HIGH);
-  Wire.endTransmission();
-  Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
-  delay(1);
-  if(Wire.available())
-    msb = Wire.read();
+    Wire.beginTransmission(LTR_329_ADDR);
+    Wire.write(LTR_CH0_HIGH);
+    Wire.endTransmission();
+    Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
+    delay(1);
+    if(Wire.available())
+      msb = Wire.read();
 
-  LTR_CH0_VALUE = (msb<<8) | lsb;
-  Serial.println(LTR_CH1_VALUE, DEC); //output in steps (16bit)
+    LTR_CH0_VALUE = (msb<<8) | lsb;
+    Serial.println(LTR_CH1_VALUE, DEC); //output in steps (16bit)
 
+    // IMU
+
+
+  // HOPPER SENSORS
+    // Light Sensor
+    // Not going to populate as I2C address is not selectable
+
+    // ToF Sensor
+    // needs development
   delay(1000);
 }
 
