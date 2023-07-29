@@ -69,7 +69,7 @@ void setup() {
   pinMode(LED, OUTPUT);
   pinMode(MPA0, OUTPUT);
   pinMode(MPA1, OUTPUT);
-  
+
   Serial.begin(115200);
   Wire.begin();
 
@@ -178,7 +178,6 @@ void loop() {
   digitalWrite(LED, LOW);
   */
   Serial.print("Temperature #1: ");
-  Serial.println(thermocouple.readInternal());
   double ambientC = thermocouple.readCelsius();
   if (isnan(ambientC)) {
     Serial.println("Thermocouple Fault:");
@@ -190,11 +189,7 @@ void loop() {
     Serial.print("C = ");
     Serial.println(ambientC);
   }
-  digitalWrite(MPA0, HIGH);
-  digitalWrite(MPA1, HIGH);
-  delay(1000);
-  digitalWrite(MPA0, LOW);
-  digitalWrite(MPA1, LOW);
+
   // LID SENSORS
     // Light Sensor
     byte msb = 0, lsb = 0;
