@@ -67,6 +67,9 @@ float readTemperature();
 // Setup
 void setup() {
   pinMode(LED, OUTPUT);
+  pinMode(MPA0, OUTPUT);
+  pinMode(MPA1, OUTPUT);
+  
   Serial.begin(115200);
   Wire.begin();
 
@@ -248,20 +251,6 @@ void loop() {
     // ToF Sensor
     // needs development
   delay(1000);
-}
-
-float readTemperature(){
-  v = spiRead();
-  float thermocouple = 0;
-  if (v == 0) {
-    Serial.print("Temperature sensor not found\n");
-    return thermocouple;
-  }
-  else {
-    thermocouple = v * 0.25;
-    Serial.println(thermocouple);
-    return thermocouple;
-  }
 }
 
 // IMU
