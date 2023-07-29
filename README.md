@@ -29,3 +29,9 @@ Hopper PCB
 # Image
 <img width="987" alt="SmokerCad" src="https://github.com/dwynnychuk/SmartSmoker/assets/92692830/30f151fa-3eb1-4e98-861e-fa84921604d5">
 
+# Suggested Changes for Next Hardware REV
+- Delete 1x ambient light sensors
+- Add a dedicated GND pin for easier use of a logic analyzer
+- Breakout XSHUT and INT pins on main board for easier connection to hopper
+- Footprint change on U4
+- Add control for Traeger interface to implement PID control
