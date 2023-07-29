@@ -21,18 +21,10 @@
 #define clk 18 // SPI SCK
 #define miso 19 // SPI MISO
 
-#ifdef ARDUINO_SAM_DUE
-#define DEV_I2C Wire1
-#elif defined(ARDUINO_ARCH_STM32)
 #define DEV_I2C Wire
-#elif defined(ARDUINO_ARCH_AVR)
-#define DEV_I2C Wire
-#else
-#define DEV_I2C Wire
-#endif
 
-const int LSM_IMU_ADDR_LID = 0x6B; // LID IMU
-const int LSM_IMU_ADDR_HOP = 0x4D; // Hopper IMU
+const int LSM_IMU_ADDR_LID = 0xD7; // LID IMU
+const int LSM_IMU_ADDR_HOP = 0xD5; // Hopper IMU
 
 const int LTR_329_ADDR = 0x29; // LID Light Sensor
 const int LTR_REG_CONTR = 0x80; // LTR Control Register
@@ -42,18 +34,13 @@ const int LTR_CH1_HIGH = 0x89;
 const int LTR_CH0_LOW = 0x8A;
 const int LTR_CH0_HIGH = 0x8B;
 
-int16_t AccX, AccY, AccZ, Tmp, GyroX, GyroY, GyroZ;
-int16_t AccErrorX, AccErrorY, AccErrorZ, GyroErrorX, GyroErrorY, GyroErrorZ;
-float AccAngleX, AccAngleY, AccAngleZ, GyroAngleX, GyroAngleY, GyroAngleZ, BoardTemp;
-float ElapsedTime, CurrentTime, PreviousTime;
-int v = 0;
 double ambientC, internalC, foodC1, foodC2; // measured temperatures in celcius
 
 // Initialize thermocouple
 Adafruit_MAX31855 thermocouple(clk, cs, miso);
 
 // Initialize IMU
-LSM6DSRSensor AccGyr(&Wire, LSM6DSR_I2C_ADD_L);
+LSM6DSRSensor AccGyr(&Wire, LSM_IMU_ADDR_LID);
 
 // Setup
 void setup() {
@@ -64,7 +51,6 @@ void setup() {
   Serial.begin(115200);
   Wire.begin();
   while(!Serial) delay(10);
-
 
   // Light Sensor
   Wire.beginTransmission(LTR_329_ADDR);
@@ -163,25 +149,25 @@ void loop() {
     Serial.println(LTR_CH1_VALUE, DEC); //output in steps (16bit)
 
     // IMU
-  int32_t accelerometer[3];
-  int32_t gyroscope[3];
-  AccGyr.Get_X_Axes(accelerometer);
-  AccGyr.Get_G_Axes(gyroscope);
+    int32_t accelerometer[3];
+    int32_t gyroscope[3];
+    AccGyr.Get_X_Axes(accelerometer);
+    AccGyr.Get_G_Axes(gyroscope);
 
-  // Output data.
-  Serial.print("LSM6DSR: | Acc[mg]: ");
-  Serial.print(accelerometer[0]);
-  Serial.print(" ");
-  Serial.print(accelerometer[1]);
-  Serial.print(" ");
-  Serial.print(accelerometer[2]);
-  Serial.print(" | Gyr[mdps]: ");
-  Serial.print(gyroscope[0]);
-  Serial.print(" ");
-  Serial.print(gyroscope[1]);
-  Serial.print(" ");
-  Serial.print(gyroscope[2]);
-  Serial.println(" |");
+    // IMU Output
+    Serial.print("LSM6DSR: | Acc[mg]: ");
+    Serial.print(accelerometer[0]);
+    Serial.print(" ");
+    Serial.print(accelerometer[1]);
+    Serial.print(" ");
+    Serial.print(accelerometer[2]);
+    Serial.print(" | Gyr[mdps]: ");
+    Serial.print(gyroscope[0]);
+    Serial.print(" ");
+    Serial.print(gyroscope[1]);
+    Serial.print(" ");
+    Serial.print(gyroscope[2]);
+    Serial.println(" |");
 
   // HOPPER SENSORS
     // Light Sensor
