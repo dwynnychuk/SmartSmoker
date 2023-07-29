@@ -41,29 +41,6 @@ double ambientC, internalC, foodC1, foodC2; // measured temperatures in celcius
 // Initialize thermocouple
 Adafruit_MAX31855 thermocouple(clk, cs, miso);
 
-// SPI reading for temperature
-int spiRead() {
-  int rawtmp = 0;
-  int NC = 0;
-  digitalWrite(cs, LOW);
-  delay(200);
-  digitalWrite(clk, HIGH);
-  NC += digitalRead(miso);
-  digitalWrite(clk,LOW); 
-
-  // bit 14 - 0
-  for (int i = 14; i > 0; i--){
-    digitalWrite(clk,HIGH);
-    rawtmp += digitalRead(miso) << i;
-    digitalWrite(clk,LOW);
-  }
-  digitalWrite(cs, HIGH);
-
-  if (NC == 0x00) return 0;
-  return rawtmp >> 3;
-}
-float readTemperature();
-
 // Setup
 void setup() {
   pinMode(LED, OUTPUT);
@@ -104,79 +81,6 @@ void setup() {
 // Loop indefinitely 
 void loop() {
   // Temperature readings
-  /*
-  // Temperature 1
-  digitalWrite(LED, HIGH);
-  delay(100);
-  digitalWrite(LED, LOW);
-  delay(100);
-  digitalWrite(MPA0, 0);
-  digitalWrite(MPA1, 0);
-  digitalWrite(LED, HIGH);
-  ambientC = readTemperature();
-  delay(2000);
-  digitalWrite(LED, LOW);
-
-  // Temperature 2
-  digitalWrite(LED, HIGH);
-  delay(100);
-  digitalWrite(LED, LOW);
-  delay(100);
-  digitalWrite(LED, HIGH);
-  delay(100);
-  digitalWrite(LED, LOW);
-  delay(100);
-  digitalWrite(MPA0, 1);
-  digitalWrite(MPA1, 0);
-  digitalWrite(LED, HIGH);
-  internalC = readTemperature();
-  delay(2000);
-  digitalWrite(LED, LOW);
-
-  // Temperature 3
-  digitalWrite(LED, HIGH);
-  delay(100);
-  digitalWrite(LED, LOW);
-  delay(100);
-  digitalWrite(LED, HIGH);
-  delay(100);
-  digitalWrite(LED, LOW);
-  delay(100);
-  digitalWrite(LED, HIGH);
-  delay(100);
-  digitalWrite(LED, LOW);
-  delay(100);
-  digitalWrite(MPA0, 0);
-  digitalWrite(MPA1, 1);
-  digitalWrite(LED, HIGH);
-  foodC1 = readTemperature();
-  delay(2000);
-  digitalWrite(LED, LOW);
-
-  // Temperature 4
-  digitalWrite(LED, HIGH);
-  delay(100);
-  digitalWrite(LED, LOW);
-  delay(100);
-  digitalWrite(LED, HIGH);
-  delay(100);
-  digitalWrite(LED, LOW);
-  delay(100);
-  digitalWrite(LED, HIGH);
-  delay(100);
-  digitalWrite(LED, LOW);
-  delay(100);
-  digitalWrite(LED, HIGH);
-  delay(100);
-  digitalWrite(LED, LOW);
-  delay(100);
-  digitalWrite(MPA0, 1);
-  digitalWrite(MPA1, 1);
-  digitalWrite(LED, HIGH);
-  foodC2 = readTemperature();
-  delay(2000);
-  digitalWrite(LED, LOW);
-  */
   Serial.print("Temperature #1: ");
   double ambientC = thermocouple.readCelsius();
   if (isnan(ambientC)) {
@@ -214,7 +118,6 @@ void loop() {
       msb = Wire.read();
 
     LTR_CH1_VALUE = (msb<<8) | lsb;
-    Serial.println(LTR_CH1_VALUE, DEC); //output in steps (16bit)
 
     //channel 0
     Wire.beginTransmission(LTR_329_ADDR);
@@ -234,6 +137,10 @@ void loop() {
       msb = Wire.read();
 
     LTR_CH0_VALUE = (msb<<8) | lsb;
+
+    Serial.print("Light Sensor CH 0: ");
+    Serial.println(LTR_CH1_VALUE, DEC); //output in steps (16bit)
+    Serial.print("Light Sensor CH 1: ");
     Serial.println(LTR_CH1_VALUE, DEC); //output in steps (16bit)
 
     // IMU
