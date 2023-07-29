@@ -23,8 +23,8 @@
 
 #define DEV_I2C Wire
 
-const int LSM_IMU_ADDR_LID = 0xD7; // LID IMU
-const int LSM_IMU_ADDR_HOP = 0xD5; // Hopper IMU
+const int LSM_IMU_ADDR_LID = 0xD7; // LID IMU + READ
+const int LSM_IMU_ADDR_HOP = 0xD5; // Hopper IMU + READ
 
 const int LTR_329_ADDR = 0x29; // LID Light Sensor
 const int LTR_REG_CONTR = 0x80; // LTR Control Register
@@ -40,7 +40,8 @@ double ambientC, internalC, foodC1, foodC2; // measured temperatures in celcius
 Adafruit_MAX31855 thermocouple(clk, cs, miso);
 
 // Initialize IMU
-LSM6DSRSensor AccGyr(&Wire, LSM_IMU_ADDR_LID);
+LSM6DSRSensor AccGyrL(&Wire, LSM_IMU_ADDR_LID);
+LSM6DSRSensor AccGyrH(&Wire, LSM_IMU_ADDR_HOP);
 
 // Setup
 void setup() {
@@ -65,9 +66,13 @@ void setup() {
   //sensor_vl53lx.VL53LX_StartMeasurement();
   
   // IMU
-  AccGyr.begin();
-  AccGyr.Enable_X();
-  AccGyr.Enable_G();
+  AccGyrL.begin();
+  AccGyrL.Enable_X();
+  AccGyrL.Enable_G();
+
+  AccGyrH.begin();
+  AccGyrH.Enable_X();
+  AccGyrH.Enable_G();
 
   // Temperature
   Serial.println("MAX31855 test");
@@ -149,24 +154,24 @@ void loop() {
     Serial.println(LTR_CH1_VALUE, DEC); //output in steps (16bit)
 
     // IMU
-    int32_t accelerometer[3];
-    int32_t gyroscope[3];
-    AccGyr.Get_X_Axes(accelerometer);
-    AccGyr.Get_G_Axes(gyroscope);
+    int32_t accelerometerL[3];
+    int32_t gyroscopeL[3];
+    AccGyrL.Get_X_Axes(accelerometerL);
+    AccGyrL.Get_G_Axes(gyroscopeL);
 
     // IMU Output
     Serial.print("LSM6DSR: | Acc[mg]: ");
-    Serial.print(accelerometer[0]);
+    Serial.print(accelerometerL[0]);
     Serial.print(" ");
-    Serial.print(accelerometer[1]);
+    Serial.print(accelerometerL[1]);
     Serial.print(" ");
-    Serial.print(accelerometer[2]);
+    Serial.print(accelerometerL[2]);
     Serial.print(" | Gyr[mdps]: ");
-    Serial.print(gyroscope[0]);
+    Serial.print(gyroscopeL[0]);
     Serial.print(" ");
-    Serial.print(gyroscope[1]);
+    Serial.print(gyroscopeL[1]);
     Serial.print(" ");
-    Serial.print(gyroscope[2]);
+    Serial.print(gyroscopeL[2]);
     Serial.println(" |");
 
   // HOPPER SENSORS
@@ -175,71 +180,29 @@ void loop() {
 
     // ToF Sensor
     // needs development
+
+    // IMU
+    int32_t accelerometerH[3];
+    int32_t gyroscopeH[3];
+    AccGyrH.Get_X_Axes(accelerometerH);
+    AccGyrH.Get_G_Axes(gyroscopeH);
+
+    // IMU Output
+    Serial.print("LSM6DSR: | Acc[mg]: ");
+    Serial.print(accelerometerH[0]);
+    Serial.print(" ");
+    Serial.print(accelerometerH[1]);
+    Serial.print(" ");
+    Serial.print(accelerometerH[2]);
+    Serial.print(" | Gyr[mdps]: ");
+    Serial.print(gyroscopeH[0]);
+    Serial.print(" ");
+    Serial.print(gyroscopeH[1]);
+    Serial.print(" ");
+    Serial.print(gyroscopeH[2]);
+    Serial.println(" |");
   delay(1000);
 }
-
-// IMU
-  /*
-  Wire.beginTransmission(MPU);
-  Wire.write(0x3B); // Begin with register 0x3B Accel_Xout_H
-  Wire.endTransmission(false);
-  Wire.requestFrom(MPU,14);
-  int16_t t = Wire.read();
-
-  AccX = (t << 8) | Wire.read();
-  t = Wire.read();
-  AccY = (t << 8) | Wire.read();
-  t = Wire.read();
-  AccZ = (t << 8) | Wire.read();
-  t = Wire.read();
-  Tmp = (t << 8) | Wire.read();
-  t = Wire.read();
-  GyroX = (t << 8) | Wire.read();
-  t = Wire.read();
-  GyroY = (t << 8) | Wire.read();
-  t = Wire.read();
-  GyroZ = (t << 8) | Wire.read();
-  t = Wire.read();
-
-  AccAngleX = (AccX) / 16384.0;
-  AccAngleY = (AccY) / 16384.0;
-  AccAngleZ = (AccZ)/ 16384.0;
-  BoardTemp = (Tmp / 340) + 36.53;
-  GyroAngleX = GyroX / 131.0;
-  GyroAngleY = GyroY / 131.0;
-  GyroAngleZ = GyroZ / 131.0;
-  
-  // Printing to Serial Monitor
-  Serial.print(BoardTemp);
-  Serial.print(" / ");
-  Serial.print(AccAngleX);
-  Serial.print(" / ");
-  Serial.print(AccAngleY);
-  Serial.print(" / ");
-  Serial.print(AccAngleZ);
-  Serial.print(" / ");
-  Serial.print(GyroX);
-  Serial.print(" / ");
-  Serial.print(GyroY);
-  Serial.print(" / ");
-  Serial.println(GyroZ);
-  */  
-  /*
-  Wire.beginTransmission(MPU);
-  Wire.write(0x6B);
-  Wire.write(0);
-  Wire.endTransmission(true);
-
-  Wire.beginTransmission(MPU);
-  Wire.write(0x1B);
-  Wire.write(0);
-  Wire.endTransmission(true);
-
-  Wire.beginTransmission(MPU);
-  Wire.write(0x1C);
-  Wire.write(0);
-  Wire.endTransmission(true);
-  */
 
 // BLE
   /*
