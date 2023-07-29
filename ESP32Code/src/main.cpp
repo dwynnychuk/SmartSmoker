@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <assert.h>
+#include "Adafruit_MAX31855.h"
 
 #define LED 17 // Internal LED
 #define MPA0 2 // A0 for Multiplexer
@@ -35,7 +36,10 @@ int16_t AccErrorX, AccErrorY, AccErrorZ, GyroErrorX, GyroErrorY, GyroErrorZ;
 float AccAngleX, AccAngleY, AccAngleZ, GyroAngleX, GyroAngleY, GyroAngleZ, BoardTemp;
 float ElapsedTime, CurrentTime, PreviousTime;
 int v = 0;
-float ambientC, internalC, foodC1, foodC2; // measured temperatures in celcius
+double ambientC, internalC, foodC1, foodC2; // measured temperatures in celcius
+
+// Initialize thermocouple
+Adafruit_MAX31855 thermocouple(clk, cs, miso);
 
 // SPI reading for temperature
 int spiRead() {
@@ -80,8 +84,18 @@ void setup() {
   
   // IMU
 
-
+  // Temperature
+  Serial.println("MAX31855 test");
+  digitalWrite(MPA0, LOW);
+  digitalWrite(MPA1, LOW);
   delay(500);
+  Serial.print("Initializing Sensor...");
+  if (!thermocouple.begin()) {
+    Serial.print("ERROR");
+    while(1) delay(10);
+  }
+  Serial.print("DONE");
+
 }
 
 // Loop indefinitely 
@@ -160,7 +174,24 @@ void loop() {
   delay(2000);
   digitalWrite(LED, LOW);
   */
-
+  Serial.print("Temperature #1: ");
+  Serial.println(thermocouple.readInternal());
+  double ambientC = thermocouple.readCelsius();
+  if (isnan(ambientC)) {
+    Serial.println("Thermocouple Fault:");
+    uint8_t therm_error = thermocouple.readError();
+    if (therm_error & MAX31855_FAULT_OPEN) Serial.println("FAULT: Thermocouple is open - no connection.");
+    if (therm_error & MAX31855_FAULT_SHORT_GND) Serial.println("FAULT: Thermocouple is shorted to GND.");
+    if (therm_error & MAX31855_FAULT_SHORT_VCC) Serial.println("FAULT: Thermocouple is shorted to VCC.");
+  } else {
+    Serial.print("C = ");
+    Serial.println(ambientC);
+  }
+  digitalWrite(MPA0, HIGH);
+  digitalWrite(MPA1, HIGH);
+  delay(1000);
+  digitalWrite(MPA0, LOW);
+  digitalWrite(MPA1, LOW);
   // LID SENSORS
     // Light Sensor
     byte msb = 0, lsb = 0;
