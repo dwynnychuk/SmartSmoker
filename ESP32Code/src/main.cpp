@@ -39,7 +39,7 @@ double ambientC, internalC, foodC1, foodC2; // measured temperatures in celcius
 // Initialize thermocouple
 Adafruit_MAX31855 thermocouple(clk, cs, miso);
 
-// Initialize IMU
+// Initialize IMU(s)
 LSM6DSRSensor AccGyrL(&Wire, LSM_IMU_ADDR_LID);
 LSM6DSRSensor AccGyrH(&Wire, LSM_IMU_ADDR_HOP);
 
