@@ -6741,10 +6741,10 @@
     (path "/19a5f0d3-9633-4122-baef-2beb570111c5/83c33c57-efe5-499f-839e-40ef80426cec"
       (reference "#PWR063") (unit 1) (value "GND") (footprint "")
     )
-    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/5be292d8-55d2-494c-a6d0-f23a0fb25ad6"
+    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/84c46056-0d2c-4dc4-9082-24e739e418a6"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
-    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/84c46056-0d2c-4dc4-9082-24e739e418a6"
+    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/9d08e138-9995-485e-9e3b-836cb2df23ef"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
     (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/ec1a050c-b88d-43f4-8d36-dfa1d3fead78"
@@ -6801,6 +6801,12 @@
     (path "/19a5f0d3-9633-4122-baef-2beb570111c5/c07ef757-d982-4abe-8b1e-8f8ffebc60ee"
       (reference "C21") (unit 1) (value "0.1uF 50V X7R 0603") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
+    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/1d45caba-66c7-4dff-abc1-e2d8b416efe8"
+      (reference "C?") (unit 1) (value "Film 0.1uF 305V 15mm") (footprint "Capacitor_THT:C_Rect_L18.0mm_W6.0mm_P15.00mm_FKS3_FKP3")
+    )
+    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/4136507c-ba7b-4354-b984-c30ce7c57c29"
+      (reference "C?") (unit 1) (value "Film 0.1uF 305V 15mm") (footprint "Capacitor_THT:C_Rect_L18.0mm_W6.0mm_P15.00mm_FKS3_FKP3")
+    )
     (path "/1a817d58-7a97-417b-8931-87f73d08581c"
       (reference "D2") (unit 1) (value "Y 2V 20mA") (footprint "LED_SMD:LED_0603_1608Metric")
     )
@@ -6815,12 +6821,6 @@
     )
     (path "/512d3e85-61ec-400c-953f-dabaa49dbe31"
       (reference "D6") (unit 1) (value "SP0503BAHT") (footprint "Package_TO_SOT_SMD:SOT-143")
-    )
-    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/a7529f73-0cac-4eac-a1a6-bf34a4234e95"
-      (reference "D?") (unit 1) (value "D_TVS") (footprint "Customs Smoker:DIOM7959X262N")
-    )
-    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/b00e87a7-5ba9-448c-81d0-5f942d8b01db"
-      (reference "D?") (unit 1) (value "D_TVS") (footprint "Customs Smoker:DIOM7959X262N")
     )
     (path "/6fbfe9d4-b64b-4ab2-a415-b2b998c73c1d"
       (reference "H1") (unit 1) (value "AC_GND") (footprint "MountingHole:MountingHole_3.2mm_M3_Pad_Via")
@@ -6868,10 +6868,10 @@
       (reference "J?") (unit 1) (value "FAN") (footprint "TestPoint:TestPoint_2Pads_Pitch5.08mm_Drill1.3mm")
     )
     (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/c18050ee-de75-4b77-b6b9-6587f6c4b0f9"
-      (reference "J?") (unit 1) (value "HEATER") (footprint "TestPoint:TestPoint_2Pads_Pitch5.08mm_Drill1.3mm")
+      (reference "J?") (unit 1) (value "Ignitor") (footprint "TestPoint:TestPoint_2Pads_Pitch5.08mm_Drill1.3mm")
     )
     (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/f532e62f-a911-4911-a70c-887cc73535b4"
-      (reference "J?") (unit 1) (value "AUGER") (footprint "TestPoint:TestPoint_2Pads_Pitch5.08mm_Drill1.3mm")
+      (reference "J?") (unit 1) (value "Auger") (footprint "TestPoint:TestPoint_2Pads_Pitch5.08mm_Drill1.3mm")
     )
     (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/7db81ce3-6e66-4f8d-9a8b-2bcad1f1550b"
       (reference "K?") (unit 1) (value "CPC1966Y") (footprint "Customs Smoker:SIP4_CPC1966Y_LTF")
@@ -6942,14 +6942,20 @@
     (path "/19a5f0d3-9633-4122-baef-2beb570111c5/06508cbf-d6f5-4078-9583-a7834f34d39d"
       (reference "R25") (unit 1) (value "470Ohm 5% 0603") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
-    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/3fffa317-7fb7-4ae0-b783-ea71610df925"
-      (reference "R?") (unit 1) (value "973Ohm 1% 0603") (footprint "Resistor_SMD:R_0603_1608Metric")
+    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/7f95002a-f528-4718-8df9-bf7083be91d8"
+      (reference "R?") (unit 1) (value "47Ohm 5% 1/2W") (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Vertical")
     )
-    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/47826a3d-b791-40ca-b29d-89fdd26a530b"
-      (reference "R?") (unit 1) (value "973Ohm 1% 0603") (footprint "Resistor_SMD:R_0603_1608Metric")
+    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/869f562d-94f6-4848-b83f-4fc30c8bc101"
+      (reference "R?") (unit 1) (value "105Ohm 1% 0603") (footprint "Resistor_SMD:R_0603_1608Metric")
+    )
+    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/a14c364f-7e77-4fef-b3db-29eb46825cfd"
+      (reference "R?") (unit 1) (value "47Ohm 5% 1/2W") (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Vertical")
     )
     (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/b386d243-b330-4ffe-9a91-9cc9f0092285"
-      (reference "R?") (unit 1) (value "973Ohm 1% 0603") (footprint "Resistor_SMD:R_0603_1608Metric")
+      (reference "R?") (unit 1) (value "105Ohm 1% 0603") (footprint "Resistor_SMD:R_0603_1608Metric")
+    )
+    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/b9c17169-7d7a-4250-974f-85cbff4bfe30"
+      (reference "R?") (unit 1) (value "105Ohm 1% 0603") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/ebf21bf1-a2ae-4942-acf5-e9bede86ed81"
       (reference "S1") (unit 1) (value "TL1015AF160QG") (footprint "Customs Smoker:SW_TL1015AF160QG")
@@ -7008,10 +7014,10 @@
     (path "/19a5f0d3-9633-4122-baef-2beb570111c5/54f904be-76e3-4030-bc05-f039570faeb0"
       (reference "U9") (unit 1) (value "LTC4412xS6") (footprint "Package_TO_SOT_SMD:TSOT-23-6")
     )
-    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/7a7a3314-ea25-4357-a137-e9a2d4c93319"
+    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/141cca95-70fa-4237-98c1-a5e8b367c27e"
       (reference "U?") (unit 1) (value "AQH3223A") (footprint "Package_SO:SSO-7-8_6.4x9.78mm_P2.54mm")
     )
-    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/c347aa34-71d7-4432-8f3b-6deb36ea5cd2"
+    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/7a7a3314-ea25-4357-a137-e9a2d4c93319"
       (reference "U?") (unit 1) (value "AQH3223A") (footprint "Package_SO:SSO-7-8_6.4x9.78mm_P2.54mm")
     )
   )
