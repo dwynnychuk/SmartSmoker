@@ -489,6 +489,10 @@
     [
       "19a5f0d3-9633-4122-baef-2beb570111c5",
       "Power"
+    ],
+    [
+      "5b73f7e4-f14d-4438-9be5-957d9562dd1a",
+      "Loads"
     ]
   ],
   "text_variables": {}
