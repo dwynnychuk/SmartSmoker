@@ -14,17 +14,17 @@
 #include "Adafruit_MAX31855.h"
 #include <LSM6DSRSensor.h>
 
-#define LED 17 // Internal LED
-#define MPA0 2 // A0 for Multiplexer
+#define LED 17  // Internal LED
+#define MPA0 2  // A0 for Multiplexer
 #define MPA1 15 // A1 for Multiplexer
-#define cs 5 // SPI CS
-#define clk 18 // SPI SCK
+#define cs 5    // SPI CS
+#define clk 18  // SPI SCK
 #define miso 19 // SPI MISO
 
 #define DEV_I2C Wire
 
-#define BLE_Server_Name     "ESP32 Smoker"
-#define SERVICE_UUID        "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
+#define BLE_Server_Name "ESP32 Smoker"
+#define SERVICE_UUID "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
 #define CHARACTERISTIC_UUID "beb5483e-36e1-4688-b7f5-ea07361b26a8"
 
 bool Device_Connected = false;
@@ -32,7 +32,7 @@ bool Device_Connected = false;
 const int LSM_IMU_ADDR_LID = 0xD7; // LID IMU + READ
 const int LSM_IMU_ADDR_HOP = 0xD5; // Hopper IMU + READ
 
-const int LTR_329_ADDR = 0x29; // LID Light Sensor
+const int LTR_329_ADDR = 0x29;  // LID Light Sensor
 const int LTR_REG_CONTR = 0x80; // LTR Control Register
 const int LTR_CONTR_VAL = 0x0D; // 8x gain
 const int LTR_CH1_LOW = 0x88;
@@ -49,15 +49,68 @@ Adafruit_MAX31855 thermocouple(clk, cs, miso);
 LSM6DSRSensor AccGyrL(&Wire, LSM_IMU_ADDR_LID);
 LSM6DSRSensor AccGyrH(&Wire, LSM_IMU_ADDR_HOP);
 
+// BLE Setup
+BLECharacteristic AccLXCharacteristics("f78ebbff-c8b7-4107-93de-889a6a06d408", BLECharacteristic::PROPERTY_NOTIFY);
+BLEDescriptor AccLXDescriptor(BLEUUID((uint16_t)0x2902));
+
+BLECharacteristic AccHXCharacteristics("ca73b3ba-39f6-4ab3-91ae-186dc9577d99", BLECharacteristic::PROPERTY_NOTIFY);
+BLEDescriptor AccHXDescriptor(BLEUUID((uint16_t)0x2903));
+
+// BLE Setup callbacks onConnect and onDisconnect
+class MyServerCallbacks : public BLEServerCallbacks
+{
+  void onConnect(BLEServer *pServer)
+  {
+    Device_Connected = true;
+  };
+  void onDisconnect(BLEServer *pServer)
+  {
+    Device_Connected = false;
+  }
+};
+
 // Setup
-void setup() {
+void setup()
+{
   pinMode(LED, OUTPUT);
   pinMode(MPA0, OUTPUT);
   pinMode(MPA1, OUTPUT);
 
   Serial.begin(115200);
   Wire.begin();
-  while(!Serial) delay(10);
+  while (!Serial)
+    delay(10);
+
+  // BLE
+  // Create the BLE Device
+  BLEDevice::init(BLE_Server_Name);
+
+  // Create the BLE Server
+  BLEServer *pServer = BLEDevice::createServer();
+  pServer->setCallbacks(new MyServerCallbacks());
+
+  // Create the BLE Service
+  BLEService *BleService = pServer->createService(SERVICE_UUID);
+
+  // Create BLE Characteristics and Create a BLE Descriptor
+  BleService->addCharacteristic(&AccLXCharacteristics);
+  AccLXDescriptor.setValue("Lid ACC X Value");
+  AccLXCharacteristics.addDescriptor(&AccLXDescriptor);
+
+  // Humidity
+  BleService->addCharacteristic(&AccHXCharacteristics);
+  AccHXDescriptor.setValue("Hopper ACC X Value");
+  AccHXCharacteristics.addDescriptor(new BLE2902());
+
+  // Start the service
+  BleService->start();
+
+  // Start advertising
+  BLEAdvertising *pAdvertising = BLEDevice::getAdvertising();
+  pAdvertising->addServiceUUID(SERVICE_UUID);
+  pServer->getAdvertising()->start();
+  Serial.println("Waiting a client connection to notify...");
+  // End of BLE
 
   // Light Sensor
   Wire.beginTransmission(LTR_329_ADDR);
@@ -66,11 +119,11 @@ void setup() {
   Wire.endTransmission();
 
   // ToF Sensor
-  //sensor_vl53lx.begin();
-  //sensor_vl53lx.VL53LX_Off();
-  //sensor_vl53lx.InitSensor(0x12);
-  //sensor_vl53lx.VL53LX_StartMeasurement();
-  
+  // sensor_vl53lx.begin();
+  // sensor_vl53lx.VL53LX_Off();
+  // sensor_vl53lx.InitSensor(0x12);
+  // sensor_vl53lx.VL53LX_StartMeasurement();
+
   // IMU
   AccGyrL.begin();
   AccGyrL.Enable_X();
@@ -86,139 +139,168 @@ void setup() {
   digitalWrite(MPA1, LOW);
   delay(500);
   Serial.print("Initializing Sensor...");
-  if (!thermocouple.begin()) {
+  if (!thermocouple.begin())
+  {
     Serial.print("ERROR");
-    while(1) delay(10);
+    while (1)
+      delay(10);
   }
   Serial.print("DONE");
-
 }
 
-// Loop indefinitely 
-void loop() {
+// Loop indefinitely
+void loop()
+{
   // Turn on LED
   digitalWrite(LED, HIGH);
-  
+
   // Temperature readings
   Serial.print("Temperature #1: ");
   double ambientC = thermocouple.readCelsius();
-  if (isnan(ambientC)) {
+  if (isnan(ambientC))
+  {
     Serial.println("Thermocouple Fault:");
     uint8_t therm_error = thermocouple.readError();
-    if (therm_error & MAX31855_FAULT_OPEN) Serial.println("FAULT: Thermocouple is open - no connection.");
-    if (therm_error & MAX31855_FAULT_SHORT_GND) Serial.println("FAULT: Thermocouple is shorted to GND.");
-    if (therm_error & MAX31855_FAULT_SHORT_VCC) Serial.println("FAULT: Thermocouple is shorted to VCC.");
-  } else {
+    if (therm_error & MAX31855_FAULT_OPEN)
+      Serial.println("FAULT: Thermocouple is open - no connection.");
+    if (therm_error & MAX31855_FAULT_SHORT_GND)
+      Serial.println("FAULT: Thermocouple is shorted to GND.");
+    if (therm_error & MAX31855_FAULT_SHORT_VCC)
+      Serial.println("FAULT: Thermocouple is shorted to VCC.");
+  }
+  else
+  {
     Serial.print("C = ");
     Serial.println(ambientC);
   }
 
   // LID SENSORS
-    // Light Sensor
-    byte msb = 0, lsb = 0;
-    u_int16_t LTR_CH0_VALUE;
-    u_int16_t LTR_CH1_VALUE;
+  // Light Sensor
+  byte msb = 0, lsb = 0;
+  u_int16_t LTR_CH0_VALUE;
+  u_int16_t LTR_CH1_VALUE;
 
-    //channel 1
-    Wire.beginTransmission(LTR_329_ADDR);
-    Wire.write(LTR_CH1_LOW);
-    Wire.endTransmission();
-    Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
-    delay(1);
-    if(Wire.available())
-      lsb = Wire.read();
-    
-    Wire.beginTransmission(LTR_329_ADDR);
-    Wire.write(LTR_CH1_HIGH);
-    Wire.endTransmission();
-    Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
-    delay(1);
-    if(Wire.available())
-      msb = Wire.read();
+  // channel 1
+  Wire.beginTransmission(LTR_329_ADDR);
+  Wire.write(LTR_CH1_LOW);
+  Wire.endTransmission();
+  Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
+  delay(1);
+  if (Wire.available())
+    lsb = Wire.read();
 
-    LTR_CH1_VALUE = (msb<<8) | lsb;
+  Wire.beginTransmission(LTR_329_ADDR);
+  Wire.write(LTR_CH1_HIGH);
+  Wire.endTransmission();
+  Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
+  delay(1);
+  if (Wire.available())
+    msb = Wire.read();
 
-    //channel 0
-    Wire.beginTransmission(LTR_329_ADDR);
-    Wire.write(LTR_CH0_LOW);
-    Wire.endTransmission();
-    Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
-    delay(1);
-    if(Wire.available())
-      lsb = Wire.read();
+  LTR_CH1_VALUE = (msb << 8) | lsb;
 
-    Wire.beginTransmission(LTR_329_ADDR);
-    Wire.write(LTR_CH0_HIGH);
-    Wire.endTransmission();
-    Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
-    delay(1);
-    if(Wire.available())
-      msb = Wire.read();
+  // channel 0
+  Wire.beginTransmission(LTR_329_ADDR);
+  Wire.write(LTR_CH0_LOW);
+  Wire.endTransmission();
+  Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
+  delay(1);
+  if (Wire.available())
+    lsb = Wire.read();
 
-    LTR_CH0_VALUE = (msb<<8) | lsb;
+  Wire.beginTransmission(LTR_329_ADDR);
+  Wire.write(LTR_CH0_HIGH);
+  Wire.endTransmission();
+  Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
+  delay(1);
+  if (Wire.available())
+    msb = Wire.read();
 
-    Serial.print("Light Sensor CH 0: ");
-    Serial.println(LTR_CH1_VALUE, DEC); //output in steps (16bit)
-    Serial.print("Light Sensor CH 1: ");
-    Serial.println(LTR_CH1_VALUE, DEC); //output in steps (16bit)
+  LTR_CH0_VALUE = (msb << 8) | lsb;
 
-    // IMU
-    int32_t accelerometerL[3];
-    int32_t gyroscopeL[3];
-    AccGyrL.Get_X_Axes(accelerometerL);
-    AccGyrL.Get_G_Axes(gyroscopeL);
+  Serial.print("Light Sensor CH 0: ");
+  Serial.println(LTR_CH1_VALUE, DEC); // output in steps (16bit)
+  Serial.print("Light Sensor CH 1: ");
+  Serial.println(LTR_CH1_VALUE, DEC); // output in steps (16bit)
 
-    // IMU Output
-    Serial.print("LSM6DSR: | Acc[mg]: ");
-    Serial.print(accelerometerL[0]);
-    Serial.print(" ");
-    Serial.print(accelerometerL[1]);
-    Serial.print(" ");
-    Serial.print(accelerometerL[2]);
-    Serial.print(" | Gyr[mdps]: ");
-    Serial.print(gyroscopeL[0]);
-    Serial.print(" ");
-    Serial.print(gyroscopeL[1]);
-    Serial.print(" ");
-    Serial.print(gyroscopeL[2]);
-    Serial.println(" |");
+  // IMU
+  int32_t accelerometerL[3];
+  int32_t gyroscopeL[3];
+  AccGyrL.Get_X_Axes(accelerometerL);
+  AccGyrL.Get_G_Axes(gyroscopeL);
+
+  // IMU Output
+  Serial.print("LSM6DSR: | Acc[mg]: ");
+  Serial.print(accelerometerL[0]);
+  Serial.print(" ");
+  Serial.print(accelerometerL[1]);
+  Serial.print(" ");
+  Serial.print(accelerometerL[2]);
+  Serial.print(" | Gyr[mdps]: ");
+  Serial.print(gyroscopeL[0]);
+  Serial.print(" ");
+  Serial.print(gyroscopeL[1]);
+  Serial.print(" ");
+  Serial.print(gyroscopeL[2]);
+  Serial.println(" |");
 
   // HOPPER SENSORS
-    // Light Sensor
-    // Not going to populate as I2C address is not selectable
+  // Light Sensor
+  // Not going to populate as I2C address is not selectable
 
-    // ToF Sensor
-    // needs development
+  // ToF Sensor
+  // needs development
 
-    // IMU
-    int32_t accelerometerH[3];
-    int32_t gyroscopeH[3];
-    AccGyrH.Get_X_Axes(accelerometerH);
-    AccGyrH.Get_G_Axes(gyroscopeH);
+  // IMU
+  int32_t accelerometerH[3];
+  int32_t gyroscopeH[3];
+  AccGyrH.Get_X_Axes(accelerometerH);
+  AccGyrH.Get_G_Axes(gyroscopeH);
 
-    // IMU Output
-    Serial.print("LSM6DSR: | Acc[mg]: ");
-    Serial.print(accelerometerH[0]);
-    Serial.print(" ");
-    Serial.print(accelerometerH[1]);
-    Serial.print(" ");
-    Serial.print(accelerometerH[2]);
-    Serial.print(" | Gyr[mdps]: ");
-    Serial.print(gyroscopeH[0]);
-    Serial.print(" ");
-    Serial.print(gyroscopeH[1]);
-    Serial.print(" ");
-    Serial.print(gyroscopeH[2]);
-    Serial.println(" |");
+  // IMU Output
+  Serial.print("LSM6DSR: | Acc[mg]: ");
+  Serial.print(accelerometerH[0]);
+  Serial.print(" ");
+  Serial.print(accelerometerH[1]);
+  Serial.print(" ");
+  Serial.print(accelerometerH[2]);
+  Serial.print(" | Gyr[mdps]: ");
+  Serial.print(gyroscopeH[0]);
+  Serial.print(" ");
+  Serial.print(gyroscopeH[1]);
+  Serial.print(" ");
+  Serial.print(gyroscopeH[2]);
+  Serial.println(" |");
   delay(500);
 
   // Turn off LED
-  digitalWrite(LED,LOW);
+  digitalWrite(LED, LOW);
   delay(500);
+
+  // BLE
+  if (Device_Connected)
+  {
+    static char AccLXString[6];
+    dtostrf(accelerometerL[0], 6, 2, AccLXString);
+    // Set temperature Characteristic value and notify connected client
+    AccLXCharacteristics.setValue(AccLXString);
+    AccLXCharacteristics.notify();
+    Serial.print("Acceleration Lid X: ");
+    Serial.print(accelerometerL[0]);
+
+    static char AccHXString[6];
+    dtostrf(accelerometerH[0], 6, 2, AccHXString);
+    // Set temperature Characteristic value and notify connected client
+    AccHXCharacteristics.setValue(AccHXString);
+    AccHXCharacteristics.notify();
+    Serial.print("Acceleration Hopper X: ");
+    Serial.print(accelerometerH[0]);
+  }
 }
 
+/*
 // BLE
-  
+
   BLEDevice::init("ESP32"); // initialize device
 
   // Create BLE Server
@@ -260,3 +342,4 @@ class ServerCallbacks: public BLEServerCallbacks{
     deviceConnected = false;
   }
 };
+*/
