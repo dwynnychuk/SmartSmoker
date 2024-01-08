@@ -23,6 +23,12 @@
 
 #define DEV_I2C Wire
 
+#define BLE_Server_Name     "ESP32 Smoker"
+#define SERVICE_UUID        "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
+#define CHARACTERISTIC_UUID "beb5483e-36e1-4688-b7f5-ea07361b26a8"
+
+bool Device_Connected = false;
+
 const int LSM_IMU_ADDR_LID = 0xD7; // LID IMU + READ
 const int LSM_IMU_ADDR_HOP = 0xD5; // Hopper IMU + READ
 
@@ -39,7 +45,7 @@ double ambientC, internalC, foodC1, foodC2; // measured temperatures in celcius
 // Initialize thermocouple
 Adafruit_MAX31855 thermocouple(clk, cs, miso);
 
-// Initialize IMU(s)
+// Initialize IMU
 LSM6DSRSensor AccGyrL(&Wire, LSM_IMU_ADDR_LID);
 LSM6DSRSensor AccGyrH(&Wire, LSM_IMU_ADDR_HOP);
 
@@ -90,6 +96,9 @@ void setup() {
 
 // Loop indefinitely 
 void loop() {
+  // Turn on LED
+  digitalWrite(LED, HIGH);
+  
   // Temperature readings
   Serial.print("Temperature #1: ");
   double ambientC = thermocouple.readCelsius();
@@ -201,11 +210,15 @@ void loop() {
     Serial.print(" ");
     Serial.print(gyroscopeH[2]);
     Serial.println(" |");
-  delay(1000);
+  delay(500);
+
+  // Turn off LED
+  digitalWrite(LED,LOW);
+  delay(500);
 }
 
 // BLE
-  /*
+  
   BLEDevice::init("ESP32"); // initialize device
 
   // Create BLE Server
@@ -228,9 +241,7 @@ void loop() {
   pServer->getAdvertising()->addServiceUUID(environmentalService);
   pEnvironment->start();
   Serial.println("Waiting for a client connection...");
-}
-*/
-  /*
+
 #define environmentalService BLEUUID((uint16_t)0x181A)
 BLECharacteristic temperatureCharacteristic(
   BLEUUID((uint16_t)0x2A6E),
@@ -249,4 +260,3 @@ class ServerCallbacks: public BLEServerCallbacks{
     deviceConnected = false;
   }
 };
-*/
