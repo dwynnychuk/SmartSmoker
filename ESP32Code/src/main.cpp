@@ -23,12 +23,6 @@
 
 #define DEV_I2C Wire
 
-#define BLE_Server_Name "ESP32 Smoker"
-#define SERVICE_UUID "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
-#define CHARACTERISTIC_UUID "beb5483e-36e1-4688-b7f5-ea07361b26a8"
-
-bool Device_Connected = false;
-
 const int LSM_IMU_ADDR_LID = 0xD7; // LID IMU + READ
 const int LSM_IMU_ADDR_HOP = 0xD5; // Hopper IMU + READ
 
@@ -50,12 +44,13 @@ LSM6DSRSensor AccGyrL(&Wire, LSM_IMU_ADDR_LID);
 LSM6DSRSensor AccGyrH(&Wire, LSM_IMU_ADDR_HOP);
 
 // BLE Setup
-BLECharacteristic AccLXCharacteristics("f78ebbff-c8b7-4107-93de-889a6a06d408", BLECharacteristic::PROPERTY_NOTIFY);
-BLEDescriptor AccLXDescriptor(BLEUUID((uint16_t)0x2902));
-
-BLECharacteristic AccHXCharacteristics("ca73b3ba-39f6-4ab3-91ae-186dc9577d99", BLECharacteristic::PROPERTY_NOTIFY);
-BLEDescriptor AccHXDescriptor(BLEUUID((uint16_t)0x2903));
-
+#define BLE_Server_Name "ESP32 Smoker"
+BLEServer* pServer = NULL;
+BLECharacteristic* pCharacteristic = NULL;
+bool Device_Connected = false;
+bool Old_Device_Connected = false;
+#define SERVICE_UUID "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
+#define AccLXCharacteristic_UUID "beb5483e-36e1-4688-b7f5-ea07361b26a8"
 // BLE Setup callbacks onConnect and onDisconnect
 class MyServerCallbacks : public BLEServerCallbacks
 {
@@ -68,6 +63,12 @@ class MyServerCallbacks : public BLEServerCallbacks
     Device_Connected = false;
   }
 };
+BLECharacteristic AccLXCharacteristic("f78ebbff-c8b7-4107-93de-889a6a06d408", BLECharacteristic::PROPERTY_NOTIFY | BLECharacteristic::PROPERTY_READ);
+BLEDescriptor AccLXDescriptor(BLEUUID((uint16_t)0x2902));
+
+//BLECharacteristic AccHXCharacteristics("ca73b3ba-39f6-4ab3-91ae-186dc9577d99", BLECharacteristic::PROPERTY_NOTIFY);
+//BLEDescriptor AccHXDescriptor(BLEUUID((uint16_t)0x2903));
+
 
 // Setup
 void setup()
@@ -90,25 +91,28 @@ void setup()
   pServer->setCallbacks(new MyServerCallbacks());
 
   // Create the BLE Service
-  BLEService *BleService = pServer->createService(SERVICE_UUID);
+  BLEService *pService = pServer->createService(SERVICE_UUID);
 
   // Create BLE Characteristics and Create a BLE Descriptor
-  BleService->addCharacteristic(&AccLXCharacteristics);
+  pService->addCharacteristic(&AccLXCharacteristic);
   AccLXDescriptor.setValue("Lid ACC X Value");
-  AccLXCharacteristics.addDescriptor(&AccLXDescriptor);
+  AccLXCharacteristic.addDescriptor(&AccLXDescriptor);
 
   // Humidity
-  BleService->addCharacteristic(&AccHXCharacteristics);
-  AccHXDescriptor.setValue("Hopper ACC X Value");
-  AccHXCharacteristics.addDescriptor(new BLE2902());
+  //pService->addCharacteristic(&AccHXCharacteristic);
+  //AccHXDescriptor.setValue("Hopper ACC X Value");
+  //AccHXCharacteristics.addDescriptor(new BLE2902());
 
   // Start the service
-  BleService->start();
+  pService->start();
 
   // Start advertising
   BLEAdvertising *pAdvertising = BLEDevice::getAdvertising();
   pAdvertising->addServiceUUID(SERVICE_UUID);
-  pServer->getAdvertising()->start();
+  pAdvertising->setScanResponse(false);
+  pAdvertising->setMinPreferred(0x0);
+  BLEDevice::startAdvertising();
+  //pServer->getAdvertising()->start();
   Serial.println("Waiting a client connection to notify...");
   // End of BLE
 
@@ -283,18 +287,18 @@ void loop()
     static char AccLXString[6];
     dtostrf(accelerometerL[0], 6, 2, AccLXString);
     // Set temperature Characteristic value and notify connected client
-    AccLXCharacteristics.setValue(AccLXString);
-    AccLXCharacteristics.notify();
+    AccLXCharacteristic.setValue(AccLXString);
+    AccLXCharacteristic.notify();
     Serial.print("Acceleration Lid X: ");
     Serial.print(accelerometerL[0]);
 
-    static char AccHXString[6];
-    dtostrf(accelerometerH[0], 6, 2, AccHXString);
+    //static char AccHXString[6];
+    //dtostrf(accelerometerH[0], 6, 2, AccHXString);
     // Set temperature Characteristic value and notify connected client
-    AccHXCharacteristics.setValue(AccHXString);
-    AccHXCharacteristics.notify();
-    Serial.print("Acceleration Hopper X: ");
-    Serial.print(accelerometerH[0]);
+    //AccHXCharacteristics.setValue(AccHXString);
+    //AccHXCharacteristics.notify();
+    //Serial.print("Acceleration Hopper X: ");
+    //Serial.print(accelerometerH[0]);
   }
 }
 
