@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		637A86C72B4CFA2500D2E69D /* BluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637A86C62B4CFA2500D2E69D /* BluetoothService.swift */; };
 		638B5326298CB1F9005E8D76 /* SmartSmokerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638B5325298CB1F9005E8D76 /* SmartSmokerApp.swift */; };
 		638B5328298CB1F9005E8D76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638B5327298CB1F9005E8D76 /* ContentView.swift */; };
 		638B532A298CB1FB005E8D76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 638B5329298CB1FB005E8D76 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		637A86C62B4CFA2500D2E69D /* BluetoothService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothService.swift; sourceTree = "<group>"; };
 		638B5322298CB1F9005E8D76 /* SmartSmoker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartSmoker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		638B5325298CB1F9005E8D76 /* SmartSmokerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSmokerApp.swift; sourceTree = "<group>"; };
 		638B5327298CB1F9005E8D76 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 		638B5324298CB1F9005E8D76 /* SmartSmoker */ = {
 			isa = PBXGroup;
 			children = (
+				637A86C62B4CFA2500D2E69D /* BluetoothService.swift */,
 				638B5325298CB1F9005E8D76 /* SmartSmokerApp.swift */,
 				638B5327298CB1F9005E8D76 /* ContentView.swift */,
 				638B5329298CB1FB005E8D76 /* Assets.xcassets */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				638B5328298CB1F9005E8D76 /* ContentView.swift in Sources */,
+				637A86C72B4CFA2500D2E69D /* BluetoothService.swift in Sources */,
 				638B5326298CB1F9005E8D76 /* SmartSmokerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
