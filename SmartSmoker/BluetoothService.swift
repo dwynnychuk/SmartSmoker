@@ -31,4 +31,21 @@ class BluetoothService: NSObject, ObservableObject{
     
     var AccLXPeripheral: CBPeripheral?
     @Published var peripheralStatus: ConnectionStatus = .disconnected
+    
+    override init() {
+        super.init()
+        centralManager = CBCentralManager(delegate: self, queue: nil)
+    }
+    
+    func scanForPeripherals() {
+        centralManager.scanForPeripherals(withServices: <#T##[CBUUID]?#>)
+    }
+}
+
+extension BluetoothService: CBCentralManagerDelegate {
+    func centralManagerDidUpdateState(_ central: CBCentralManager) {
+        if central.state == .poweredOn {
+            scanForPeripherals()
+        }
+    }
 }
