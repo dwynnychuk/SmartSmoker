@@ -16,7 +16,7 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello, lets smoke!")
+            Text("Hello, lets smoke!!")
             Text(service.peripheralStatus.rawValue).font(.title2)
             Text("\(service.AccLXValue)")
         }
