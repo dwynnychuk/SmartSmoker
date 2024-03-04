@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var service = BluetoothService()
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("Hello, lets smoke!")
+            Text(service.peripheralStatus.rawValue).font(.title2)
+            Text("\(service.AccLXValue)")
         }
         .padding()
     }
