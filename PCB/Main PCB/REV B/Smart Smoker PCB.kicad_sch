@@ -6721,17 +6721,11 @@
     (path "/19a5f0d3-9633-4122-baef-2beb570111c5/7563fcaf-7c0d-42c4-a43e-7785eaee0048"
       (reference "#PWR055") (unit 1) (value "+3.3V") (footprint "")
     )
-    (path "/19a5f0d3-9633-4122-baef-2beb570111c5/5bc2911c-0a9d-4978-81f6-b0ac17d72219"
-      (reference "#PWR056") (unit 1) (value "GND") (footprint "")
-    )
     (path "/19a5f0d3-9633-4122-baef-2beb570111c5/cacccc9b-3608-47de-99e0-da560bd0c003"
       (reference "#PWR057") (unit 1) (value "GND") (footprint "")
     )
     (path "/19a5f0d3-9633-4122-baef-2beb570111c5/904ead18-9cd7-43d2-ac04-b274867d1040"
       (reference "#PWR058") (unit 1) (value "+3.3VA") (footprint "")
-    )
-    (path "/19a5f0d3-9633-4122-baef-2beb570111c5/dac50628-a917-4dab-ac52-01b0f54236e5"
-      (reference "#PWR059") (unit 1) (value "GND") (footprint "")
     )
     (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/ec1a050c-b88d-43f4-8d36-dfa1d3fead78"
       (reference "#PWR060") (unit 1) (value "GND") (footprint "")
@@ -6798,12 +6792,6 @@
     )
     (path "/19a5f0d3-9633-4122-baef-2beb570111c5/8e484176-7a15-4962-b543-7862a5bd8489"
       (reference "C14") (unit 1) (value "10uF 16V X5R 0805") (footprint "Capacitor_SMD:C_0805_2012Metric")
-    )
-    (path "/19a5f0d3-9633-4122-baef-2beb570111c5/a776871f-1326-470a-99d0-b124c469eb87"
-      (reference "C15") (unit 1) (value "1uF 16V X7R 0603") (footprint "Capacitor_SMD:C_0603_1608Metric")
-    )
-    (path "/19a5f0d3-9633-4122-baef-2beb570111c5/b17d7bc6-0457-427d-9756-1ec6719f574e"
-      (reference "C16") (unit 1) (value "1uF 25V X5R 0603") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/1d45caba-66c7-4dff-abc1-e2d8b416efe8"
       (reference "C18") (unit 1) (value "Film 0.1uF 305V 15mm") (footprint "Capacitor_THT:C_Rect_L18.0mm_W6.0mm_P15.00mm_FKS3_FKP3")
@@ -6961,17 +6949,11 @@
     (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/a14c364f-7e77-4fef-b3db-29eb46825cfd"
       (reference "R22") (unit 1) (value "47Ohm 5% 1/2W") (footprint "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Vertical")
     )
-    (path "/19a5f0d3-9633-4122-baef-2beb570111c5/5bf26d5f-7749-4e85-8ded-2727125608b4"
-      (reference "R?") (unit 1) (value "1kOhm 1% 0603") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
     (path "/19a5f0d3-9633-4122-baef-2beb570111c5/6395bb21-5e8f-4823-820d-613503c8c642"
       (reference "R?") (unit 1) (value "250Ohm 0.1% 0603") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/19a5f0d3-9633-4122-baef-2beb570111c5/7002b872-76de-47e4-a94e-c8949459602c"
       (reference "R?") (unit 1) (value "10K 1% 0603") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/19a5f0d3-9633-4122-baef-2beb570111c5/d1a70130-cb2e-4dc4-b62a-c48563c4221c"
-      (reference "R?") (unit 1) (value "1kOhm 1% 0603") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/ebf21bf1-a2ae-4942-acf5-e9bede86ed81"
       (reference "S1") (unit 1) (value "TL1015AF160QG") (footprint "Customs Smoker:SW_TL1015AF160QG")
