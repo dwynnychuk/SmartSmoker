@@ -4920,7 +4920,7 @@
   (symbol (lib_id "Device:C") (at 217.424 252.73 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 24bf2faa-ef93-4aac-89a5-137e1e747fd4)
-    (property "Reference" "C?" (id 0) (at 215.9 250.698 0))
+    (property "Reference" "C12" (id 0) (at 215.9 250.698 0))
     (property "Value" "0.1uF 50V X7R 0603" (id 1) (at 207.01 255.016 0))
     (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (id 2) (at 218.3892 256.54 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -7703,38 +7703,38 @@
     (path "/5283434b-27d3-4413-9895-2170f73383c8"
       (reference "C11") (unit 1) (value "0.01uF 50V X7R 0603") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
-    (path "/19a5f0d3-9633-4122-baef-2beb570111c5/deb9d2b3-7d83-4ec5-8643-c5c86f1d11ef"
+    (path "/24bf2faa-ef93-4aac-89a5-137e1e747fd4"
       (reference "C12") (unit 1) (value "0.1uF 50V X7R 0603") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
-    (path "/19a5f0d3-9633-4122-baef-2beb570111c5/4a53e579-f832-49d3-951d-629b4c74ae1c"
-      (reference "C13") (unit 1) (value "10uF 16V X5R 0805") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    (path "/19a5f0d3-9633-4122-baef-2beb570111c5/deb9d2b3-7d83-4ec5-8643-c5c86f1d11ef"
+      (reference "C13") (unit 1) (value "0.1uF 50V X7R 0603") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
-    (path "/19a5f0d3-9633-4122-baef-2beb570111c5/7ca74750-d82c-49b7-b884-54c293223c96"
+    (path "/19a5f0d3-9633-4122-baef-2beb570111c5/4a53e579-f832-49d3-951d-629b4c74ae1c"
       (reference "C14") (unit 1) (value "10uF 16V X5R 0805") (footprint "Capacitor_SMD:C_0805_2012Metric")
     )
-    (path "/19a5f0d3-9633-4122-baef-2beb570111c5/73b4450f-6c21-4d40-90af-8b177d32f391"
+    (path "/19a5f0d3-9633-4122-baef-2beb570111c5/7ca74750-d82c-49b7-b884-54c293223c96"
       (reference "C15") (unit 1) (value "10uF 16V X5R 0805") (footprint "Capacitor_SMD:C_0805_2012Metric")
     )
-    (path "/19a5f0d3-9633-4122-baef-2beb570111c5/8e484176-7a15-4962-b543-7862a5bd8489"
+    (path "/19a5f0d3-9633-4122-baef-2beb570111c5/73b4450f-6c21-4d40-90af-8b177d32f391"
       (reference "C16") (unit 1) (value "10uF 16V X5R 0805") (footprint "Capacitor_SMD:C_0805_2012Metric")
     )
+    (path "/19a5f0d3-9633-4122-baef-2beb570111c5/8e484176-7a15-4962-b543-7862a5bd8489"
+      (reference "C17") (unit 1) (value "10uF 16V X5R 0805") (footprint "Capacitor_SMD:C_0805_2012Metric")
+    )
     (path "/19a5f0d3-9633-4122-baef-2beb570111c5/d4e43a44-11cd-4b82-83da-7de606daee58"
-      (reference "C17") (unit 1) (value "1uF 16V X7R 0603") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C18") (unit 1) (value "1uF 16V X7R 0603") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/19a5f0d3-9633-4122-baef-2beb570111c5/91f37c3b-6c16-4c74-bb0d-3401fc720dcb"
-      (reference "C18") (unit 1) (value "0.1uF 50V X7R 0603") (footprint "Capacitor_SMD:C_0603_1608Metric")
-    )
-    (path "/19a5f0d3-9633-4122-baef-2beb570111c5/71396d5b-bb0f-4582-b5cd-5103e809ab5b"
       (reference "C19") (unit 1) (value "0.1uF 50V X7R 0603") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
-    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/1d45caba-66c7-4dff-abc1-e2d8b416efe8"
-      (reference "C20") (unit 1) (value "Film 0.1uF 305V 15mm") (footprint "Capacitor_THT:C_Rect_L18.0mm_W6.0mm_P15.00mm_FKS3_FKP3")
+    (path "/19a5f0d3-9633-4122-baef-2beb570111c5/71396d5b-bb0f-4582-b5cd-5103e809ab5b"
+      (reference "C20") (unit 1) (value "0.1uF 50V X7R 0603") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
-    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/4136507c-ba7b-4354-b984-c30ce7c57c29"
+    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/1d45caba-66c7-4dff-abc1-e2d8b416efe8"
       (reference "C21") (unit 1) (value "Film 0.1uF 305V 15mm") (footprint "Capacitor_THT:C_Rect_L18.0mm_W6.0mm_P15.00mm_FKS3_FKP3")
     )
-    (path "/24bf2faa-ef93-4aac-89a5-137e1e747fd4"
-      (reference "C?") (unit 1) (value "0.1uF 50V X7R 0603") (footprint "Capacitor_SMD:C_0603_1608Metric")
+    (path "/5b73f7e4-f14d-4438-9be5-957d9562dd1a/4136507c-ba7b-4354-b984-c30ce7c57c29"
+      (reference "C22") (unit 1) (value "Film 0.1uF 305V 15mm") (footprint "Capacitor_THT:C_Rect_L18.0mm_W6.0mm_P15.00mm_FKS3_FKP3")
     )
     (path "/1a817d58-7a97-417b-8931-87f73d08581c"
       (reference "D1") (unit 1) (value "Y 2V 20mA") (footprint "LED_SMD:LED_0603_1608Metric")
