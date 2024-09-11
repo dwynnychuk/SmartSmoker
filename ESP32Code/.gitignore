@@ -3,8 +3,6 @@
 .vscode/c_cpp_properties.json
 .vscode/launch.json
 .vscode/ipch
-./../GUI/bin
-./../GUI/lib
-./../GUI/include
-./../PCB/Main PCB/REV B/Smart Smoker PCB-backups/
-./../PCB/Main PCB/REV A/Smart Smoker PCB-backups/
+.backups/
+bin/
+lib/
