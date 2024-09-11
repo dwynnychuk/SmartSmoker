@@ -10,6 +10,13 @@ def turn_led_off():
 def blink_led():
     pass
 
+# Connection Functions
+def connect_to_grill():
+    pass
+
+def disconnect_from_grill():
+    pass
+
 # Measurement Functions
 
 
