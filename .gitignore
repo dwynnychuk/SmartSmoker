@@ -6,3 +6,6 @@
 .backups/
 *.zip
 *.cfg
+bin/
+lib/
+*.json
