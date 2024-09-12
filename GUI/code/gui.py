@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter.scrolledtext import ScrolledText
+import tkinter.ttk as ttk
 from gui_functions import *
 import serial
 import time
@@ -28,7 +29,8 @@ button_connect.grid(row=0, column=0, padx=paddingX, pady=paddingY)
 button_disconnect = Button(connection_frame, text="Disconnect", command=disconnect_from_grill)
 button_disconnect.grid(row=0, column=1, padx=paddingX, pady=paddingY)
 
-# add combobox
+combobox_ports = ttk.Combobox(connection_frame)
+combobox_ports.grid(row=1, column=0)
 
 label_connectedto = Label(connection_frame, text=f"Connected To:  {connectedPort}")
 label_connectedto.grid(row=2, column=0, columnspan=2, padx=paddingX, pady=paddingY)
