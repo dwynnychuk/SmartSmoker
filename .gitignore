@@ -8,5 +8,6 @@
 *.cfg
 bin/
 lib/
+Data/
 *.json
 *.pyc
