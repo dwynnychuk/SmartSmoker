@@ -2,26 +2,37 @@ from tkinter import *
 from tkinter.scrolledtext import ScrolledText
 import tkinter.ttk as ttk
 from tkinter.filedialog import asksaveasfilename
+
+import serial.tools
+import serial.tools.list_ports
 from gui_functions import *
 import serial
 import time
 import datetime
 
+# -------------------------------------------------------------------------- #
 # Variable Initializations
+# -------------------------------------------------------------------------- #
+global updateTimeMs
+global connectedPort
+global ser
+
 paddingX = 10
 paddingY = 10
+updateTimeMs = 2000
 loggingFilepath = None
 logFile = None
+connectedPort = None
+ser = None
 
 # Initialize Tkinter window
 root = Tk()
 root.title("GUI Test")
 root.geometry("1000x800")
 
-# Examples, need to connect
-connectedPort = "COM4"
-
+# -------------------------------------------------------------------------- #
 # Functions
+# -------------------------------------------------------------------------- #
 def logging_start():
     global loggingFilepath, logFile
     tempLogFile = "log_" + datetime.datetime.now().strftime("%m-%d-%Y-%H-%M-%S")
@@ -32,13 +43,9 @@ def logging_start():
     if loggingFilepath:
         label_loggingto.config(text=f"Logging Location: {loggingFilepath}")
         button_startlog.config(state="disabled")
-        
         logFile = open(loggingFilepath,'w')
         logFile.write("Time, Temperature\n")
-        
-        # Schedule data read each second
         readData()
-        
 
 def logging_stop():
     global logFile
@@ -50,9 +57,8 @@ def logging_stop():
         window_output.see(END)
 
 def readData():
-    global logFile
+    global logFile, updateTimeMs
     if logFile:
-        print("reading\n")
         timeStamp = datetime.datetime.now().strftime("%m-%d-%Y-%H-%M-%S")
         tempData = "100"
         logFile.write(f"{timeStamp}, {tempData}\n")
@@ -61,9 +67,50 @@ def readData():
         window_output.insert(END, f"{timeStamp}, {tempData}\n")
         window_output.see(END)
         
-    root.after(1000, readData)
+    root.after(updateTimeMs, readData)
 
+def blink_led():
+    pass
+
+def list_ports():
+    ports = serial.tools.list_ports.comports()
+    return [port.device for port in ports]
+
+def connect_to_grill():
+    global ser, connectedPort
+    selectedPort = combobox_ports.get()
+    
+    if selectedPort:
+        try:
+            ser = serial.Serial(selectedPort, baudrate=115200, timeout=1)
+            connectedPort = selectedPort
+            label_connectedto.config(text=f"Connected to {connectedPort}")
+            window_output.insert(END, f"Connected to {connectedPort}\n")
+        except serial.SerialException:
+            window_output.insert(END, f"Failed to connect to {connectedPort}\n")
+    else:
+        window_output.insert(END, "No port selected\n")
+    window_output.see(END)
+            
+def disconnect_from_grill():
+    global ser, connectedPort
+    if ser and ser.is_open:
+        ser.close()
+        label_connectedto.config(text="Disconnected")
+        window_output.insert(END, f"Disconnected from Device\n")
+        window_output.see(END)
+        ser = None
+        connectedPort = None
+    else:
+        window_output.insert(END, "No active connection to disconnect\n")
+    window_output.see(END)
+
+def read_serial():
+    pass
+
+# -------------------------------------------------------------------------- #
 # Tkinter Widgets
+# -------------------------------------------------------------------------- #
 # Connection Frame
 connection_frame = LabelFrame(root, text="Connect to Grill")
 connection_frame.grid(row=0, column=0, padx=paddingX, pady=paddingY, sticky=NSEW)
@@ -74,8 +121,11 @@ button_connect.grid(row=0, column=0, padx=paddingX, pady=paddingY)
 button_disconnect = Button(connection_frame, text="Disconnect", command=disconnect_from_grill)
 button_disconnect.grid(row=0, column=1, padx=paddingX, pady=paddingY)
 
-combobox_ports = ttk.Combobox(connection_frame)
+availablePorts = list_ports()
+combobox_ports = ttk.Combobox(connection_frame, values=availablePorts)
 combobox_ports.grid(row=1, column=0)
+if availablePorts:
+    combobox_ports.current(0)
 
 label_connectedto = Label(connection_frame, text=f"Connected To:  {connectedPort}")
 label_connectedto.grid(row=2, column=0, columnspan=2, padx=paddingX, pady=paddingY)
@@ -93,12 +143,16 @@ button_stoplog.grid(row=0, column=1, padx=paddingX, pady=paddingY)
 label_loggingto = Label(control_frame, text=f"Logging Location: {loggingFilepath}")
 label_loggingto.grid(row=1, column=0, padx=paddingX, pady=paddingY)
 
-# Settings Frame
+# Info Frame
+# Cover on or Off
+# Lid open or closed
+
 
 # Output Frame
 window_output = ScrolledText(root, wrap=WORD, width=100, height=25)
 window_output.grid(row=3, column=0, columnspan=4, padx=paddingX, pady=paddingY)
-        
 
+# -------------------------------------------------------------------------- #
 # Run the Tkinter event loop
+# -------------------------------------------------------------------------- #
 root.mainloop()
