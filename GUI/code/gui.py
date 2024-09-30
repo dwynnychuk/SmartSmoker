@@ -16,6 +16,7 @@ import datetime
 global updateTimeMs
 global connectedPort
 global ser
+global loggingActive
 
 paddingX = 10
 paddingY = 10
@@ -24,6 +25,7 @@ loggingFilepath = None
 logFile = None
 connectedPort = None
 ser = None
+loggingActive = False
 
 # Initialize Tkinter window
 root = Tk()
@@ -34,7 +36,7 @@ root.geometry("1000x800")
 # Functions
 # -------------------------------------------------------------------------- #
 def logging_start():
-    global loggingFilepath, logFile
+    global loggingFilepath, logFile, loggingActive
     tempLogFile = "log_" + datetime.datetime.now().strftime("%m-%d-%Y-%H-%M-%S")
     loggingFilepath = asksaveasfilename(defaultextension=".csv",
                                         initialdir="/Users/dallynwynnychuk/Documents/Projects/Smart Smoker/SmartSmoker/Data",
@@ -43,31 +45,21 @@ def logging_start():
     if loggingFilepath:
         label_loggingto.config(text=f"Logging Location: {loggingFilepath}")
         button_startlog.config(state="disabled")
+        loggingActive = True
         logFile = open(loggingFilepath,'w')
-        logFile.write("Time, Temperature\n")
+        logFile.write("Time, Temp1, Light, LidAccX, LidAccY, LidAccZ, LidGyX, LidGyY, LidGyZ, \
+                        HopAccX, HopAccY, HopAccZ, HopGyX, HopGyY, HopGyZ\n")
         read_serial()
 
 def logging_stop():
-    global logFile
+    global logFile, loggingActive
+    loggingActive = False
     if logFile:
         logFile.close()
         logFile = None
         button_startlog.config(state="normal")
         window_output.insert(END, "Logging stopped\n")
         window_output.see(END)
-
-def readData():
-    global logFile, updateTimeMs
-    if logFile:
-        timeStamp = datetime.datetime.now().strftime("%m-%d-%Y-%H-%M-%S")
-        tempData = "100"
-        logFile.write(f"{timeStamp}, {tempData}\n")
-        logFile.flush()
-        
-        window_output.insert(END, f"{timeStamp}, {tempData}\n")
-        window_output.see(END)
-        
-    root.after(updateTimeMs, readData)
 
 def blink_led():
     pass
@@ -106,7 +98,11 @@ def disconnect_from_grill():
     window_output.see(END)
 
 def read_serial():
-    global ser, logFile
+    global ser, logFile, loggingActive
+    
+    if not loggingActive:
+        return
+    
     if ser and ser.is_open:
         try:
             if ser.in_waiting > 0:
@@ -126,6 +122,7 @@ def read_serial():
                                         {dataRaw[5]}, {dataRaw[6]}, {dataRaw[7]}, \
                                         {dataRaw[8]}, {dataRaw[9]}, {dataRaw[10]}, \
                                         {dataRaw[11]}, {dataRaw[12]}, {dataRaw[13]}\n")
+                        logFile.flush()
         
         except serial.SerialException as e:
             window_output.insert(END, f"Error reading serial port, error: {str(e)}\n")
@@ -133,7 +130,9 @@ def read_serial():
     else:
         window_output.insert(END, "No active serial connection.\n")
         window_output.see(END)
-    root.after(updateTimeMs, read_serial)
+    
+    if loggingActive:
+        root.after(updateTimeMs, read_serial)
     
 
 # -------------------------------------------------------------------------- #
