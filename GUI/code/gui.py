@@ -45,7 +45,7 @@ def logging_start():
         button_startlog.config(state="disabled")
         logFile = open(loggingFilepath,'w')
         logFile.write("Time, Temperature\n")
-        readData()
+        read_serial()
 
 def logging_stop():
     global logFile
@@ -106,7 +106,35 @@ def disconnect_from_grill():
     window_output.see(END)
 
 def read_serial():
-    pass
+    global ser, logFile
+    if ser and ser.is_open:
+        try:
+            if ser.in_waiting > 0:
+                line = ser.readline().decode("utf-8").strip()
+                if line:
+                    timeStamp = datetime.datetime.now().strftime("%m-%d-%Y-%H-%M-%S")
+                    dataRaw = line.split(",")
+                    
+                    # Current Layout Below:
+                    # Ambient, Light Sensor, AccLx, AccLy, AccLz, GyLx, GyLy, GyLz, AccHx, AccHy, AccHz, GyHx, GyHy, GyHz
+                    window_output.insert(END, f"{timeStamp}, {dataRaw[0]}, {dataRaw[1]}, {dataRaw[2]}, {dataRaw[3]}, {dataRaw[4]}, {dataRaw[5]}, {dataRaw[6]}, {dataRaw[7]}, {dataRaw[8]}, {dataRaw[9]}, {dataRaw[10]}, {dataRaw[11]}, {dataRaw[12]}, {dataRaw[13]}\n")
+                    window_output.see(END)
+                    
+                    if logFile:
+                        logFile.write(f"{timeStamp}, {dataRaw[0]}, {dataRaw[1]}, \
+                                        {dataRaw[2]}, {dataRaw[3]}, {dataRaw[4]}, \
+                                        {dataRaw[5]}, {dataRaw[6]}, {dataRaw[7]}, \
+                                        {dataRaw[8]}, {dataRaw[9]}, {dataRaw[10]}, \
+                                        {dataRaw[11]}, {dataRaw[12]}, {dataRaw[13]}\n")
+        
+        except serial.SerialException as e:
+            window_output.insert(END, f"Error reading serial port, error: {str(e)}\n")
+            window_output.see(END)
+    else:
+        window_output.insert(END, "No active serial connection.\n")
+        window_output.see(END)
+    root.after(updateTimeMs, read_serial)
+    
 
 # -------------------------------------------------------------------------- #
 # Tkinter Widgets

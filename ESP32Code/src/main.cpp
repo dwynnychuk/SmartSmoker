@@ -71,18 +71,16 @@ void setup()
   AccGyrH.Enable_G();
 
   // Temperature
-  Serial.println("MAX31855 test");
   digitalWrite(MPA0, LOW);
   digitalWrite(MPA1, LOW);
   delay(500);
-  Serial.print("Initializing Sensor...");
   if (!thermocouple.begin())
   {
-    Serial.print("ERROR");
+    //Serial.print("ERROR");
     while (1)
       delay(10);
   }
-  Serial.print("DONE");
+  //Serial.print("DONE");
 }
 
 // Loop indefinitely
@@ -95,14 +93,19 @@ void loop()
   double ambientC = thermocouple.readCelsius();
   if (isnan(ambientC))
   {
-    Serial.println("Thermocouple Fault:");
+    //Serial.println("Thermocouple Fault:");
     uint8_t therm_error = thermocouple.readError();
     if (therm_error & MAX31855_FAULT_OPEN)
-      Serial.println("FAULT: Thermocouple is open - no connection.");
+      ambientC = -1;
+      //Serial.println("FAULT: Thermocouple is open - no connection.");
     if (therm_error & MAX31855_FAULT_SHORT_GND)
-      Serial.println("FAULT: Thermocouple is shorted to GND.");
+      ambientC = -1;
+      //Serial.println("FAULT: Thermocouple is shorted to GND.");
     if (therm_error & MAX31855_FAULT_SHORT_VCC)
-      Serial.println("FAULT: Thermocouple is shorted to VCC.");
+      ambientC = -1;
+      //Serial.println("FAULT: Thermocouple is shorted to VCC.");
+    Serial.print(ambientC);
+    Serial.print(", ");
   }
   else
   {
@@ -175,7 +178,7 @@ void loop()
   Serial.print(gyroscopeH[1]);
   Serial.print(", ");
   Serial.print(gyroscopeH[2]);
-  Serial.println(", ");
+  Serial.println("");
   delay(500);
 
   // Turn off LED
