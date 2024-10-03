@@ -47,7 +47,7 @@ def logging_start():
         button_startlog.config(state="disabled")
         loggingActive = True
         logFile = open(loggingFilepath,'w')
-        logFile.write("Time, Temp1, Light, LidAccX, LidAccY, LidAccZ, LidGyX, LidGyY, LidGyZ, \
+        logFile.write("Teme, Temp1, Light, LidAccX, LidAccY, LidAccZ, LidGyX, LidGyY, LidGyZ, \
                         HopAccX, HopAccY, HopAccZ, HopGyX, HopGyY, HopGyZ\n")
         read_serial()
 
@@ -78,8 +78,8 @@ def connect_to_grill():
             connectedPort = selectedPort
             label_connectedto.config(text=f"Connected to {connectedPort}")
             window_output.insert(END, f"Connected to {connectedPort}\n")
-        except serial.SerialException:
-            window_output.insert(END, f"Failed to connect to {connectedPort}\n")
+        except serial.SerialException as e:
+            window_output.insert(END, f"Failed to connect to {selectedPort}: {str(e)}\n")
     else:
         window_output.insert(END, "No port selected\n")
     window_output.see(END)
@@ -108,9 +108,8 @@ def read_serial():
             if ser.in_waiting > 0:
                 line = ser.readline().decode("utf-8").strip()
                 if line:
-                    timeStamp = datetime.datetime.now().strftime("%m-%d-%Y-%H-%M-%S")
+                    timeStamp = datetime.datetime.now().strftime("%H-%M-%S")
                     dataRaw = line.split(",")
-                    
                     # Current Layout Below:
                     # Ambient, Light Sensor, AccLx, AccLy, AccLz, GyLx, GyLy, GyLz, AccHx, AccHy, AccHz, GyHx, GyHy, GyHz
                     window_output.insert(END, f"{timeStamp}, {dataRaw[0]}, {dataRaw[1]}, {dataRaw[2]}, {dataRaw[3]}, {dataRaw[4]}, {dataRaw[5]}, {dataRaw[6]}, {dataRaw[7]}, {dataRaw[8]}, {dataRaw[9]}, {dataRaw[10]}, {dataRaw[11]}, {dataRaw[12]}, {dataRaw[13]}\n")
