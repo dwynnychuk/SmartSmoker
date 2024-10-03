@@ -47,7 +47,7 @@ def logging_start():
         button_startlog.config(state="disabled")
         loggingActive = True
         logFile = open(loggingFilepath,'w')
-        logFile.write("Teme, Temp1, Light, LidAccX, LidAccY, LidAccZ, LidGyX, LidGyY, LidGyZ, \
+        logFile.write("Time, Temp1, Temp2, Light, LidAccX, LidAccY, LidAccZ, LidGyX, LidGyY, LidGyZ, \
                         HopAccX, HopAccY, HopAccZ, HopGyX, HopGyY, HopGyZ\n")
         read_serial()
 
@@ -111,16 +111,20 @@ def read_serial():
                     timeStamp = datetime.datetime.now().strftime("%H-%M-%S")
                     dataRaw = line.split(",")
                     # Current Layout Below:
-                    # Ambient, Light Sensor, AccLx, AccLy, AccLz, GyLx, GyLy, GyLz, AccHx, AccHy, AccHz, GyHx, GyHy, GyHz
-                    window_output.insert(END, f"{timeStamp}, {dataRaw[0]}, {dataRaw[1]}, {dataRaw[2]}, {dataRaw[3]}, {dataRaw[4]}, {dataRaw[5]}, {dataRaw[6]}, {dataRaw[7]}, {dataRaw[8]}, {dataRaw[9]}, {dataRaw[10]}, {dataRaw[11]}, {dataRaw[12]}, {dataRaw[13]}\n")
+                    # Time, Temp1, Temp2, Grill, Light Sensor, AccLx, AccLy, AccLz, GyLx, GyLy, GyLz, AccHx, AccHy, AccHz, GyHx, GyHy, GyHz
+                    window_output.insert(END, (f"{timeStamp}, {dataRaw[0]}, {dataRaw[1]}, "
+                                        f"{dataRaw[2]}, {dataRaw[3]}, {dataRaw[4]}, {dataRaw[5]}, " 
+                                        f"{dataRaw[6]}, {dataRaw[7]}, {dataRaw[8]}, {dataRaw[9]}, "
+                                        f"{dataRaw[10]}, {dataRaw[11]}, {dataRaw[12]}, {dataRaw[13]}, "
+                                        f"{dataRaw[14]}\n"))
                     window_output.see(END)
                     
                     if logFile:
-                        logFile.write(f"{timeStamp}, {dataRaw[0]}, {dataRaw[1]}, \
-                                        {dataRaw[2]}, {dataRaw[3]}, {dataRaw[4]}, \
-                                        {dataRaw[5]}, {dataRaw[6]}, {dataRaw[7]}, \
-                                        {dataRaw[8]}, {dataRaw[9]}, {dataRaw[10]}, \
-                                        {dataRaw[11]}, {dataRaw[12]}, {dataRaw[13]}\n")
+                        logFile.write((f"{timeStamp}, {dataRaw[0]}, {dataRaw[1]}, "
+                                        f"{dataRaw[2]}, {dataRaw[3]}, {dataRaw[4]}, "
+                                        f"{dataRaw[5]}, {dataRaw[6]}, {dataRaw[7]}, "
+                                        f"{dataRaw[8]}, {dataRaw[9]}, {dataRaw[10]}, "
+                                        f"{dataRaw[11]}, {dataRaw[12]}, {dataRaw[13]}, {dataRaw[14]}\n"))
                         logFile.flush()
         
         except serial.SerialException as e:

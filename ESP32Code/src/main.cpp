@@ -43,6 +43,16 @@ Adafruit_MAX31855 thermocouple(clk, cs, miso);
 LSM6DSRSensor AccGyrL(&Wire, LSM_IMU_ADDR_LID);
 LSM6DSRSensor AccGyrH(&Wire, LSM_IMU_ADDR_HOP);
 
+void set_read_temp1() {
+  digitalWrite(MPA0, LOW);
+  digitalWrite(MPA1, LOW);
+}
+
+void set_read_temp2() {
+  digitalWrite(MPA0, LOW);
+  digitalWrite(MPA1, HIGH);
+}
+
 // Setup
 void setup()
 {
@@ -71,8 +81,7 @@ void setup()
   AccGyrH.Enable_G();
 
   // Temperature
-  digitalWrite(MPA0, LOW);
-  digitalWrite(MPA1, LOW);
+  set_read_temp1();
   delay(500);
   if (!thermocouple.begin())
   {
@@ -90,28 +99,53 @@ void loop()
   digitalWrite(LED, HIGH);
 
   // Temperature readings
-  double ambientC = thermocouple.readCelsius();
-  if (isnan(ambientC))
+  set_read_temp1();
+  double temp1 = thermocouple.readCelsius();
+  if (isnan(temp1))
   {
     //Serial.println("Thermocouple Fault:");
     uint8_t therm_error = thermocouple.readError();
     if (therm_error & MAX31855_FAULT_OPEN)
-      ambientC = -1;
+      temp1 = -1;
       //Serial.println("FAULT: Thermocouple is open - no connection.");
     if (therm_error & MAX31855_FAULT_SHORT_GND)
-      ambientC = -1;
+      temp1 = -1;
       //Serial.println("FAULT: Thermocouple is shorted to GND.");
     if (therm_error & MAX31855_FAULT_SHORT_VCC)
-      ambientC = -1;
+      temp1 = -1;
       //Serial.println("FAULT: Thermocouple is shorted to VCC.");
-    Serial.print(ambientC);
+    Serial.print(temp1);
     Serial.print(", ");
   }
   else
   {
-    Serial.print(ambientC);
+    Serial.print(temp1);
     Serial.print(", ");
-    
+  }
+
+  delay(100);
+  set_read_temp2();
+  double temp2 = thermocouple.readCelsius();
+  if (isnan(temp2))
+  {
+    //Serial.println("Thermocouple Fault:");
+    uint8_t therm_error = thermocouple.readError();
+    if (therm_error & MAX31855_FAULT_OPEN)
+      temp2 = -1;
+      //Serial.println("FAULT: Thermocouple is open - no connection.");
+    if (therm_error & MAX31855_FAULT_SHORT_GND)
+      temp2 = -1;
+      //Serial.println("FAULT: Thermocouple is shorted to GND.");
+    if (therm_error & MAX31855_FAULT_SHORT_VCC)
+      temp2 = -1;
+      //Serial.println("FAULT: Thermocouple is shorted to VCC.");
+    Serial.print(temp2);
+    Serial.print(", ");
+  }
+  else
+  {
+    Serial.print(temp2);
+    Serial.print(", ");
   }
 
   // LID SENSORS
