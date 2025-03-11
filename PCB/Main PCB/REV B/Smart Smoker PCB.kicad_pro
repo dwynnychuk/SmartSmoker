@@ -395,8 +395,7 @@
           "+3.3VP",
           "+5V",
           "/AC_L",
-          "/AC_N",
-          "GND"
+          "/AC_N"
         ],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
