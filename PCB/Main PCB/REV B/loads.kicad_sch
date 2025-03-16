@@ -1439,6 +1439,10 @@
     (effects (font (size 3 3) (thickness 1.016) bold) (justify left bottom))
     (uuid 77ac611f-1aa4-4cd8-843d-a7b05cf11cdd)
   )
+  (text "Pull signal high or low" (at 137.795 28.829 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid cc503948-2fcc-4b06-b07a-027b12b92c58)
+  )
 
   (label "Opto_Ignitor" (at 257.429 134.747 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
