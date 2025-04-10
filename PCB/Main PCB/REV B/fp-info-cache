@@ -1,260 +1,148 @@
-63023372102873
-Customs Smoker
-1051330001_MOL
-
-1051330001 
-0
-8
-8
-Customs Smoker
-BMI323_BOS
-
-BMI323 
-0
-14
-14
-Customs Smoker
-BMI323_BOS-L
-
-BMI323 
-0
-14
-14
-Customs Smoker
-BMI323_BOS-M
-
-BMI323 
-0
-14
-14
-Customs Smoker
-CONN_393570002_MOL
-
-393570002 
+35170454824673
+Jumper
+SolderJumper-2_P1.3mm_Bridged2Bar_Pad1.0x1.5mm
+SMD Solder Jumper, 1x1.5mm Pads, 0.3mm gap, bridged with 2 copper strips
+net tie solder jumper bridged
 0
 2
 2
-Customs Smoker
-CONV_LS10-13B03R3
-
-
+Jumper
+SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm
+SMD Solder Jumper, 1x1.5mm, rounded Pads, 0.3mm gap, bridged with 2 copper strips
+net tie solder jumper bridged
 0
-6
-6
-Customs Smoker
-CPC1706Y_IXY
-
-CPC1976YX6 
+2
+2
+Jumper
+SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm
+SMD Solder Jumper, 1x1.5mm Pads, 0.3mm gap, bridged with 1 copper strip
+net tie solder jumper bridged
 0
-4
-4
-Customs Smoker
-CPC1966B_IXY
-
-CPC1966B 
+2
+2
+Jumper
+SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm
+SMD Solder Jumper, 1x1.5mm, rounded Pads, 0.3mm gap, bridged with 1 copper strip
+net tie solder jumper bridged
 0
-8
-8
-Customs Smoker
-CUI_MJ-3502
-
-
+2
+2
+Jumper
+SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm
+SMD Solder Jumper, 1x1.5mm Pads, 0.3mm gap, open
+solder jumper open
+0
+2
+2
+Jumper
+SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm
+SMD Solder Jumper, 1x1.5mm, rounded Pads, 0.3mm gap, open
+solder jumper open
+0
+2
+2
+Jumper
+SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm
+SMD Solder Jumper, 1x1.5mm Triangular Pads, 0.3mm gap, open
+solder jumper open
+0
+2
+2
+Jumper
+SolderJumper-3_P1.3mm_Bridged2Bar12_Pad1.0x1.5mm
+SMD Solder 3-pad Jumper, 1x1.5mm Pads, 0.3mm gap, pads 1-2 Bridged2Bar with 2 copper strip
+net tie solder jumper bridged
 0
 3
 3
-Customs Smoker
-CUI_MJ-3536N
-
-
+Jumper
+SolderJumper-3_P1.3mm_Bridged2Bar12_Pad1.0x1.5mm_NumberLabels
+SMD Solder Jumper, 1x1.5mm Pads, 0.3mm gap, pads 1-2 Bridged2Bar with 2 copper strip, labeled with numbers
+net tie solder jumper bridged
 0
 3
 3
-Customs Smoker
-DCK6_TEX
-
-LM66100DCKR 
+Jumper
+SolderJumper-3_P1.3mm_Bridged2Bar12_RoundedPad1.0x1.5mm
+SMD Solder 3-pad Jumper, 1x1.5mm rounded Pads, 0.3mm gap, pads 1-2 Bridged2Bar with 2 copper strip
+net tie solder jumper bridged
 0
-6
-6
-Customs Smoker
-DIOM7959X262N
-
-
+3
+3
+Jumper
+SolderJumper-3_P1.3mm_Bridged2Bar12_RoundedPad1.0x1.5mm_NumberLabels
+SMD Solder 3-pad Jumper, 1x1.5mm rounded Pads, 0.3mm gap, pads 1-2 Bridged2Bar with 2 copper strip, labeled with numbers
+net tie solder jumper bridged
 0
-2
-2
-Customs Smoker
-DM3CS-SF_HIR
-
-DM3CS-SF 
+3
+3
+Jumper
+SolderJumper-3_P1.3mm_Bridged12_Pad1.0x1.5mm
+SMD Solder 3-pad Jumper, 1x1.5mm Pads, 0.3mm gap, pads 1-2 bridged with 1 copper strip
+net tie solder jumper bridged
 0
-13
-13
-Customs Smoker
-E-SWITCH_RR511D1121
-
-
+3
+3
+Jumper
+SolderJumper-3_P1.3mm_Bridged12_Pad1.0x1.5mm_NumberLabels
+SMD Solder Jumper, 1x1.5mm Pads, 0.3mm gap, pads 1-2 bridged with 1 copper strip, labeled with numbers
+net tie solder jumper bridged
 0
-2
-2
-Customs Smoker
-ESP32-WROOM-32UE 16MB
-
-
+3
+3
+Jumper
+SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm
+SMD Solder 3-pad Jumper, 1x1.5mm rounded Pads, 0.3mm gap, pads 1-2 bridged with 1 copper strip
+net tie solder jumper bridged
 0
-47
-47
-Customs Smoker
-GCT_MEM2051-00-195-00-A
-
-
+3
+3
+Jumper
+SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels
+SMD Solder 3-pad Jumper, 1x1.5mm rounded Pads, 0.3mm gap, pads 1-2 bridged with 1 copper strip, labeled with numbers
+net tie solder jumper bridged
 0
-13
-13
-Customs Smoker
-K-TypeAdapter
-
-
+3
+3
+Jumper
+SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm
+SMD Solder 3-pad Jumper, 1x1.5mm Pads, 0.3mm gap, open
+solder jumper open
 0
-2
-2
-Customs Smoker
-LED_ASMB-KTF0-0A306
-
-
+3
+3
+Jumper
+SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm_NumberLabels
+SMD Solder Jumper, 1x1.5mm Pads, 0.3mm gap, open, labeled with numbers
+solder jumper open
 0
-4
-4
-Customs Smoker
-LTR-329ALS-01
-
-
+3
+3
+Jumper
+SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm
+SMD Solder 3-pad Jumper, 1x1.5mm rounded Pads, 0.3mm gap, open
+solder jumper open
 0
-4
-4
-Customs Smoker
-MOLEX_105017-0001
-
-
+3
+3
+Jumper
+SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels
+SMD Solder 3-pad Jumper, 1x1.5mm rounded Pads, 0.3mm gap, open, labeled with numbers
+solder jumper open
 0
-13
-13
-Customs Smoker
-PAN_ALD_PAN
-
-ALDP105W 
-0
-4
-4
-Customs Smoker
-PQFN50P300X250X86-14N
-
-
-0
-14
-14
-Customs Smoker
-PW8-L
-
-TPS2115APWR 
-0
-8
-8
-Customs Smoker
-PW8-M
-
-TPS2115APWR 
-0
-8
-8
-Customs Smoker
-RB521S30T1G-M
-
-RB521S30T1G 
-0
-2
-2
-Customs Smoker
-SIP4_CPC1966Y_LTF
-
-CPC1966Y 
-0
-4
-4
-Customs Smoker
-SN74LVC1G3157DBVR
-
-SN74LVC1G3157DBVR 
-0
-6
-6
-Customs Smoker
-SOIC16_NARROW_VIS
-
-DG409LEDY-T1-GE3 
-0
-16
-16
-Customs Smoker
-SOP65P640X120-8N
-
-
-0
-8
-8
-Customs Smoker
-STM811SW16F
-
-STM811SW16F 
-0
-4
-4
-Customs Smoker
-SW5_PEC11R-4225F-S0024_BRN
-
-PEC11R-4225F-S0024 
-0
-2
-2
-Customs Smoker
-SW_TL1015AF160QG
-
-
-0
-2
-2
-Customs Smoker
-TLP2362
-
-TLP2362TPR_E 
+3
+3
+Jumper
+SolderJumper-3_P2.0mm_Open_TrianglePad1.0x1.5mm
+SMD Solder Jumper, 1x1.5mm Triangular Pads, 0.3mm gap, open
+solder jumper open
 0
 5
+3
+Jumper
+SolderJumper-3_P2.0mm_Open_TrianglePad1.0x1.5mm_NumberLabels
+SMD Solder Jumper, 1x1.5mm Triangular Pads, 0.3mm gap, open, labeled with numbers
+solder jumper open
+0
 5
-Customs Smoker
-VARS_B72214S_15P5X5P6-7P5-2P2_TDK
-
-B72214S0351K101 
-0
-2
-2
-Customs Smoker
-VESM_TOS
-
-SSM3J56MFV 
-0
 3
-3
-Customs Smoker
-XDCR_PEC11R-4215F-S0024
-
-
-0
-7
-7
-Customs Smoker
-XDCR_VL53L3CXV0DH_1
-
-
-0
-12
-12

@@ -6747,10 +6747,6 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 57423c09-713e-4a6f-817b-66d9cec6c26a)
   )
-  (label "Auger_-" (at 47.244 287.782 180)
-    (effects (font (size 1.27 1.27)) (justify right bottom))
-    (uuid 585f8b5d-c77a-41a4-88b3-168a8ebea3bc)
-  )
   (label "Probe1+" (at 464.82 50.546 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 5ae64076-7eb1-475f-aa2c-1f13cc004bf0)
@@ -6783,6 +6779,10 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 64a023bd-c752-4659-97b4-c823b736f70c)
   )
+  (label "AC_N" (at 47.498 313.69 180)
+    (effects (font (size 1.27 1.27)) (justify right bottom))
+    (uuid 64d6b221-e4b9-46cb-8daa-5412cce7fa84)
+  )
   (label "SPI_SCK" (at 482.6 107.442 180)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 651dd4b9-dd92-4200-ad9e-246376a9a881)
@@ -6799,9 +6799,9 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 6c772373-0a47-48f8-a414-d8dbd01ca577)
   )
-  (label "Ignitor_-" (at 47.498 313.69 180)
+  (label "AC_N" (at 47.498 300.99 180)
     (effects (font (size 1.27 1.27)) (justify right bottom))
-    (uuid 725e3ae5-a528-4c70-9f7c-35861afd6022)
+    (uuid 71142346-421b-41b3-a10d-86c05df5615b)
   )
   (label "IO26" (at 425.704 378.841 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -6858,6 +6858,10 @@
   (label "Auger" (at 271.399 109.093 180)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 9541a386-4f73-47e9-8844-f8d2f3ea876b)
+  )
+  (label "AC_N" (at 47.244 287.782 180)
+    (effects (font (size 1.27 1.27)) (justify right bottom))
+    (uuid 97197a64-3803-4a60-886a-c55f8848ef18)
   )
   (label "I39" (at 271.399 63.373 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -7027,10 +7031,6 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid fc3797c3-d8fd-46d9-8bdc-ab29378cc7ea)
   )
-  (label "Fan_-" (at 47.498 300.99 180)
-    (effects (font (size 1.27 1.27)) (justify right bottom))
-    (uuid fd14668b-4769-4235-afaf-7959b02e687f)
-  )
 
   (symbol (lib_id "power:+3.3V") (at 473.075 281.813 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes)
@@ -7101,7 +7101,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 436.372 291.592 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 02c53378-8953-4b7a-a026-227890245431)
-    (property "Reference" "TP23" (id 0) (at 438.277 288.2899 0)
+    (property "Reference" "TP28" (id 0) (at 438.277 288.2899 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TP" (id 1) (at 437.6419 286.512 90)
@@ -7365,7 +7365,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 436.118 322.453 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 07604b21-3ea4-4b09-8a74-b4d22a95b969)
-    (property "Reference" "TP27" (id 0) (at 437.642 319.1509 0)
+    (property "Reference" "TP33" (id 0) (at 437.642 319.1509 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TP" (id 1) (at 437.3879 317.373 90)
@@ -7571,7 +7571,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 283.591 212.217 90) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 12a4bf39-77fb-442d-b191-5360ecba487e)
-    (property "Reference" "TP20" (id 0) (at 280.289 208.407 90))
+    (property "Reference" "TP22" (id 0) (at 280.289 208.407 90))
     (property "Value" "TP" (id 1) (at 278.511 210.9471 90)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
@@ -7614,7 +7614,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 488.061 354.457 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 165ce42f-81f7-4926-8594-be164433ea8d)
-    (property "Reference" "TP30" (id 0) (at 489.966 351.1549 0)
+    (property "Reference" "TP36" (id 0) (at 489.966 351.1549 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TP" (id 1) (at 489.3309 349.377 90)
@@ -7807,7 +7807,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 363.855 190.246 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 1b9e05c9-d19d-4353-bc44-5deea947ab68)
-    (property "Reference" "TP18" (id 0) (at 366.395 186.9439 0)
+    (property "Reference" "TP20" (id 0) (at 366.395 186.9439 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TP" (id 1) (at 365.1249 185.166 90)
@@ -8127,7 +8127,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 60.325 184.277 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 32f887b2-6e21-4d20-99f4-55d43700c02a)
-    (property "Reference" "TP?" (id 0) (at 62.357 180.9749 0)
+    (property "Reference" "TP18" (id 0) (at 62.357 180.9749 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TP" (id 1) (at 61.5949 179.197 90)
@@ -8314,7 +8314,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 232.918 182.499 90) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 375fe4c4-d0fa-4137-b885-695279906ff3)
-    (property "Reference" "TP?" (id 0) (at 229.616 179.705 90))
+    (property "Reference" "TP17" (id 0) (at 229.616 179.705 90))
     (property "Value" "TP" (id 1) (at 227.838 181.2291 90)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
@@ -8361,7 +8361,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 324.231 277.241 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 38a69ae1-4915-4be9-9957-04c92cdb8af5)
-    (property "Reference" "TP21" (id 0) (at 326.771 273.9389 0)
+    (property "Reference" "TP26" (id 0) (at 326.771 273.9389 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TP" (id 1) (at 325.5009 272.161 90)
@@ -8379,7 +8379,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 356.362 190.246 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 395aef2e-f869-4ad8-9220-6c71e66d4ecf)
-    (property "Reference" "TP17" (id 0) (at 358.394 186.9439 0)
+    (property "Reference" "TP19" (id 0) (at 358.394 186.9439 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TP" (id 1) (at 357.6319 185.166 90)
@@ -8431,7 +8431,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x04") (at 332.867 379.857 0) (unit 1)
     (in_bom yes) (on_board no) (fields_autoplaced)
     (uuid 3b0cb9f9-5317-4dd2-b9dd-a5d806b06e48)
-    (property "Reference" "TP31" (id 0) (at 336.042 379.8569 0)
+    (property "Reference" "TP37" (id 0) (at 336.042 379.8569 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Screen I2C - FOR BOM ONLY" (id 1) (at 336.042 382.3969 0)
@@ -8838,7 +8838,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 349.123 190.373 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 4cf5d2f2-bd79-46e0-9503-eb0cd0cce94e)
-    (property "Reference" "TP19" (id 0) (at 350.52 187.0709 0)
+    (property "Reference" "TP21" (id 0) (at 350.52 187.0709 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TP" (id 1) (at 350.3929 185.293 90)
@@ -8950,7 +8950,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x06") (at 447.802 381.381 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 514793eb-3e60-4a97-8da9-a6b6df395b92)
-    (property "Reference" "TP32" (id 0) (at 450.977 381.3809 0)
+    (property "Reference" "TP38" (id 0) (at 450.977 381.3809 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "GPIO MISC." (id 1) (at 450.977 383.9209 0)
@@ -9043,7 +9043,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 291.719 284.988 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 539f8db2-52c7-4e5b-aa53-41cd1e5ea3b8)
-    (property "Reference" "TP22" (id 0) (at 290.449 280.035 0)
+    (property "Reference" "TP27" (id 0) (at 290.449 280.035 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TP" (id 1) (at 292.9889 279.908 90)
@@ -9061,7 +9061,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 294.64 302.514 180) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 5412a571-82e6-43ed-9506-9884526683e5)
-    (property "Reference" "TP25" (id 0) (at 296.799 305.8159 0)
+    (property "Reference" "TP31" (id 0) (at 296.799 305.8159 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "TP" (id 1) (at 293.3701 307.594 90)
@@ -9079,7 +9079,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 232.918 237.744 90) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 55657769-7fcd-4605-82f7-7d2d352648ff)
-    (property "Reference" "TP?" (id 0) (at 229.616 234.442 90))
+    (property "Reference" "TP24" (id 0) (at 229.616 234.442 90))
     (property "Value" "TP" (id 1) (at 227.838 236.4741 90)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
@@ -9457,7 +9457,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 61.849 257.048 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 64c81136-dd93-481a-9586-4add87062d37)
-    (property "Reference" "TP?" (id 0) (at 63.627 253.7459 0)
+    (property "Reference" "TP25" (id 0) (at 63.627 253.7459 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TP" (id 1) (at 63.1189 251.968 90)
@@ -10071,7 +10071,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 436.245 354.33 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 7a7023e7-6808-4d84-a939-a012f064ee51)
-    (property "Reference" "TP29" (id 0) (at 438.404 351.0279 0)
+    (property "Reference" "TP35" (id 0) (at 438.404 351.0279 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TP" (id 1) (at 437.5149 349.25 90)
@@ -10816,7 +10816,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 61.087 219.456 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid a2354d56-b97c-45fb-96f4-8d00708fc617)
-    (property "Reference" "TP?" (id 0) (at 63.5 216.1539 0)
+    (property "Reference" "TP23" (id 0) (at 63.5 216.1539 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TP" (id 1) (at 62.3569 214.376 90)
@@ -11005,7 +11005,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 324.612 310.007 180) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid a896b0a4-8eb4-4e82-861c-88b8546fb876)
-    (property "Reference" "TP26" (id 0) (at 327.152 313.3089 0)
+    (property "Reference" "TP32" (id 0) (at 327.152 313.3089 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
     (property "Value" "TP" (id 1) (at 323.3421 315.087 90)
@@ -11096,7 +11096,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 487.934 322.453 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid ac0d08f9-d66a-4405-97b2-eace8e0a9c51)
-    (property "Reference" "TP28" (id 0) (at 489.585 319.1509 0)
+    (property "Reference" "TP34" (id 0) (at 489.585 319.1509 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TP" (id 1) (at 489.2039 317.373 90)
@@ -11549,7 +11549,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 487.68 291.846 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid c3ee586e-d9ae-4f68-9547-93fc05ad6bbc)
-    (property "Reference" "TP24" (id 0) (at 489.458 288.5439 0)
+    (property "Reference" "TP29" (id 0) (at 489.458 288.5439 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "TP" (id 1) (at 488.9499 286.766 90)
@@ -11845,7 +11845,7 @@
   (symbol (lib_id "Connector:TestPoint") (at 232.918 300.355 90) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid ccb80139-0f28-4362-8f5c-19594fd0792f)
-    (property "Reference" "TP?" (id 0) (at 229.616 296.545 90))
+    (property "Reference" "TP30" (id 0) (at 229.616 296.545 90))
     (property "Value" "TP" (id 1) (at 227.838 299.0851 90)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
@@ -13663,71 +13663,71 @@
     (path "/1a32751c-9315-4ec8-8e7a-dd8d05535512"
       (reference "TP16") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
-    (path "/395aef2e-f869-4ad8-9220-6c71e66d4ecf"
+    (path "/375fe4c4-d0fa-4137-b885-695279906ff3"
       (reference "TP17") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
-    (path "/1b9e05c9-d19d-4353-bc44-5deea947ab68"
+    (path "/32f887b2-6e21-4d20-99f4-55d43700c02a"
       (reference "TP18") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
-    (path "/4cf5d2f2-bd79-46e0-9503-eb0cd0cce94e"
+    (path "/395aef2e-f869-4ad8-9220-6c71e66d4ecf"
       (reference "TP19") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
-    (path "/12a4bf39-77fb-442d-b191-5360ecba487e"
+    (path "/1b9e05c9-d19d-4353-bc44-5deea947ab68"
       (reference "TP20") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
-    (path "/38a69ae1-4915-4be9-9957-04c92cdb8af5"
+    (path "/4cf5d2f2-bd79-46e0-9503-eb0cd0cce94e"
       (reference "TP21") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
-    (path "/539f8db2-52c7-4e5b-aa53-41cd1e5ea3b8"
+    (path "/12a4bf39-77fb-442d-b191-5360ecba487e"
       (reference "TP22") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
-    (path "/02c53378-8953-4b7a-a026-227890245431"
+    (path "/a2354d56-b97c-45fb-96f4-8d00708fc617"
       (reference "TP23") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
-    (path "/c3ee586e-d9ae-4f68-9547-93fc05ad6bbc"
+    (path "/55657769-7fcd-4605-82f7-7d2d352648ff"
       (reference "TP24") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
-    (path "/5412a571-82e6-43ed-9506-9884526683e5"
+    (path "/64c81136-dd93-481a-9586-4add87062d37"
       (reference "TP25") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
-    (path "/a896b0a4-8eb4-4e82-861c-88b8546fb876"
+    (path "/38a69ae1-4915-4be9-9957-04c92cdb8af5"
       (reference "TP26") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
-    (path "/07604b21-3ea4-4b09-8a74-b4d22a95b969"
+    (path "/539f8db2-52c7-4e5b-aa53-41cd1e5ea3b8"
       (reference "TP27") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
-    (path "/ac0d08f9-d66a-4405-97b2-eace8e0a9c51"
+    (path "/02c53378-8953-4b7a-a026-227890245431"
       (reference "TP28") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
-    (path "/7a7023e7-6808-4d84-a939-a012f064ee51"
+    (path "/c3ee586e-d9ae-4f68-9547-93fc05ad6bbc"
       (reference "TP29") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
-    (path "/165ce42f-81f7-4926-8594-be164433ea8d"
+    (path "/ccb80139-0f28-4362-8f5c-19594fd0792f"
       (reference "TP30") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
+    (path "/5412a571-82e6-43ed-9506-9884526683e5"
+      (reference "TP31") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
+    )
+    (path "/a896b0a4-8eb4-4e82-861c-88b8546fb876"
+      (reference "TP32") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
+    )
+    (path "/07604b21-3ea4-4b09-8a74-b4d22a95b969"
+      (reference "TP33") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
+    )
+    (path "/ac0d08f9-d66a-4405-97b2-eace8e0a9c51"
+      (reference "TP34") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
+    )
+    (path "/7a7023e7-6808-4d84-a939-a012f064ee51"
+      (reference "TP35") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
+    )
+    (path "/165ce42f-81f7-4926-8594-be164433ea8d"
+      (reference "TP36") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
+    )
     (path "/3b0cb9f9-5317-4dd2-b9dd-a5d806b06e48"
-      (reference "TP31") (unit 1) (value "Screen I2C - FOR BOM ONLY") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
+      (reference "TP37") (unit 1) (value "Screen I2C - FOR BOM ONLY") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
     )
     (path "/514793eb-3e60-4a97-8da9-a6b6df395b92"
-      (reference "TP32") (unit 1) (value "GPIO MISC.") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical")
-    )
-    (path "/32f887b2-6e21-4d20-99f4-55d43700c02a"
-      (reference "TP?") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
-    )
-    (path "/375fe4c4-d0fa-4137-b885-695279906ff3"
-      (reference "TP?") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
-    )
-    (path "/55657769-7fcd-4605-82f7-7d2d352648ff"
-      (reference "TP?") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
-    )
-    (path "/64c81136-dd93-481a-9586-4add87062d37"
-      (reference "TP?") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
-    )
-    (path "/a2354d56-b97c-45fb-96f4-8d00708fc617"
-      (reference "TP?") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
-    )
-    (path "/ccb80139-0f28-4362-8f5c-19594fd0792f"
-      (reference "TP?") (unit 1) (value "TP") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
+      (reference "TP38") (unit 1) (value "GPIO MISC.") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical")
     )
     (path "/7f2a1406-00ac-4f3a-8e5d-93c3e801b1d4"
       (reference "U1") (unit 1) (value "AMS1117-3.3") (footprint "Package_TO_SOT_SMD:TO-252-2")
