@@ -357,7 +357,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Smart Smoker PCB.kicad_pro",
+    "filename": "AnalogPCB.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -389,14 +389,7 @@
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "PWR",
-        "nets": [
-          "+3.3V",
-          "+3.3VA",
-          "+3.3VP",
-          "+5V",
-          "/AC_L",
-          "/AC_N"
-        ],
+        "nets": [],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.65,
@@ -414,7 +407,7 @@
     "last_paths": {
       "gencad": "",
       "idf": "",
-      "netlist": "",
+      "netlist": "../../../../../../../../../Applications/KiCad/KiCad.app/Contents/Applications/",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
