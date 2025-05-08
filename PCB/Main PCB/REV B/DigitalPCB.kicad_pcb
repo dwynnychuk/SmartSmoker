@@ -409,6 +409,11 @@
       (net 51 "Net-(S1-Pad1)") (pintype "passive") (tstamp f6137e78-5ed6-49a6-8454-844c6354a8d0))
     (pad "2" smd rect locked (at 2.075 0 270) (size 0.95 1.4) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 53 "GND") (pintype "passive") (tstamp 9eef6c47-3dab-4a00-bed6-6d3f03dc5f53))
+    (model "${SMOKER}/TL1015AF160QG.step"
+      (offset (xyz 2 -1.5 -0.5))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 -90))
+    )
   )
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
@@ -638,6 +643,11 @@
       (net 51 "Net-(S1-Pad1)") (pinfunction "*MR") (pintype "unspecified") (tstamp 045f4c05-2fca-4465-870c-2ddc9a8b845b))
     (pad "4" smd rect (at -0.960001 -1.0668) (size 0.508 1.6256) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 1 "+3.3V") (pinfunction "VCC") (pintype "power_in") (tstamp 4ce7bd5e-43cc-420a-bddd-3f0c27a19dde))
+    (model "${SMOKER}/STM811SW16F.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "LED_SMD:LED_0603_1608Metric" (layer "F.Cu")
@@ -916,6 +926,11 @@
       (net 1 "+3.3V") (pinfunction "OUT") (pintype "output") (tstamp 382a0d5a-c112-41ff-9f4c-fcca0013c1b3))
     (pad "8" smd rect (at 2.9718 -0.974999 90) (size 1.778 0.3556) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 5 "+3.3VP") (pinfunction "1N1") (pintype "input") (tstamp bf80057f-f18d-459c-ba73-d128c377a75b))
+    (model "${SMOKER}/TPS2115APWR.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (footprint "TestPoint:TestPoint_Pad_D1.0mm" (layer "F.Cu")
@@ -1049,6 +1064,11 @@
       (net 26 "/I2C_SCL") (pinfunction "4") (pintype "unspecified") (tstamp db6c3eca-2105-4e4d-b966-8e5b97d0f687))
     (pad "5" smd rect (at -2.799999 1.773501) (size 1.1938 1.8034) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 1c187e7d-19a2-4cf3-9a22-3773c1fe2cfd))
     (pad "6" smd rect (at 2.799999 1.773501) (size 1.1938 1.8034) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 4758e7db-8e2b-4046-924c-b6e966d82761))
+    (model "${SMOKER}/PRT-14417.STEP"
+      (offset (xyz 0 1.5 -0.5))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (footprint "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" locked (layer "F.Cu")
@@ -1146,10 +1166,10 @@
     (pad "6" thru_hole circle (at 2.5 -1.4625 90) (size 1.45 1.45) (drill 0.85) (layers *.Cu *.Mask) (tstamp 86d271cd-2466-45a7-8439-7756c84adb96))
     (pad "6" thru_hole circle (at -2.5 -1.4625 90) (size 1.45 1.45) (drill 0.85) (layers *.Cu *.Mask) (tstamp a993d4e8-0895-40ef-909b-b9726bc145f0))
     (pad "6" smd rect (at -2.9 1.2375 90) (size 1.2 1.9) (layers "F.Cu" "F.Mask") (tstamp d7a906c0-187a-406c-b171-2cfd5ae4481e))
-    (model "${KICAD6_3DMODEL_DIR}/Connector_USB.3dshapes/USB_Micro-B_Molex-105017-0001.wrl"
-      (offset (xyz 0 0 0))
+    (model "${SMOKER}/105017-0001.step"
+      (offset (xyz 0 -1 1))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz -90 0 0))
     )
   )
 
@@ -1249,6 +1269,11 @@
       (net 26 "/I2C_SCL") (pinfunction "4") (pintype "unspecified") (tstamp 4c2340bb-aeba-4ff3-a95d-23a137948e42))
     (pad "5" smd rect (at -2.799999 1.773501) (size 1.1938 1.8034) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 3d57db54-6a76-4f15-9092-234b47a7c313))
     (pad "6" smd rect (at 2.799999 1.773501) (size 1.1938 1.8034) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp f6d41be4-a439-484a-82bf-b25db7281ffe))
+    (model "${SMOKER}/PRT-14417.STEP"
+      (offset (xyz 0 1.5 -0.5))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (footprint "Customs Smoker:PRT-14417" (layer "F.Cu")
@@ -1301,6 +1326,11 @@
       (net 26 "/I2C_SCL") (pinfunction "4") (pintype "unspecified") (tstamp c9c9b82f-618f-4151-96cd-11aabb62a513))
     (pad "5" smd rect (at -2.799999 1.773501) (size 1.1938 1.8034) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp c0d4d6c4-4b69-4c50-941e-d21b089eb4de))
     (pad "6" smd rect (at 2.799999 1.773501) (size 1.1938 1.8034) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 88bcab3f-3ba1-4902-b2fb-5530b984f710))
+    (model "${SMOKER}/PRT-14417.STEP"
+      (offset (xyz 0 1.5 -0.5))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
@@ -2184,6 +2214,11 @@
       (net 53 "GND") (pinfunction "SHIELD") (pintype "passive") (tstamp 305b45ca-94df-4e6b-ab8c-3ff4aa282576))
     (pad "S2" thru_hole oval locked (at 5.7 0 180) (size 3 6) (drill oval 2 2.8) (layers *.Cu *.Mask)
       (net 53 "GND") (pinfunction "SHIELD") (pintype "passive") (tstamp 06e540b5-6637-421c-a04d-9033c47a6abc))
+    (model "${SMOKER}/PEC11R-4220K-S0024.STEP"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
@@ -2692,6 +2727,11 @@
       (net 40 "/Opto_Ignitor") (pinfunction "VO") (pintype "power_in") (tstamp d9695f68-dd5f-4f08-b2f2-1019702e4b7e))
     (pad "6" smd rect (at 3.4417 -1.27 90) (size 1.2192 0.4064) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 4 "+5V") (pinfunction "VCC") (pintype "power_in") (tstamp fa90f2d2-a414-4bba-b2e1-d188efd16fb2))
+    (model "${SMOKER}/5pin SO6.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 90))
+    )
   )
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
@@ -3018,6 +3058,11 @@
       (net 53 "GND") (pinfunction "GND") (pintype "unspecified") (tstamp 55e45eac-52b2-46e4-ab44-8e882982288e))
     (pad "47" smd rect locked (at -0.10414 0.331191 90) (size 0.889 0.889) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 53 "GND") (pinfunction "GND") (pintype "unspecified") (tstamp 2f805ce8-6961-4742-93f0-4c950334e53f))
+    (model "${SMOKER}/ESP32-WROOM-32UE-N4--3DModel-STEP-269445.STEP"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
@@ -3735,6 +3780,11 @@
       (net 53 "GND") (pintype "passive") (tstamp 3eb174f9-84bc-4dcf-a593-e61360074481))
     (pad "2" smd rect locked (at 2.075 0 270) (size 0.95 1.4) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 18 "/IO0") (pintype "passive") (tstamp d3150ce3-a628-4bc1-8457-0db48be372e2))
+    (model "${SMOKER}/TL1015AF160QG.step"
+      (offset (xyz 2.5 -1.5 -0.5))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 -90))
+    )
   )
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
@@ -4383,6 +4433,11 @@
       (net 39 "/Opto_Auger") (pinfunction "VO") (pintype "power_in") (tstamp 447bf8c7-78b0-4179-bcd7-17a190578fff))
     (pad "6" smd rect (at 3.4417 -1.27 90) (size 1.2192 0.4064) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 4 "+5V") (pinfunction "VCC") (pintype "power_in") (tstamp 1ff31d9b-2345-4d9e-b5c5-31ec13e4c882))
+    (model "${SMOKER}/5pin SO6.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 90))
+    )
   )
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
@@ -4699,6 +4754,11 @@
       (net 26 "/I2C_SCL") (pinfunction "4") (pintype "unspecified") (tstamp 4dc71182-298c-435e-87bc-f8b5ba022001))
     (pad "5" smd rect (at -2.799999 1.773501) (size 1.1938 1.8034) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp da082da5-8a9f-4b2b-a716-bbc0bd48828c))
     (pad "6" smd rect (at 2.799999 1.773501) (size 1.1938 1.8034) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 41210973-ebc2-48dd-8a75-4db612640793))
+    (model "${SMOKER}/PRT-14417.STEP"
+      (offset (xyz 0 1.5 -0.5))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (footprint "Resistor_SMD:R_0603_1608Metric" (layer "F.Cu")
@@ -4916,6 +4976,11 @@
       (net 41 "/Opto_Fan") (pinfunction "VO") (pintype "power_in") (tstamp f01201f2-7e47-4e2f-b8b5-c82e078377e3))
     (pad "6" smd rect (at 3.4417 -1.27 90) (size 1.2192 0.4064) (layers "F.Cu" "F.Paste" "F.Mask")
       (net 4 "+5V") (pinfunction "VCC") (pintype "power_in") (tstamp 67e133da-1b32-44e6-a77b-36bc8b311b59))
+    (model "${SMOKER}/5pin SO6.step"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 90))
+    )
   )
 
   (footprint "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" (layer "F.Cu")
@@ -5322,6 +5387,11 @@
           (xy 82.4 61)
         )
       )
+    )
+    (model "${SMOKER}/DF12NC-20DS-0.5V_51_.step"
+      (offset (xyz -3.5 -1.75 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
     )
   )
 
