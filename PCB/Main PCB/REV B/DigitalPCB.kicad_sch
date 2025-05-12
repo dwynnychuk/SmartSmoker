@@ -5681,7 +5681,7 @@
   (symbol (lib_id "power:+3.3V") (at 212.217 170.688 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 144e09f3-c451-4ffb-af9e-0f2de1961575)
-    (property "Reference" "#PWR?" (id 0) (at 208.407 170.688 0)
+    (property "Reference" "#PWR0102" (id 0) (at 208.407 170.688 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3.3V" (id 1) (at 216.027 170.6879 90)
@@ -5897,7 +5897,7 @@
   (symbol (lib_id "power:GND") (at 212.217 201.168 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 1f8591ad-f40f-4a35-b3e2-62bf1ef7ce40)
-    (property "Reference" "#PWR?" (id 0) (at 212.217 207.518 0)
+    (property "Reference" "#PWR0103" (id 0) (at 212.217 207.518 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 212.217 206.248 0))
@@ -6926,7 +6926,7 @@
   (symbol (lib_id "Device:C") (at 189.357 189.738 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 6581279e-5095-42c9-b01a-6e7349533c94)
-    (property "Reference" "C?" (id 0) (at 193.167 189.738 0))
+    (property "Reference" "C20" (id 0) (at 193.167 189.738 0))
     (property "Value" "0.01uF 50V X7R 0603" (id 1) (at 189.357 194.818 0))
     (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (id 2) (at 190.3222 193.548 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -8335,7 +8335,7 @@
   (symbol (lib_id "Device:C") (at 199.517 175.768 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid c4832baa-20ac-402c-81ce-007ac5e65786)
-    (property "Reference" "C?" (id 0) (at 199.517 168.148 90))
+    (property "Reference" "C19" (id 0) (at 199.517 168.148 90))
     (property "Value" "0.1uF 50V X7R 0603" (id 1) (at 199.517 170.688 90))
     (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (id 2) (at 195.707 176.7332 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -8450,7 +8450,7 @@
   (symbol (lib_id "Sensor_Temperature:MAX31855KASA") (at 212.217 188.468 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid c9863860-fc34-4504-88b4-9985c0de8eca)
-    (property "Reference" "U?" (id 0) (at 214.2364 175.768 0)
+    (property "Reference" "U9" (id 0) (at 214.2364 175.768 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "MAX31855KASA" (id 1) (at 214.2364 178.308 0)
@@ -8910,7 +8910,7 @@
   (symbol (lib_id "power:GND") (at 195.707 178.308 0) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid df6f082e-2266-4b40-89c2-d72f993fca39)
-    (property "Reference" "#PWR?" (id 0) (at 195.707 184.658 0)
+    (property "Reference" "#PWR0101" (id 0) (at 195.707 184.658 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 195.707 183.388 0))
@@ -9761,14 +9761,14 @@
     (path "/aa645635-39e4-4919-9b4a-55c706e7b969"
       (reference "#PWR077") (unit 1) (value "GND") (footprint "")
     )
+    (path "/df6f082e-2266-4b40-89c2-d72f993fca39"
+      (reference "#PWR0101") (unit 1) (value "GND") (footprint "")
+    )
     (path "/144e09f3-c451-4ffb-af9e-0f2de1961575"
-      (reference "#PWR?") (unit 1) (value "+3.3V") (footprint "")
+      (reference "#PWR0102") (unit 1) (value "+3.3V") (footprint "")
     )
     (path "/1f8591ad-f40f-4a35-b3e2-62bf1ef7ce40"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
-    )
-    (path "/df6f082e-2266-4b40-89c2-d72f993fca39"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+      (reference "#PWR0103") (unit 1) (value "GND") (footprint "")
     )
     (path "/43dc6377-fbfd-4b1d-8e60-8659a54cef54"
       (reference "AE1") (unit 1) (value "Antenna - FOR BOM ONLY") (footprint "Symbol:KiCad-Logo2_5mm_SilkScreen")
@@ -9827,11 +9827,11 @@
     (path "/ed1fb34e-1f97-4928-b44c-060435861571"
       (reference "C18") (unit 1) (value "0.1uF 50V X7R 0603") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
-    (path "/6581279e-5095-42c9-b01a-6e7349533c94"
-      (reference "C?") (unit 1) (value "0.01uF 50V X7R 0603") (footprint "Capacitor_SMD:C_0603_1608Metric")
-    )
     (path "/c4832baa-20ac-402c-81ce-007ac5e65786"
-      (reference "C?") (unit 1) (value "0.1uF 50V X7R 0603") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C19") (unit 1) (value "0.1uF 50V X7R 0603") (footprint "Capacitor_SMD:C_0603_1608Metric")
+    )
+    (path "/6581279e-5095-42c9-b01a-6e7349533c94"
+      (reference "C20") (unit 1) (value "0.01uF 50V X7R 0603") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/13b75dcb-ebb0-437a-b2b1-7185f8bfa073"
       (reference "D1") (unit 1) (value "R 2.0V 20mA") (footprint "LED_SMD:LED_0603_1608Metric")
@@ -10101,7 +10101,7 @@
       (reference "U8") (unit 1) (value "STM811SW16F") (footprint "Customs Smoker:STM811SW16F")
     )
     (path "/c9863860-fc34-4504-88b4-9985c0de8eca"
-      (reference "U?") (unit 1) (value "MAX31855KASA") (footprint "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
+      (reference "U9") (unit 1) (value "MAX31855KASA") (footprint "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
     )
   )
 )
