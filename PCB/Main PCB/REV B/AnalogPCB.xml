@@ -1,0 +1,1502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/dallynwynnychuk/Documents/Projects/Smart Smoker/SmartSmoker/PCB/Main PCB/REV B/AnalogPCB.kicad_sch</source>
+    <date/>
+    <tool>Eeschema (6.0.11-0)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Smart Smoker Analog</title>
+        <company/>
+        <rev>B</rev>
+        <date>2025-04-20</date>
+        <source>AnalogPCB.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>0.1uF 50V X7R 0603</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL10B104KB8NNWC</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1935-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL10B104KB8NNWC"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1935-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2e4d116f-ffd7-4baf-b47f-657f82f6d3ac</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>10uF 16V X5R 0805</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL21A106KOQNNNE</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1096-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL21A106KOQNNNE"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1096-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>86377005-a162-4cb8-a6ed-941fcba3a7d0</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>0.1uF 50V X7R 0603</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL10B104KB8NNWC</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1935-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL10B104KB8NNWC"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1935-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fc7c7be4-8211-49dd-8aed-cc1a4259e105</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>10uF 16V X5R 0805</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part Number">CL21A106KOQNNNE</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1276-1096-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part Number" value="CL21A106KOQNNNE"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1276-1096-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>85d87775-2a57-46b3-92b8-9bc0c2f41e53</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>B 3.2 20mA 0603</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Würth Elektronik</field>
+        <field name="Manufacturer Part Number">150060BS75000</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">732-4966-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Manufacturer" value="Würth Elektronik"/>
+      <property name="Manufacturer Part Number" value="150060BS75000"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="732-4966-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a6d28d9b-08c0-4376-8223-89f61f9c4390</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>Schottky 30v 200mA</value>
+      <footprint>Customs Smoker:RB521S30T1G-M</footprint>
+      <datasheet>https://www.microsemi.com/document-portal/doc_download/131890-lds-0040-1-datasheet</datasheet>
+      <fields>
+        <field name="Manufacturer">onsemi</field>
+        <field name="Manufacturer Part Number">RB521S30T1G</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">RB521S30T1GOSCT-ND</field>
+      </fields>
+      <libsource lib="Diode" part="1N6857UR" description="20V 150mA Schottky diode, MELF(DO-213AA)"/>
+      <property name="Manufacturer" value="onsemi"/>
+      <property name="Manufacturer Part Number" value="RB521S30T1G"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="RB521S30T1GOSCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1fb40f21-1816-4ec3-a6b2-490c06697cb5</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>R 2.0V 20mA</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">ams-OSRAM USA INC.</field>
+        <field name="Manufacturer Part Number">LO Q976-PS-25-0-20-R18</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">475-LOQ976-PS-25-0-20-R18CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Manufacturer" value="ams-OSRAM USA INC."/>
+      <property name="Manufacturer Part Number" value="LO Q976-PS-25-0-20-R18"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="475-LOQ976-PS-25-0-20-R18CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>642f50c1-5160-4859-a4e3-a4ea76734543</tstamps>
+    </comp>
+    <comp ref="D4">
+      <value>R 2.0V 20mA</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">ams-OSRAM USA INC.</field>
+        <field name="Manufacturer Part Number">LO Q976-PS-25-0-20-R18</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">475-LOQ976-PS-25-0-20-R18CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Manufacturer" value="ams-OSRAM USA INC."/>
+      <property name="Manufacturer Part Number" value="LO Q976-PS-25-0-20-R18"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="475-LOQ976-PS-25-0-20-R18CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>88f93c49-82fd-4f63-b59b-bb7139f783ad</tstamps>
+    </comp>
+    <comp ref="D5">
+      <value>B 3.2 20mA 0603</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Würth Elektronik</field>
+        <field name="Manufacturer Part Number">150060BS75000</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">732-4966-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Manufacturer" value="Würth Elektronik"/>
+      <property name="Manufacturer Part Number" value="150060BS75000"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="732-4966-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a2a9a142-5f53-4416-aa4f-4a19ab5bb212</tstamps>
+    </comp>
+    <comp ref="D6">
+      <value>Schottky 30v 200mA</value>
+      <footprint>Customs Smoker:RB521S30T1G-M</footprint>
+      <datasheet>https://www.microsemi.com/document-portal/doc_download/131890-lds-0040-1-datasheet</datasheet>
+      <fields>
+        <field name="Manufacturer">onsemi</field>
+        <field name="Manufacturer Part Number">RB521S30T1G</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">RB521S30T1GOSCT-ND</field>
+      </fields>
+      <libsource lib="Diode" part="1N6857UR" description="20V 150mA Schottky diode, MELF(DO-213AA)"/>
+      <property name="Manufacturer" value="onsemi"/>
+      <property name="Manufacturer Part Number" value="RB521S30T1G"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="RB521S30T1GOSCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bf494768-89ea-4319-ae6a-012f3ec4fb72</tstamps>
+    </comp>
+    <comp ref="D7">
+      <value>B 3.2 20mA 0603</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Würth Elektronik</field>
+        <field name="Manufacturer Part Number">150060BS75000</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">732-4966-1-ND</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Manufacturer" value="Würth Elektronik"/>
+      <property name="Manufacturer Part Number" value="150060BS75000"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="732-4966-1-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6364b2e5-55e2-4084-b9bb-7d3b127b99aa</tstamps>
+    </comp>
+    <comp ref="D8">
+      <value>Schottky 30v 200mA</value>
+      <footprint>Customs Smoker:RB521S30T1G-M</footprint>
+      <datasheet>https://www.microsemi.com/document-portal/doc_download/131890-lds-0040-1-datasheet</datasheet>
+      <fields>
+        <field name="Manufacturer">onsemi</field>
+        <field name="Manufacturer Part Number">RB521S30T1G</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">RB521S30T1GOSCT-ND</field>
+      </fields>
+      <libsource lib="Diode" part="1N6857UR" description="20V 150mA Schottky diode, MELF(DO-213AA)"/>
+      <property name="Manufacturer" value="onsemi"/>
+      <property name="Manufacturer Part Number" value="RB521S30T1G"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="RB521S30T1GOSCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>918241c1-bb50-444f-bbb4-379563555ec5</tstamps>
+    </comp>
+    <comp ref="H1">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965_Pad</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6fa04ab9-a102-4db3-85b9-c8238bed92de</tstamps>
+    </comp>
+    <comp ref="H2">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965_Pad</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>62f5c70e-6a26-427c-a5dd-43c77f9864f6</tstamps>
+    </comp>
+    <comp ref="H3">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965_Pad</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>11f56798-64c9-4a18-b09c-c35f99e3af09</tstamps>
+    </comp>
+    <comp ref="H4">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965_Pad</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cb4ab258-5854-4963-9a8d-25ffc4a3dac6</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>DF12NB_4.0_-20DP-0.5V_51_</value>
+      <footprint>Customs Smoker:HRS_DF12NB_4.0_-20DP-0.5V_51_</footprint>
+      <fields>
+        <field name="Manufacturer">Hirose</field>
+        <field name="Manufacturer Part Number">DF12NB(4.0)-20DP-0.5V(51)</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">26-DF12NB(4.0)-20DP-0.5V(51)CT-ND</field>
+      </fields>
+      <libsource lib="DF12NBHHDR" part="DF12NB_4.0_-20DP-0.5V_51_" description=""/>
+      <property name="Manufacturer" value="Hirose"/>
+      <property name="Manufacturer Part Number" value="DF12NB(4.0)-20DP-0.5V(51)"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="26-DF12NB(4.0)-20DP-0.5V(51)CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>60c11d3a-afae-4fcb-b3a9-dbde93698075</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>393570002</value>
+      <footprint>CONN_393570002_MOL</footprint>
+      <fields>
+        <field name="Manufacturer">Molex</field>
+        <field name="Manufacturer Part Number">393570002</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">WM7877-ND</field>
+      </fields>
+      <libsource lib="0393570002" part="393570002" description=""/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="Manufacturer Part Number" value="393570002"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="WM7877-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3818065e-cb8b-48ee-9db9-a1ac5acd0987</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>393570002</value>
+      <footprint>CONN_393570002_MOL</footprint>
+      <fields>
+        <field name="Manufacturer">Molex</field>
+        <field name="Manufacturer Part Number">393570002</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">WM7877-ND</field>
+      </fields>
+      <libsource lib="0393570002" part="393570002" description=""/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="Manufacturer Part Number" value="393570002"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="WM7877-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ff781a3b-f2bb-4eee-a3ff-d775fbbf13e2</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>393570002</value>
+      <footprint>CONN_393570002_MOL</footprint>
+      <fields>
+        <field name="Manufacturer">Molex</field>
+        <field name="Manufacturer Part Number">393570002</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">WM7877-ND</field>
+      </fields>
+      <libsource lib="0393570002" part="393570002" description=""/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="Manufacturer Part Number" value="393570002"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="WM7877-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c4507317-1a9f-49cb-ac5c-78d783868388</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>393570002</value>
+      <footprint>CONN_393570002_MOL</footprint>
+      <fields>
+        <field name="Manufacturer">Molex</field>
+        <field name="Manufacturer Part Number">393570002</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">WM7877-ND</field>
+      </fields>
+      <libsource lib="0393570002" part="393570002" description=""/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="Manufacturer Part Number" value="393570002"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="WM7877-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9e8d299a-2ee5-472f-8004-58798a45f33d</tstamps>
+    </comp>
+    <comp ref="J6">
+      <value>SJ3-35053D</value>
+      <footprint>Customs Smoker:SAMESKY_SJ3-35053D</footprint>
+      <fields>
+        <field name="Manufacturer">SameSky</field>
+        <field name="Manufacturer Part Number">SJ3-35053D</field>
+        <field name="Vendor">Digkey</field>
+        <field name="Vendor Part Number">2223-SJ3-35053D-ND</field>
+      </fields>
+      <libsource lib="SJ3-35053D" part="SJ3-35053D" description=""/>
+      <property name="Manufacturer" value="SameSky"/>
+      <property name="Manufacturer Part Number" value="SJ3-35053D"/>
+      <property name="Vendor" value="Digkey"/>
+      <property name="Vendor Part Number" value="2223-SJ3-35053D-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>01e6dd54-1030-4824-bd57-6df5cdd2ac30</tstamps>
+    </comp>
+    <comp ref="JP1">
+      <value>SolderJumper_3_Open</value>
+      <footprint>Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm</footprint>
+      <libsource lib="Jumper" part="SolderJumper_3_Open" description="Solder Jumper, 3-pole, open"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>43fe162c-a537-45fa-a7fc-e4118ef90edc</tstamps>
+    </comp>
+    <comp ref="JP2">
+      <value>SolderJumper_3_Open</value>
+      <footprint>Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm</footprint>
+      <libsource lib="Jumper" part="SolderJumper_3_Open" description="Solder Jumper, 3-pole, open"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>758a8794-77ea-444e-b2db-4bb73e7eb0ee</tstamps>
+    </comp>
+    <comp ref="JP3">
+      <value>SolderJumper_3_Open</value>
+      <footprint>Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm</footprint>
+      <libsource lib="Jumper" part="SolderJumper_3_Open" description="Solder Jumper, 3-pole, open"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3e3cfb46-27c9-4926-a4fb-d6801d61b925</tstamps>
+    </comp>
+    <comp ref="JP4">
+      <value>SolderJumper_3_Open</value>
+      <footprint>Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm</footprint>
+      <libsource lib="Jumper" part="SolderJumper_3_Open" description="Solder Jumper, 3-pole, open"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>62c06e8e-2f22-422a-a6ba-b110cd922db8</tstamps>
+    </comp>
+    <comp ref="PS1">
+      <value>IRM-10-3.3</value>
+      <footprint>Converter_ACDC:Converter_ACDC_MeanWell_IRM-10-xx_THT</footprint>
+      <datasheet>https://www.meanwell.com/Upload/PDF/IRM-10/IRM-10-SPEC.PDF</datasheet>
+      <fields>
+        <field name="Manufacturer">MEAN WELL USA Inc.</field>
+        <field name="Manufacturer Part Number">IRM-10-3.3</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1866-3031-ND</field>
+      </fields>
+      <libsource lib="Converter_ACDC" part="IRM-10-3.3" description="3.3V, 2.5A, 8.25W, Isolated, AC-DC, 222A(IRM10)"/>
+      <property name="Manufacturer" value="MEAN WELL USA Inc."/>
+      <property name="Manufacturer Part Number" value="IRM-10-3.3"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1866-3031-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>737637f3-8c39-45c2-a3a3-4ea93bf07a72</tstamps>
+    </comp>
+    <comp ref="PS2">
+      <value>IRM-05-5</value>
+      <footprint>Converter_ACDC:Converter_ACDC_MeanWell_IRM-05-xx_THT</footprint>
+      <datasheet>https://www.meanwell.com/Upload/PDF/IRM-05/IRM-05-SPEC.PDF</datasheet>
+      <fields>
+        <field name="Manufacturer">MEAN WELL USA Inc.</field>
+        <field name="Manufacturer Part Number">IRM-05-5</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">1866-3027-ND</field>
+      </fields>
+      <libsource lib="Converter_ACDC" part="IRM-05-5" description="5V, 1A, 5W, Isolated, AC-DC, 222A(IRM05)"/>
+      <property name="Manufacturer" value="MEAN WELL USA Inc."/>
+      <property name="Manufacturer Part Number" value="IRM-05-5"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="1866-3027-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>654b800d-3e48-4692-a3dc-f157d8d108b9</tstamps>
+    </comp>
+    <comp ref="Q1">
+      <value>2N7002</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF</datasheet>
+      <fields>
+        <field name="Manufacturer">Nexperia USA Inc.</field>
+        <field name="Manufacturer Part Number">1727-4789-1-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">Nexperia USA Inc.</field>
+      </fields>
+      <libsource lib="Transistor_FET" part="2N7002" description="0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"/>
+      <property name="Manufacturer" value="Nexperia USA Inc."/>
+      <property name="Manufacturer Part Number" value="1727-4789-1-ND"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="Nexperia USA Inc."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>34c2d90a-9102-4495-87fa-9ba744b5b49e</tstamps>
+    </comp>
+    <comp ref="Q2">
+      <value>2N7002</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF</datasheet>
+      <fields>
+        <field name="Manufacturer">Nexperia USA Inc.</field>
+        <field name="Manufacturer Part Number">1727-4789-1-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">Nexperia USA Inc.</field>
+      </fields>
+      <libsource lib="Transistor_FET" part="2N7002" description="0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"/>
+      <property name="Manufacturer" value="Nexperia USA Inc."/>
+      <property name="Manufacturer Part Number" value="1727-4789-1-ND"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="Nexperia USA Inc."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>822d94c4-281c-4f46-a987-7ac92c851836</tstamps>
+    </comp>
+    <comp ref="Q3">
+      <value>2N7002</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF</datasheet>
+      <fields>
+        <field name="Manufacturer">Nexperia USA Inc.</field>
+        <field name="Manufacturer Part Number">1727-4789-1-ND</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">Nexperia USA Inc.</field>
+      </fields>
+      <libsource lib="Transistor_FET" part="2N7002" description="0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"/>
+      <property name="Manufacturer" value="Nexperia USA Inc."/>
+      <property name="Manufacturer Part Number" value="1727-4789-1-ND"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="Nexperia USA Inc."/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3ea60e3e-03d1-4da6-8596-167b91860e50</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>91Ohm 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Manufacturer Part Number">RC0603FR-0791RL</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">311-91.0HRCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Manufacturer Part Number" value="RC0603FR-0791RL"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="311-91.0HRCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d5b1b4cd-0c7f-43f9-b027-6609b269acd7</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>10K 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Part Number">RNCP0603FTD10K0</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">RNCP0603FTD10K0CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="Stackpole Electronics Inc"/>
+      <property name="Manufacturer Part Number" value="RNCP0603FTD10K0"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="RNCP0603FTD10K0CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bdddde32-ebd7-49bb-901c-ab7d666507d9</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>0 Ohm 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Manufacturer Part Number">RC0603JR-070RL</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">311-0.0GRCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Manufacturer Part Number" value="RC0603JR-070RL"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="311-0.0GRCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9fb7ffdc-895b-48b9-bb94-bbcb97619c48</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>150Ohm 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Manufacturer Part Number">RC0603FR-07150RL</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">311-150HRCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Manufacturer Part Number" value="RC0603FR-07150RL"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="311-150HRCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e8630c9e-c05b-4bdf-9524-237d1b607ea0</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>64.9Ohm 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Manufacturer Part Number">RC0603FR-0764R9L</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">311-64.9HRCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Manufacturer Part Number" value="RC0603FR-0764R9L"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="311-64.9HRCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ae9f4fd6-5f2a-40c8-9c46-a13a782aa0bd</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>91Ohm 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Manufacturer Part Number">RC0603FR-0791RL</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">311-91.0HRCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Manufacturer Part Number" value="RC0603FR-0791RL"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="311-91.0HRCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c6c21bb8-5aee-4563-9b9b-072dbbc41e55</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>10K 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Part Number">RNCP0603FTD10K0</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">RNCP0603FTD10K0CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="Stackpole Electronics Inc"/>
+      <property name="Manufacturer Part Number" value="RNCP0603FTD10K0"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="RNCP0603FTD10K0CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5c30f760-7276-4a23-8198-e6ac32d246e5</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>0 Ohm 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Manufacturer Part Number">RC0603JR-070RL</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">311-0.0GRCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Manufacturer Part Number" value="RC0603JR-070RL"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="311-0.0GRCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e8a03188-3d01-414d-b9b7-382d6cb48abf</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>91Ohm 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Manufacturer Part Number">RC0603FR-0791RL</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">311-91.0HRCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Manufacturer Part Number" value="RC0603FR-0791RL"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="311-91.0HRCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7960d00d-89fb-4cd8-bc9e-9ee3cbec1ea0</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>10K 1% 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Stackpole Electronics Inc</field>
+        <field name="Manufacturer Part Number">RNCP0603FTD10K0</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">RNCP0603FTD10K0CT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="Stackpole Electronics Inc"/>
+      <property name="Manufacturer Part Number" value="RNCP0603FTD10K0"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="RNCP0603FTD10K0CT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4db2221c-8a09-403a-89f3-2b3c164de5cd</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>0 Ohm 0603</value>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
+      <fields>
+        <field name="Manufacturer">YAGEO</field>
+        <field name="Manufacturer Part Number">RC0603JR-070RL</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">311-0.0GRCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="YAGEO"/>
+      <property name="Manufacturer Part Number" value="RC0603JR-070RL"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="311-0.0GRCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1ab3bd8b-2775-4240-869f-cd4a4ea328a3</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>1kOhm 0.1% 0805</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Susumu</field>
+        <field name="Manufacturer Part Number">RG2012P-102-B-T5</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">RG20P1.0KBCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="Susumu"/>
+      <property name="Manufacturer Part Number" value="RG2012P-102-B-T5"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="RG20P1.0KBCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1977fea4-9e41-4d3f-82de-654b47e45f0b</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>1kOhm 0.1% 0805</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Susumu</field>
+        <field name="Manufacturer Part Number">RG2012P-102-B-T5</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">RG20P1.0KBCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="Susumu"/>
+      <property name="Manufacturer Part Number" value="RG2012P-102-B-T5"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="RG20P1.0KBCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>487a2b0a-3ef3-441a-92db-8a6d3bd3ad6b</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>1kOhm 0.1% 0805</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Susumu</field>
+        <field name="Manufacturer Part Number">RG2012P-102-B-T5</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">RG20P1.0KBCT-ND</field>
+      </fields>
+      <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
+      <property name="Manufacturer" value="Susumu"/>
+      <property name="Manufacturer Part Number" value="RG2012P-102-B-T5"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="RG20P1.0KBCT-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>81860c93-09f6-4627-a5a8-13e75d77119b</tstamps>
+    </comp>
+    <comp ref="TC1">
+      <value>Thermocouple_Block</value>
+      <footprint>Customs Smoker:K-TypeAdapter</footprint>
+      <fields>
+        <field name="Manufacturer">Labfacility Ltd</field>
+        <field name="Manufacturer Part Number">XE-1139-001</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">5425-XE-1139-001-ND</field>
+      </fields>
+      <libsource lib="Device" part="Thermocouple_Block" description="Thermocouple with isothermal block"/>
+      <property name="Manufacturer" value="Labfacility Ltd"/>
+      <property name="Manufacturer Part Number" value="XE-1139-001"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="5425-XE-1139-001-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>86d98575-a093-4d34-9a45-f9f3ce03b5a4</tstamps>
+    </comp>
+    <comp ref="TP1">
+      <value>TP</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>43403bdf-0a83-4d92-b108-324d52542abe</tstamps>
+    </comp>
+    <comp ref="TP2">
+      <value>TP</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>375fe4c4-d0fa-4137-b885-695279906ff3</tstamps>
+    </comp>
+    <comp ref="TP3">
+      <value>TP</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>04dfd0d1-9660-4f77-b805-e1e581490e6d</tstamps>
+    </comp>
+    <comp ref="TP13">
+      <value>TP</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1e99e2e3-94be-4f1a-a61d-2f457050f1d4</tstamps>
+    </comp>
+    <comp ref="TP15">
+      <value>TP</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>58cc7bae-75bb-419f-9ee4-b2f75af6bd37</tstamps>
+    </comp>
+    <comp ref="TP16">
+      <value>TP</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>950eb9d9-9a94-48f2-8aba-1b31efb60e22</tstamps>
+    </comp>
+    <comp ref="TP17">
+      <value>TP</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>55657769-7fcd-4605-82f7-7d2d352648ff</tstamps>
+    </comp>
+    <comp ref="TP18">
+      <value>TP</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>16a76e3f-ca18-48ee-bbd8-3efb1bfac425</tstamps>
+    </comp>
+    <comp ref="TP19">
+      <value>TP</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ccb80139-0f28-4362-8f5c-19594fd0792f</tstamps>
+    </comp>
+    <comp ref="TP20">
+      <value>TP</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1f414170-d1d4-4aad-b5b9-fe7ba514aa2b</tstamps>
+    </comp>
+    <comp ref="TP29">
+      <value>TP</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.0mm</footprint>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5d494944-aaee-4411-8efc-1b9ae8162aec</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>ALDP105W</value>
+      <footprint>Customs Smoker:PAN_ALD_PAN</footprint>
+      <datasheet>ALDP105W</datasheet>
+      <fields>
+        <field name="Manufacturer">Panasonic Electric Works</field>
+        <field name="Manufacturer Part Number">ALDP105W</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">255-3586-ND</field>
+      </fields>
+      <libsource lib="ALDP105W" part="ALDP105W" description=""/>
+      <property name="Manufacturer" value="Panasonic Electric Works"/>
+      <property name="Manufacturer Part Number" value="ALDP105W"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="255-3586-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>03d07710-ad7b-4d26-b79b-cd52fc2b68c4</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>ALDP105W</value>
+      <footprint>Customs Smoker:PAN_ALD_PAN</footprint>
+      <datasheet>ALDP105W</datasheet>
+      <fields>
+        <field name="Manufacturer">Panasonic Electric Works</field>
+        <field name="Manufacturer Part Number">ALDP105W</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">255-3586-ND</field>
+      </fields>
+      <libsource lib="ALDP105W" part="ALDP105W" description=""/>
+      <property name="Manufacturer" value="Panasonic Electric Works"/>
+      <property name="Manufacturer Part Number" value="ALDP105W"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="255-3586-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>74e19f9d-017f-4ac2-89ee-73bdecdfda39</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>ALDP105W</value>
+      <footprint>Customs Smoker:PAN_ALD_PAN</footprint>
+      <datasheet>ALDP105W</datasheet>
+      <fields>
+        <field name="Manufacturer">Panasonic Electric Works</field>
+        <field name="Manufacturer Part Number">ALDP105W</field>
+        <field name="Vendor">Digikey</field>
+        <field name="Vendor Part Number">255-3586-ND</field>
+      </fields>
+      <libsource lib="ALDP105W" part="ALDP105W" description=""/>
+      <property name="Manufacturer" value="Panasonic Electric Works"/>
+      <property name="Manufacturer Part Number" value="ALDP105W"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Vendor Part Number" value="255-3586-ND"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="AnalogPCB.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a29da9bc-f0ac-4174-8303-40b595c6f950</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="0393570002" part="393570002">
+      <docs>393570002</docs>
+      <footprints>
+        <fp>CONN_393570002_MOL</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">393570002</field>
+        <field name="Footprint">CONN_393570002_MOL</field>
+        <field name="Datasheet">393570002</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="unspecified"/>
+        <pin num="2" name="2" type="unspecified"/>
+      </pins>
+    </libpart>
+    <libpart lib="ALDP105W" part="ALDP105W">
+      <docs>ALDP105W</docs>
+      <footprints>
+        <fp>PAN_ALD_PAN</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ALDP105W</field>
+        <field name="Footprint">PAN_ALD_PAN</field>
+        <field name="Datasheet">ALDP105W</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="unspecified"/>
+        <pin num="2" name="2" type="unspecified"/>
+        <pin num="3" name="3" type="unspecified"/>
+        <pin num="4" name="4" type="unspecified"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="TestPoint">
+      <description>test point</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Converter_ACDC" part="IRM-05-5">
+      <description>5V, 1A, 5W, Isolated, AC-DC, 222A(IRM05)</description>
+      <docs>https://www.meanwell.com/Upload/PDF/IRM-05/IRM-05-SPEC.PDF</docs>
+      <footprints>
+        <fp>Converter*ACDC*MeanWell*IRM*05*THT*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">PS</field>
+        <field name="Value">IRM-05-5</field>
+        <field name="Footprint">Converter_ACDC:Converter_ACDC_MeanWell_IRM-05-xx_THT</field>
+        <field name="Datasheet">https://www.meanwell.com/Upload/PDF/IRM-05/IRM-05-SPEC.PDF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="AC/N" type="power_in"/>
+        <pin num="2" name="AC/L" type="power_in"/>
+        <pin num="3" name="-Vo" type="power_out"/>
+        <pin num="4" name="+Vo" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Converter_ACDC" part="IRM-10-3.3">
+      <description>3.3V, 2.5A, 8.25W, Isolated, AC-DC, 222A(IRM10)</description>
+      <docs>https://www.meanwell.com/Upload/PDF/IRM-10/IRM-10-SPEC.PDF</docs>
+      <footprints>
+        <fp>Converter*ACDC*MeanWell*IRM*10*THT*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">PS</field>
+        <field name="Value">IRM-10-3.3</field>
+        <field name="Footprint">Converter_ACDC:Converter_ACDC_MeanWell_IRM-10-xx_THT</field>
+        <field name="Datasheet">https://www.meanwell.com/Upload/PDF/IRM-10/IRM-10-SPEC.PDF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="AC/N" type="power_in"/>
+        <pin num="2" name="AC/L" type="power_in"/>
+        <pin num="3" name="-Vo" type="power_out"/>
+        <pin num="4" name="+Vo" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="DF12NBHHDR" part="DF12NB_4.0_-20DP-0.5V_51_">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">DF12NB_4.0_-20DP-0.5V_51_</field>
+        <field name="Footprint">DF12NB_4.0_-20DP-0.5V_51_:HRS_DF12NB_4.0_-20DP-0.5V_51_</field>
+        <field name="MANUFACTURER">HRS</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="9" type="passive"/>
+        <pin num="10" name="10" type="passive"/>
+        <pin num="11" name="11" type="passive"/>
+        <pin num="12" name="12" type="passive"/>
+        <pin num="13" name="13" type="passive"/>
+        <pin num="14" name="14" type="passive"/>
+        <pin num="15" name="15" type="passive"/>
+        <pin num="16" name="16" type="passive"/>
+        <pin num="17" name="17" type="passive"/>
+        <pin num="18" name="18" type="passive"/>
+        <pin num="19" name="19" type="passive"/>
+        <pin num="20" name="20" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_US">
+      <description>Resistor, US symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_US</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Thermocouple_Block">
+      <description>Thermocouple with isothermal block</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>PIN?ARRAY*</fp>
+        <fp>bornier*</fp>
+        <fp>*Terminal?Block*</fp>
+        <fp>Thermo*Couple*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TC</field>
+        <field name="Value">Thermocouple_Block</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="1N6857UR">
+      <description>20V 150mA Schottky diode, MELF(DO-213AA)</description>
+      <docs>https://www.microsemi.com/document-portal/doc_download/131890-lds-0040-1-datasheet</docs>
+      <footprints>
+        <fp>D?MELF*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">1N6857UR</field>
+        <field name="Footprint">Diode_SMD:D_MELF</field>
+        <field name="Datasheet">https://www.microsemi.com/document-portal/doc_download/131890-lds-0040-1-datasheet</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Jumper" part="SolderJumper_3_Open">
+      <description>Solder Jumper, 3-pole, open</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>SolderJumper*Open*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">SolderJumper_3_Open</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole">
+      <description>Mounting Hole without connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole</field>
+        <field name="Datasheet">~</field>
+      </fields>
+    </libpart>
+    <libpart lib="SJ3-35053D" part="SJ3-35053D">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">SJ3-35053D</field>
+        <field name="Footprint">SJ3-35053D:SAMESKY_SJ3-35053D</field>
+        <field name="PARTREV">1.0</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
+        <field name="MAXIMUM_PACKAGE_HEIGHT">18.05mm</field>
+        <field name="MANUFACTURER">Same Sky</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+        <pin num="5" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_FET" part="2N7002">
+      <description>0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23</description>
+      <docs>https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">2N7002</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+        <field name="Datasheet">https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="0393570002">
+      <uri>/Users/dallynwynnychuk/Documents/Projects/Smart Smoker/SmartSmoker/PCB/Symbols/2023-05-22_14-47-12.kicad_sym</uri>
+    </library>
+    <library logical="ALDP105W">
+      <uri>/Users/dallynwynnychuk/Documents/Projects/Smart Smoker/SmartSmoker/PCB/Symbols/2025-03-09_22-17-59.kicad_sym</uri>
+    </library>
+    <library logical="Connector">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Connector.kicad_sym</uri>
+    </library>
+    <library logical="Converter_ACDC">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Converter_ACDC.kicad_sym</uri>
+    </library>
+    <library logical="DF12NBHHDR">
+      <uri>/Users/dallynwynnychuk/Documents/Projects/Smart Smoker/SmartSmoker/PCB/Symbols/DF12NB_4.0_-20DP-0.5V_51_.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Device.kicad_sym</uri>
+    </library>
+    <library logical="Diode">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Diode.kicad_sym</uri>
+    </library>
+    <library logical="Jumper">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Jumper.kicad_sym</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Mechanical.kicad_sym</uri>
+    </library>
+    <library logical="SJ3-35053D">
+      <uri>/Users/dallynwynnychuk/Documents/Projects/Smart Smoker/SmartSmoker/PCB/Symbols/SJ3-35053D.kicad_sym</uri>
+    </library>
+    <library logical="Transistor_FET">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Transistor_FET.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3.3VA">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="J1" pin="5" pinfunction="5" pintype="passive"/>
+      <node ref="J1" pin="7" pinfunction="7" pintype="passive"/>
+      <node ref="JP1" pin="3" pinfunction="B" pintype="passive"/>
+      <node ref="JP2" pin="3" pinfunction="B" pintype="passive"/>
+      <node ref="JP3" pin="3" pinfunction="B" pintype="passive"/>
+      <node ref="PS1" pin="4" pinfunction="+Vo" pintype="power_out"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="TP20" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="2" name="+5V">
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D6" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D8" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J1" pin="11" pinfunction="11" pintype="passive"/>
+      <node ref="J1" pin="9" pinfunction="9" pintype="passive"/>
+      <node ref="PS2" pin="4" pinfunction="+Vo" pintype="power_out"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="TP3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="U2" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="U3" pin="1" pinfunction="1" pintype="unspecified"/>
+    </net>
+    <net code="3" name="/AC_L">
+      <node ref="J2" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="PS1" pin="2" pinfunction="AC/L" pintype="power_in"/>
+      <node ref="PS2" pin="2" pinfunction="AC/L" pintype="power_in"/>
+      <node ref="TP18" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="U2" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="U3" pin="2" pinfunction="2" pintype="unspecified"/>
+    </net>
+    <net code="4" name="/AC_N">
+      <node ref="J2" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="J3" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="J4" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="J5" pin="2" pinfunction="2" pintype="unspecified"/>
+      <node ref="PS1" pin="1" pinfunction="AC/N" pintype="power_in"/>
+      <node ref="PS2" pin="1" pinfunction="AC/N" pintype="power_in"/>
+      <node ref="TP16" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="5" name="/Auger_+">
+      <node ref="J5" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="U1" pin="3" pinfunction="3" pintype="unspecified"/>
+    </net>
+    <net code="6" name="/Fan_+">
+      <node ref="J4" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="U3" pin="3" pinfunction="3" pintype="unspecified"/>
+    </net>
+    <net code="7" name="/Ignitor_+">
+      <node ref="J3" pin="1" pinfunction="1" pintype="unspecified"/>
+      <node ref="U2" pin="3" pinfunction="3" pintype="unspecified"/>
+    </net>
+    <net code="8" name="/MeatProbe+">
+      <node ref="J1" pin="19" pinfunction="19" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+    </net>
+    <net code="9" name="/MeatProbe-">
+      <node ref="J1" pin="20" pinfunction="20" pintype="passive"/>
+      <node ref="J6" pin="3" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+    </net>
+    <net code="10" name="/MeatProbeSleeve">
+      <node ref="J6" pin="1" pintype="passive"/>
+      <node ref="JP4" pin="3" pinfunction="B" pintype="passive"/>
+    </net>
+    <net code="11" name="/MeatProbeTip">
+      <node ref="J6" pin="2" pintype="passive"/>
+      <node ref="JP4" pin="1" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="12" name="/Opto_Auger">
+      <node ref="J1" pin="15" pinfunction="15" pintype="passive"/>
+      <node ref="Q1" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="13" name="/Opto_Fan">
+      <node ref="J1" pin="16" pinfunction="16" pintype="passive"/>
+      <node ref="Q3" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="TP19" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="14" name="/Opto_Ignitor">
+      <node ref="J1" pin="17" pinfunction="17" pintype="passive"/>
+      <node ref="Q2" pin="1" pinfunction="G" pintype="input"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="TP17" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="15" name="/Probe1+">
+      <node ref="J1" pin="13" pinfunction="13" pintype="passive"/>
+      <node ref="TC1" pin="1" pinfunction="+" pintype="passive"/>
+    </net>
+    <net code="16" name="/Probe1-">
+      <node ref="J1" pin="14" pinfunction="14" pintype="passive"/>
+      <node ref="TC1" pin="2" pinfunction="-" pintype="passive"/>
+    </net>
+    <net code="17" name="GND">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D4" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J1" pin="10" pinfunction="10" pintype="passive"/>
+      <node ref="J1" pin="12" pinfunction="12" pintype="passive"/>
+      <node ref="J1" pin="18" pinfunction="18" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="J1" pin="4" pinfunction="4" pintype="passive"/>
+      <node ref="J1" pin="6" pinfunction="6" pintype="passive"/>
+      <node ref="J1" pin="8" pinfunction="8" pintype="passive"/>
+      <node ref="JP1" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="JP2" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="JP3" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="JP4" pin="2" pinfunction="C" pintype="passive"/>
+      <node ref="PS1" pin="3" pinfunction="-Vo" pintype="power_out"/>
+      <node ref="PS2" pin="3" pinfunction="-Vo" pintype="power_out"/>
+      <node ref="Q1" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="Q2" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="Q3" pin="2" pinfunction="S" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+      <node ref="TP29" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="18" name="Net-(D1-Pad1)">
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="Q1" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+    </net>
+    <net code="19" name="Net-(D1-Pad2)">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+    </net>
+    <net code="20" name="Net-(D2-Pad2)">
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="4" pintype="unspecified"/>
+    </net>
+    <net code="21" name="Net-(D3-Pad2)">
+      <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="TP13" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="22" name="Net-(D4-Pad2)">
+      <node ref="D4" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="TP15" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="23" name="Net-(D5-Pad1)">
+      <node ref="D5" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="Q2" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+    </net>
+    <net code="24" name="Net-(D5-Pad2)">
+      <node ref="D5" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+    </net>
+    <net code="25" name="Net-(D6-Pad2)">
+      <node ref="D6" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="U2" pin="4" pinfunction="4" pintype="unspecified"/>
+    </net>
+    <net code="26" name="Net-(D7-Pad1)">
+      <node ref="D7" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="Q3" pin="3" pinfunction="D" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+    </net>
+    <net code="27" name="Net-(D7-Pad2)">
+      <node ref="D7" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+    </net>
+    <net code="28" name="Net-(D8-Pad2)">
+      <node ref="D8" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="U3" pin="4" pinfunction="4" pintype="unspecified"/>
+    </net>
+    <net code="29" name="Net-(JP1-Pad2)">
+      <node ref="JP1" pin="2" pinfunction="C" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+    </net>
+    <net code="30" name="Net-(JP2-Pad2)">
+      <node ref="JP2" pin="2" pinfunction="C" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+    </net>
+    <net code="31" name="Net-(JP3-Pad2)">
+      <node ref="JP3" pin="2" pinfunction="C" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+    </net>
+    <net code="32" name="unconnected-(J6-Pad4)">
+      <node ref="J6" pin="4" pintype="passive+no_connect"/>
+    </net>
+    <net code="33" name="unconnected-(J6-Pad5)">
+      <node ref="J6" pin="5" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>
