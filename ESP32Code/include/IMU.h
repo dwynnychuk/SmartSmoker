@@ -5,7 +5,7 @@
 #include "ISensor.h"
 #include <LSM6DSRSensor.h>
 
-class IMU : public Isensor {
+class IMU : public ISensor {
 private:
     LSM6DSRSensor imu;
     int32_t acc[3];     // x,y,z acceleration
