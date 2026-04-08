@@ -26,7 +26,7 @@ void LightSensor::begin() {
 
 void LightSensor::update() {
     uint8_t lsb = readReg(0x88);    // low byte
-    uint8_t msb = readReg(0x89);    // hight byte
+    uint8_t msb = readReg(0x89);    // high byte
 
     uint16_t value (msb << 8) | lsb;
 }
