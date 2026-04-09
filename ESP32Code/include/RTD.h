@@ -6,7 +6,8 @@
 
 class RTD : public ISensor {
 private:
-    int pin;;
+    int pinPlus;
+    int pinMinus;
 
     float vref;
     float rref;
@@ -14,12 +15,12 @@ private:
     float temperature;
     float voltage;
 
-    float readVoltage();
+    float readVoltage(int pin);
     float voltageToResistance(float v);
     float ResistanceToTemperature(float r);
 
 public: 
-    RTD(int analogPin, float vref, float rref);
+    RTD(int analogPinPlus, int analogPinMinus, float vref, float rref);
 
     void begin() override;
     void update() override;
