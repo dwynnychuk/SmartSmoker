@@ -1,0 +1,5 @@
+#ifndef AUGERCONTROLLER_H
+#define AUGERCONTROLLER_H
+
+
+#endif

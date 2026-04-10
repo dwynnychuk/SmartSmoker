@@ -1,0 +1,5 @@
+#ifndef IGNITORCONTROLLER_H
+#define IGNITORCONTROLLER_H
+
+
+#endif
