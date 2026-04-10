@@ -5,8 +5,8 @@
 class DutyCycleLoad : public ILoad {
 public: 
     DutyCycleLoad(uint8_t pin, uint32_t period_ms);
-    void set(float value) override {}
-    void tick() override {}
+    void set(float value) override;
+    void tick() override;
 
 private:
     uint8_t     _pin;
