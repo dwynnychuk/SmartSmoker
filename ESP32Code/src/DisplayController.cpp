@@ -84,5 +84,36 @@ void DisplayController::_drawFooter(const char* left, const char* right) {
 }
 
 void DisplayController::_drawAlarm(ErrorCode error) {
+    _display.setTextSize(1);
+    _display.setCursor(0,0);
+    _display.print("ERROR");
     
+    _display.setTextSize(2);
+    _display.setCursor(0,20);
+    
+    switch(error) {
+        case ErrorCode::IGNITION_TIMEOUT:
+        _display.print("Ignition Timeout");
+        break;
+
+        case ErrorCode::OVERTEMP:
+        _display.print("High Temperature");
+        break;
+
+        case ErrorCode::UNDERTEMP:
+        _display.print("Low Temperature");
+        break;
+
+        case ErrorCode::SENSOR_FAULT:
+        _display.print("Sensor Error");
+        break;
+
+        default:
+        _display.print("Unknown Error");
+        break;
+    }
+
+    _display.setTextSize(1);
+    _display.setCursor(0,56);
+    _display.print("Push to Clear");
 }
