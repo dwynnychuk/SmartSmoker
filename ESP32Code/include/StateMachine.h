@@ -12,6 +12,7 @@
 enum class GrillState : uint8_t {
     IDLE,
     IGNITION,
+    PREHEAT,
     TEMP_HOLD,
     LID_OPEN,
     COOLDOWN,
@@ -51,6 +52,7 @@ private:
     // Per-state handlers
     void _tickIDLE     (const Telemetry& d, const EncoderEvent& enc);
     void _tickIGNITION (const Telemetry& d, const EncoderEvent& enc);
+    void _tickPREHEAT  (const Telemetry& d, const EncoderEvent& enc);
     void _tickTEMP_HOLD(const Telemetry& d, const EncoderEvent& enc);
     void _tickLID_OPEN (const Telemetry& d, const EncoderEvent& enc);
     void _tickCOOLDOWN (const Telemetry& d, const EncoderEvent& enc);

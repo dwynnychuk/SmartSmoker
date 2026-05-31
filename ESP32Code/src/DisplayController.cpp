@@ -19,31 +19,37 @@ void DisplayController::render(GrillState _state, const Telemetry& data, float _
     switch(_state) {
         case GrillState::IDLE:
         _drawHeader("IDLE", _setTemp);
-        _drawBigTemp(0.0);
+        _drawBigTemp(data.tempRTD);
         _drawFooter("Push to Ignite", "");
         break;
 
         case GrillState::IGNITION:
         _drawHeader("IGNITING", _setTemp);
-        _drawBigTemp(0.0);
+        _drawBigTemp(data.tempRTD);
+        _drawFooter("Warming Up", "");
+        break;
+
+        case GrillState::PREHEAT:
+        _drawHeader("IGNITING", _setTemp);
+        _drawBigTemp(data.tempRTD);
         _drawFooter("Warming Up", "");
         break;
 
         case GrillState::TEMP_HOLD:
         _drawHeader("COOKING", _setTemp);
-        _drawBigTemp(0.0);
+        _drawBigTemp(data.tempRTD);
         _drawFooter("Auger: ", "100%");
         break;
 
         case GrillState::LID_OPEN:
         _drawHeader("LID OPEN", _setTemp);
-        _drawBigTemp(0.0);
+        _drawBigTemp(data.tempRTD);
         _drawFooter("Close Lid Soon", "");
         break;
 
         case GrillState::COOLDOWN:
         _drawHeader("SHUTDOWN", _setTemp);
-        _drawBigTemp(0.0);
+        _drawBigTemp(data.tempRTD);
         _drawFooter("Cooling Down", "");
         break;
 

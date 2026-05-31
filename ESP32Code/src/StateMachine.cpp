@@ -23,18 +23,19 @@ void StateMachine::tick(const Telemetry& data, const EncoderEvent& enc) {
 
     // Dispatch to per-state handler
     switch (_state) {
-        case GrillState::IDLE: _tickIDLE(data, enc); break;
-        case GrillState::IGNITION: _tickIGNITION(data, enc); break;
-        case GrillState::TEMP_HOLD: _tickTEMP_HOLD (data, enc); break;
-        case GrillState::LID_OPEN: _tickLID_OPEN(data, enc); break;
-        case GrillState::COOLDOWN: _tickCOOLDOWN(data, enc); break;
-        case GrillState::ERROR: _tickERROR(data, enc); break;
+        case GrillState::IDLE:      _tickIDLE       (data, enc);   break;
+        case GrillState::IGNITION:  _tickIGNITION   (data, enc);   break;
+        case GrillState::PREHEAT:   _tickPREHEAT    (data, enc);   break;
+        case GrillState::TEMP_HOLD: _tickTEMP_HOLD  (data, enc);   break;
+        case GrillState::LID_OPEN:  _tickLID_OPEN   (data, enc);   break;
+        case GrillState::COOLDOWN:  _tickCOOLDOWN   (data, enc);   break;
+        case GrillState::ERROR:     _tickERROR      (data, enc);   break;
     }
 
     // Tick all loads every loop
     _auger.tick();
     _fan.tick();
-    _igniter.tick();
+    _ignitor.tick();
 
     // Display always reflects current state
     _display.render(_state, data, _setTemp, _error);
@@ -43,16 +44,7 @@ void StateMachine::tick(const Telemetry& data, const EncoderEvent& enc) {
 // ── Transition ────────────────────────────────────────────────────────────────
 
 void StateMachine::_transitionTo(GrillState next, ErrorCode fault) {
-    // Exit current state
-    switch (_state) {
-        case GrillState::ERROR:
-            _fault = ErrorCode::NONE;
-            break;
-        default:
-            break;
-    }
-
-    _fault          = fault;
+    _error          = fault;
     _state          = next;
     _stateEnteredMs = millis();
 
@@ -72,8 +64,12 @@ void StateMachine::_transitionTo(GrillState next, ErrorCode fault) {
             _fan.set(IGNITION_FAN);
             break;
 
-        case GrillState::TEMP_HOLD:
+        case GrillState::PREHEAT:
             _pid.reset();
+            break;
+
+        case GrillState::TEMP_HOLD:
+            _ignitor.off();
             break;
 
         case GrillState::LID_OPEN:
@@ -96,15 +92,15 @@ void StateMachine::_transitionTo(GrillState next, ErrorCode fault) {
 
 // ── Per-state tick handlers ───────────────────────────────────────────────────
 
-void GrillStateMachine::_tickIDLE(const SmokerData& d, const EncoderEvent& enc) {
+void StateMachine::_tickIDLE(const Telemetry& d, const EncoderEvent& enc) {
     if (enc.delta != 0)
-        _targetTemp = constrain(_targetTemp + enc.delta * TARGET_STEP_C,
-                                TARGET_MIN_C, TARGET_MAX_C);
+        _setTemp = constrain(_setTemp + enc.delta * TARGET_STEP,
+                                TARGET_MIN, TARGET_MAX);
     if (enc.pressed)
-        _transitionTo(GrillState::IGNITING);
+        _transitionTo(GrillState::IGNITION);
 }
 
-void GrillStateMachine::_tickIGNITING(const SmokerData& d, const EncoderEvent& enc) {
+void StateMachine::_tickIGNITION(const Telemetry& d, const EncoderEvent& enc) {
     // Snapshot ambient temp on first valid RTD reading
     if (_tempAtIgnition == 0.0f && d.tempRTD > 0.0f)
         _tempAtIgnition = d.tempRTD;
