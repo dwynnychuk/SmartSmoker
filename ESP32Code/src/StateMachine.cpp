@@ -109,37 +109,37 @@ void StateMachine::_tickIGNITION(const Telemetry& d, const EncoderEvent& enc) {
         return _transitionTo(GrillState::PREHEAT);
 
     if (_timeInState() >= IGNITE_TIMEOUT_MS)
-        return _transitionTo(GrillState::ERROR, ErrorCode::IGNITE_TIMEOUT);
+        return _transitionTo(GrillState::ERROR, ErrorCode::IGNITION_TIMEOUT);
 
-    // Allow manual abort
-    if (enc.pressed)
+    // Allow manual abort by holding encoder
+    if (enc.hold)
         _transitionTo(GrillState::COOLDOWN);
 }
 
-void GrillStateMachine::_tickPREHEAT(const SmokerData& d, const EncoderEvent& enc) {
-    if (_nearTarget(d))
-        return _transitionTo(GrillState::COOKING);
+void StateMachine::_tickPREHEAT(const Telemetry& d, const EncoderEvent& enc) {
+    if (_nearSetTemp(d))
+        return _transitionTo(GrillState::TEMP_HOLD);
 
-    if (enc.pressed)
+    if (enc.hold)
         _transitionTo(GrillState::COOLDOWN);
 }
 
-void GrillStateMachine::_tickCOOKING(const SmokerData& d, const EncoderEvent& enc) {
+void StateMachine::_tickTEMP_HOLD(const Telemetry& d, const EncoderEvent& enc) {
     // PID drives auger, fan follows
-    float duty = _pid.compute(d.tempRTD, _targetTemp);
+    float duty = _pid.compute_pid(d.tempRTD, _setTemp);
     _auger.set(duty);
-    _fan.set(0.4f + duty * 0.6f);   // fan tracks auger: min 40%, max 100%
+    _fan.set(1.0f);   // fan tracks auger: min 40%, max 100%
 
     if (_lidIsOpen(d))
         return _transitionTo(GrillState::LID_OPEN);
 
-    if (_fireLost(d))
+    if (_flameout(d))
         return _transitionTo(GrillState::ERROR, ErrorCode::UNDERTEMP);
 
     // Live temp adjustment with encoder
     if (enc.delta != 0)
-        _targetTemp = constrain(_targetTemp + enc.delta * TARGET_STEP_C,
-                                TARGET_MIN_C, TARGET_MAX_C);
+        _setTemp = constrain(_setTemp + enc.delta * TARGET_STEP,
+                                TARGET_MIN, TARGET_MAX);
     if (enc.pressed)
         _transitionTo(GrillState::COOLDOWN);
 }
@@ -165,33 +165,33 @@ void GrillStateMachine::_tickERROR(const SmokerData& d, const EncoderEvent& enc)
 
 // ── Guards ────────────────────────────────────────────────────────────────────
 
-bool GrillStateMachine::_lidIsOpen(const SmokerData& d) const {
+bool StateMachine::_lidIsOpen(const SmokerData& d) const {
     return (d.ambientRaw > LID_LIGHT_THRESH) && d.lidOpen;
 }
 
-bool GrillStateMachine::_tempRisen(const SmokerData& d) const {
+bool StateMachine::_tempRisen(const SmokerData& d) const {
     if (_tempAtIgnition == 0.0f) return false;
     return (d.tempRTD - _tempAtIgnition) >= IGNITE_RISE_C;
 }
 
-bool GrillStateMachine::_nearTarget(const SmokerData& d) const {
-    return d.tempRTD >= (_targetTemp - PREHEAT_WINDOW_C);
+bool StateMachine::_nearSetTemp(const Telemetry& d) const {
+    return d.tempRTD >= (_setTemp - PREHEAT_WINDOW);
 }
 
-bool GrillStateMachine::_fireLost(const SmokerData& d) const {
+bool StateMachine::_fireLost(const SmokerData& d) const {
     return (d.tempRTD < (_targetTemp - UNDERTEMP_DELTA_C))
            && (_timeInState() > UNDERTEMP_HOLD_MS);
 }
 
-bool GrillStateMachine::_overTemp(const SmokerData& d) const {
+bool StateMachine::_overTemp(const SmokerData& d) const {
     return d.tempRTD > OVERTEMP_MAX_C;
 }
 
-bool GrillStateMachine::_sensorFault(const SmokerData& d) const {
+bool StateMachine::_sensorFault(const SmokerData& d) const {
     return (d.tempRTD <= 0.0f) || (d.tempProbe1 < 0.0f);
 }
 
-bool GrillStateMachine::_grillCool(const SmokerData& d) const {
+bool StateMachine::_grillCool(const SmokerData& d) const {
     return (d.tempRTD > 0.0f) && (d.tempRTD < COOLDOWN_COOL_C);
 }
 */

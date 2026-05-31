@@ -30,6 +30,7 @@ enum class ErrorCode : uint8_t {
 struct EncoderEvent {
     int8_t delta;
     bool   pressed;
+    bool   hold;
 };
 
 class StateMachine {
