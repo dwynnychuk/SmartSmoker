@@ -74,3 +74,15 @@ void DisplayController::_drawBigTemp(float temp) {
     _display.print((int)temp);
     _display.print((char)247);  // degrees
 }
+
+void DisplayController::_drawFooter(const char* left, const char* right) {
+    _display.setTextSize(1);
+    _display.setCursor(0, 56);
+    _display.print(left);
+    _display.setCursor(80, 56);
+    _display.print(right);
+}
+
+void DisplayController::_drawAlarm(ErrorCode error) {
+    
+}
