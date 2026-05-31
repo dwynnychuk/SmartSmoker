@@ -18,29 +18,59 @@ void DisplayController::render(GrillState _state, const Telemetry& data, float _
 
     switch(_state) {
         case GrillState::IDLE:
-        //do something
+        _drawHeader("IDLE", _setTemp);
+        _drawBigTemp(0.0);
+        _drawFooter("Push to Ignite", "");
         break;
 
         case GrillState::IGNITION:
-        //do something
+        _drawHeader("IGNITING", _setTemp);
+        _drawBigTemp(0.0);
+        _drawFooter("Warming Up", "");
         break;
 
         case GrillState::TEMP_HOLD:
-        //do something
+        _drawHeader("COOKING", _setTemp);
+        _drawBigTemp(0.0);
+        _drawFooter("Auger: ", "100%");
         break;
 
         case GrillState::LID_OPEN:
-        //do something
+        _drawHeader("LID OPEN", _setTemp);
+        _drawBigTemp(0.0);
+        _drawFooter("Close Lid Soon", "");
         break;
 
         case GrillState::COOLDOWN:
-        //do something
+        _drawHeader("SHUTDOWN", _setTemp);
+        _drawBigTemp(0.0);
+        _drawFooter("Cooling Down", "");
         break;
 
         case GrillState::ERROR:
-        //do something
+        _drawAlarm(_error);
         break;
     }
 
     _display.display();
+
+    return;
+}
+
+void DisplayController::_drawHeader(const char* label, float setTemp) {
+    _display.setTextSize(1);
+    _display.setCursor(0,0);
+    _display.print(label);
+
+    _display.setCursor(72,0);
+    _display.print("Set:");
+    _display.print((int)setTemp);
+    _display.print((char)247);  // Degrees
+}
+
+void DisplayController::_drawBigTemp(float temp) {
+    _display.setTextSize(3);
+    _display.setCursor(24, 20);
+    _display.print((int)temp);
+    _display.print((char)247);  // degrees
 }
