@@ -44,6 +44,15 @@ void StateMachine::tick(const Telemetry& data, const EncoderEvent& enc) {
 // ── Transition ────────────────────────────────────────────────────────────────
 
 void StateMachine::_transitionTo(GrillState next, ErrorCode fault) {
+    // Exit actions
+    switch (_state) {
+        case GrillState::LID_OPEN:
+            _pid.resume_integral();
+            break;
+        default:
+            break;
+    }
+    
     _error          = fault;
     _state          = next;
     _stateEnteredMs = millis();
@@ -51,6 +60,7 @@ void StateMachine::_transitionTo(GrillState next, ErrorCode fault) {
     // Entry actions
     switch (next) {
         case GrillState::IDLE:
+            _error = ErrorCode::NONE;
             _ignitor.off();
             _auger.off();
             _fan.off();
@@ -140,58 +150,56 @@ void StateMachine::_tickTEMP_HOLD(const Telemetry& d, const EncoderEvent& enc) {
     if (enc.delta != 0)
         _setTemp = constrain(_setTemp + enc.delta * TARGET_STEP,
                                 TARGET_MIN, TARGET_MAX);
-    if (enc.pressed)
+    if (enc.hold)
         _transitionTo(GrillState::COOLDOWN);
 }
 
-void GrillStateMachine::_tickLID_OPEN(const SmokerData& d, const EncoderEvent& enc) {
+void StateMachine::_tickLID_OPEN(const Telemetry& d, const EncoderEvent& enc) {
     if (!_lidIsOpen(d)) {
-        _pid.resumeIntegral();
-        return _transitionTo(GrillState::COOKING);
+        return _transitionTo(GrillState::TEMP_HOLD);
     }
-    if (enc.pressed)
+    if (enc.hold)
         _transitionTo(GrillState::COOLDOWN);
 }
 
-void GrillStateMachine::_tickCOOLDOWN(const SmokerData& d, const EncoderEvent& enc) {
+void StateMachine::_tickCOOLDOWN(const Telemetry& d, const EncoderEvent& enc) {
     if (_grillCool(d))
         _transitionTo(GrillState::IDLE);
 }
 
-void GrillStateMachine::_tickERROR(const SmokerData& d, const EncoderEvent& enc) {
+void StateMachine::_tickERROR(const Telemetry& d, const EncoderEvent& enc) {
     if (enc.pressed)
         _transitionTo(GrillState::IDLE);
 }
 
 // ── Guards ────────────────────────────────────────────────────────────────────
 
-bool StateMachine::_lidIsOpen(const SmokerData& d) const {
+bool StateMachine::_lidIsOpen(const Telemetry& d) const {
     return (d.ambientRaw > LID_LIGHT_THRESH) && d.lidOpen;
 }
 
-bool StateMachine::_tempRisen(const SmokerData& d) const {
+bool StateMachine::_tempRisen(const Telemetry& d) const {
     if (_tempAtIgnition == 0.0f) return false;
-    return (d.tempRTD - _tempAtIgnition) >= IGNITE_RISE_C;
+    return (d.tempRTD - _tempAtIgnition) >= IGNITE_RISE;
 }
 
 bool StateMachine::_nearSetTemp(const Telemetry& d) const {
     return d.tempRTD >= (_setTemp - PREHEAT_WINDOW);
 }
 
-bool StateMachine::_fireLost(const SmokerData& d) const {
-    return (d.tempRTD < (_targetTemp - UNDERTEMP_DELTA_C))
+bool StateMachine::_flameout(const Telemetry& d) const {
+    return (d.tempRTD < (_setTemp - UNDERTEMP_DELTA))
            && (_timeInState() > UNDERTEMP_HOLD_MS);
 }
 
-bool StateMachine::_overTemp(const SmokerData& d) const {
-    return d.tempRTD > OVERTEMP_MAX_C;
+bool StateMachine::_overTemp(const Telemetry& d) const {
+    return d.tempRTD > (TARGET_MAX + OVERTEMP_MAX);
 }
 
-bool StateMachine::_sensorFault(const SmokerData& d) const {
-    return (d.tempRTD <= 0.0f) || (d.tempProbe1 < 0.0f);
+bool StateMachine::_sensorFault(const Telemetry& d) const {
+    return (d.tempRTD <= 0.0f) || (d.tempProbe < 0.0f);
 }
 
-bool StateMachine::_grillCool(const SmokerData& d) const {
-    return (d.tempRTD > 0.0f) && (d.tempRTD < COOLDOWN_COOL_C);
+bool StateMachine::_grillCool(const Telemetry& d) const {
+    return (d.tempRTD > 0.0f) && (d.tempRTD < COOLDOWN_TARGET);
 }
-*/

@@ -37,7 +37,7 @@ class StateMachine {
 public:
     StateMachine(AugerController&   auger,
                 FanController&     fan,
-                IgnitorController& igniter,
+                IgnitorController& ignitor,
                 PID&               pid,
                 DisplayController&    display);
 
@@ -94,6 +94,7 @@ private:
     static constexpr float    TARGET_MIN       = 180.0f;
     static constexpr float    TARGET_MAX       = 400.0f;
     static constexpr float    TARGET_STEP      = 5.0f;
+    static constexpr float    COOLDOWN_TARGET  = 120.0f;
 
     // Fan/auger fixed rates per state
     static constexpr float IGNITION_AUGER = 0.30f;
