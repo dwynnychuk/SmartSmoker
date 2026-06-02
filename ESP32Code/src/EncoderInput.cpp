@@ -22,7 +22,7 @@ void EncoderInput::begin() {
     _instance = this;
 
     attachInterrupt(digitalPinToInterrupt(_pinCLK), _isrCLKHandler, FALLING);
-    attachInterrupt(digitalPinToInterrupt(_pinSW),  _isrSWHandler,  FALLING);
+    attachInterrupt(digitalPinToInterrupt(_pinSW),  _isrSWHandler,  CHANGE);
 }
 
 EncoderEvent EncoderInput::read() {
