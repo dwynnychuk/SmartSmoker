@@ -175,7 +175,7 @@ void StateMachine::_tickERROR(const Telemetry& d, const EncoderEvent& enc) {
 // ── Guards ────────────────────────────────────────────────────────────────────
 
 bool StateMachine::_lidIsOpen(const Telemetry& d) const {
-    return (d.ambientRaw > LID_LIGHT_THRESH) && d.lidOpen;
+    return (d.ambientRaw > LID_OPEN_THRESH) && d.lidOpen;
 }
 
 bool StateMachine::_tempRisen(const Telemetry& d) const {

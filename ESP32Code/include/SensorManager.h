@@ -34,7 +34,7 @@ private:
 
         IMU& _imu;
         LightSensor& _lightsensor;
-        RTD& rtd;
+        RTD& _rtd;
         Thermocouple& _thermocouple;
         Telemetry& _data;
 
