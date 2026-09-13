@@ -1,9 +1,11 @@
 #include "SensorManager.h"
 #include <math.h>
+#include <cstring>
+#include "Telemetry.h"
 
 SensorManager::SensorManager(IMU& imu, LightSensor& light, 
-    RTD& rtd, Thermocouple& thermocouple)
-    : _imu(imu), _lightsensor(light), _rtd(rtd), _thermocouple(thermocouple) {};
+    RTD& rtd, Thermocouple& thermocouple, Telemetry& data)
+    : _imu(imu), _lightsensor(light), _rtd(rtd), _thermocouple(thermocouple), _data(data) {};
 
 bool SensorManager::begin() {
     bool ok = true;
@@ -42,8 +44,8 @@ void SensorManager::_updateTemps() {
 
 void SensorManager::_updateIMU() {
     _imu.update();
-    _data.accel = _imu.getAcc();
-    _data.gyro = _imu.getGyro();
+    memcpy(_data.accel, _imu.getAcc(), sizeof(_data.accel));
+    memcpy(_data.gyro, _imu.getGyro(), sizeof(_data.gyro));
 }
 
 void SensorManager::_updateLight() {

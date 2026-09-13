@@ -1,222 +1,101 @@
 #include <Arduino.h>
 #include <Wire.h>
-#include <SPI.h>
-#include <BLEDevice.h>
-#include <BLEUtils.h>
-#include <BLEServer.h>
-#include <BLE2902.h>
-#include <vl53lx_class.h>
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <stdint.h>
-#include <assert.h>
-#include "Adafruit_MAX31855.h"
-#include <LSM6DSRSensor.h>
 
-#define LED 17  // Internal LED
-#define MPA0 2  // A0 for Multiplexer
-#define MPA1 15 // A1 for Multiplexer
-#define cs 5    // SPI CS
-#define clk 18  // SPI SCK
-#define miso 19 // SPI MISO
+#include "Telemetry.h"
+#include "GrillTypes.h"
+#include "EncoderEvent.h"
 
-#define DEV_I2C Wire
+#include "IMU.h"
+#include "LightSensor.h"
+#include "RTD.h"
+#include "Thermocouple.h"
+#include "SensorManager.h"
 
-const int LSM_IMU_ADDR_LID = 0xD7; // LID IMU + READ
-const int LSM_IMU_ADDR_HOP = 0xD5; // Hopper IMU + READ
+#include "AugerController.h"
+#include "FanController.h"
+#include "IgnitorController.h"
+#include "PID.h"
 
-const int LTR_329_ADDR = 0x29;  // LID Light Sensor
-const int LTR_REG_CONTR = 0x80; // LTR Control Register
-const int LTR_CONTR_VAL = 0x0D; // 8x gain
-const int LTR_CH1_LOW = 0x88;
-const int LTR_CH1_HIGH = 0x89;
-const int LTR_CH0_LOW = 0x8A;
-const int LTR_CH0_HIGH = 0x8B;
+#include "DisplayController.h"
+#include "EncoderInput.h"
+#include "StateMachine.h"
 
-double ambientC, internalC, foodC1, foodC2; // measured temperatures in celcius
+// ── Pin assignments ─────────────
+#define PIN_AUGER        25
+#define PIN_FAN          26
+#define PIN_IGNITOR      27
 
-// Initialize thermocouple
-Adafruit_MAX31855 thermocouple(clk, cs, miso);
+#define PIN_RTD_PLUS     34   // ADC1 pin
+#define PIN_RTD_MINUS    35   // ADC1 pin
+#define RTD_VREF         3.3f
+#define RTD_RREF         1000.0f
 
-// Initialize IMU
-LSM6DSRSensor AccGyrL(&Wire, LSM_IMU_ADDR_LID);
-LSM6DSRSensor AccGyrH(&Wire, LSM_IMU_ADDR_HOP);
+#define TC_CLK           18
+#define TC_CS            5
+#define TC_MISO          19
 
-void set_read_temp1() {
-  digitalWrite(MPA0, LOW);
-  digitalWrite(MPA1, LOW);
+#define IMU_I2C_ADDR     0xD7   // LSM6DSR address
+
+#define LIGHT_I2C_ADDR   0x29   // LTR-329 address
+
+#define PIN_ENC_CLK      32
+#define PIN_ENC_DT       33
+#define PIN_ENC_SW       14
+
+// PID tuning — placeholder values
+#define PID_KP           0.02f
+#define PID_KI           0.0005f
+#define PID_KD           0.01f
+
+// ── Shared state ─────────────────────────────────────────────────────────
+Telemetry telemetry;
+
+// ── Sensors ──────────────────────────────────────────────────────────────
+IMU          imu(&Wire, IMU_I2C_ADDR);
+LightSensor  lightSensor(LIGHT_I2C_ADDR);
+RTD          rtd(PIN_RTD_PLUS, PIN_RTD_MINUS, RTD_VREF, RTD_RREF);
+Thermocouple thermocouple(TC_CLK, TC_CS, TC_MISO);
+
+SensorManager sensors(imu, lightSensor, rtd, thermocouple, telemetry);
+
+// ── Loads ────────────────────────────────────────────────────────────────
+AugerController   auger(PIN_AUGER);
+FanController     fan(PIN_FAN);
+IgnitorController ignitor(PIN_IGNITOR);
+
+// ── Control / UI ─────────────────────────────────────────────────────────
+PID               pid(PID_KP, PID_KI, PID_KD);
+DisplayController display;
+EncoderInput      encoder(PIN_ENC_CLK, PIN_ENC_DT, PIN_ENC_SW);
+
+StateMachine stateMachine(auger, fan, ignitor, pid, display);
+
+void setup() {
+    Serial.begin(115200);
+    Wire.begin();
+
+    if (!sensors.begin()) {
+        Serial.println("WARNING: one or more sensors failed to init");
+        // Intentionally continue rather than halt — StateMachine's
+        // _sensorFault() guard will catch bad readings and go to ERROR.
+    }
+
+    if (!display.begin()) {
+        Serial.println("WARNING: display failed to init");
+    }
+
+    encoder.begin();
+
+    Serial.println("Smoker controller ready.");
 }
 
-void set_read_temp2() {
-  digitalWrite(MPA0, LOW);
-  digitalWrite(MPA1, HIGH);
-}
+void loop() {
+    sensors.update();
+    EncoderEvent enc = encoder.read();
 
-// Setup
-void setup()
-{
-  pinMode(LED, OUTPUT);
-  pinMode(MPA0, OUTPUT);
-  pinMode(MPA1, OUTPUT);
+    stateMachine.tick(sensors.getData(), enc);
 
-  Serial.begin(115200);
-  Wire.begin();
-  while (!Serial)
-    delay(10);
-
-  // Light Sensor
-  Wire.beginTransmission(LTR_329_ADDR);
-  Wire.write(LTR_REG_CONTR);
-  Wire.write(LTR_CONTR_VAL);
-  Wire.endTransmission();
-
-  // IMU
-  AccGyrL.begin();
-  AccGyrL.Enable_X();
-  AccGyrL.Enable_G();
-
-  AccGyrH.begin();
-  AccGyrH.Enable_X();
-  AccGyrH.Enable_G();
-
-  // Temperature
-  set_read_temp1();
-  delay(500);
-  if (!thermocouple.begin())
-  {
-    //Serial.print("ERROR");
-    while (1)
-      delay(10);
-  }
-  //Serial.print("DONE");
-}
-
-// Loop indefinitely
-void loop()
-{
-  // Turn on LED
-  digitalWrite(LED, HIGH);
-
-  // Temperature readings
-  set_read_temp1();
-  double temp1 = thermocouple.readCelsius();
-  if (isnan(temp1))
-  {
-    //Serial.println("Thermocouple Fault:");
-    uint8_t therm_error = thermocouple.readError();
-    if (therm_error & MAX31855_FAULT_OPEN)
-      temp1 = -1;
-      //Serial.println("FAULT: Thermocouple is open - no connection.");
-    if (therm_error & MAX31855_FAULT_SHORT_GND)
-      temp1 = -1;
-      //Serial.println("FAULT: Thermocouple is shorted to GND.");
-    if (therm_error & MAX31855_FAULT_SHORT_VCC)
-      temp1 = -1;
-      //Serial.println("FAULT: Thermocouple is shorted to VCC.");
-    Serial.print(temp1);
-    Serial.print(", ");
-  }
-  else
-  {
-    Serial.print(temp1);
-    Serial.print(", ");
-  }
-
-  delay(100);
-  set_read_temp2();
-  double temp2 = thermocouple.readCelsius();
-  if (isnan(temp2))
-  {
-    //Serial.println("Thermocouple Fault:");
-    uint8_t therm_error = thermocouple.readError();
-    if (therm_error & MAX31855_FAULT_OPEN)
-      temp2 = -1;
-      //Serial.println("FAULT: Thermocouple is open - no connection.");
-    if (therm_error & MAX31855_FAULT_SHORT_GND)
-      temp2 = -1;
-      //Serial.println("FAULT: Thermocouple is shorted to GND.");
-    if (therm_error & MAX31855_FAULT_SHORT_VCC)
-      temp2 = -1;
-      //Serial.println("FAULT: Thermocouple is shorted to VCC.");
-    Serial.print(temp2);
-    Serial.print(", ");
-  }
-  else
-  {
-    Serial.print(temp2);
-    Serial.print(", ");
-  }
-
-  // LID SENSORS
-  // Light Sensor (Only available on ch 0)
-  byte msb = 0, lsb = 0;
-  u_int16_t LTR_CH0_VALUE;
-
-  Wire.beginTransmission(LTR_329_ADDR);
-  Wire.write(LTR_CH0_LOW);
-  Wire.endTransmission();
-  Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
-  delay(1);
-  if (Wire.available())
-    lsb = Wire.read();
-
-  Wire.beginTransmission(LTR_329_ADDR);
-  Wire.write(LTR_CH0_HIGH);
-  Wire.endTransmission();
-  Wire.requestFrom((uint8_t)LTR_329_ADDR, (uint8_t)1);
-  delay(1);
-  if (Wire.available())
-    msb = Wire.read();
-
-  LTR_CH0_VALUE = (msb << 8) | lsb;
-
-  Serial.print(LTR_CH0_VALUE, DEC); // output in steps (16bit)
-  Serial.print(", ");
-
-  // IMU
-  int32_t accelerometerL[3];
-  int32_t gyroscopeL[3];
-  AccGyrL.Get_X_Axes(accelerometerL);
-  AccGyrL.Get_G_Axes(gyroscopeL);
-
-  // IMU Output
-  Serial.print(accelerometerL[0]);
-  Serial.print(", ");
-  Serial.print(accelerometerL[1]);
-  Serial.print(", ");
-  Serial.print(accelerometerL[2]);
-  Serial.print(", ");
-  Serial.print(gyroscopeL[0]);
-  Serial.print(", ");
-  Serial.print(gyroscopeL[1]);
-  Serial.print(", ");
-  Serial.print(gyroscopeL[2]);
-  Serial.print(", ");
-
-  // IMU
-  int32_t accelerometerH[3];
-  int32_t gyroscopeH[3];
-  AccGyrH.Get_X_Axes(accelerometerH);
-  AccGyrH.Get_G_Axes(gyroscopeH);
-
-  // IMU Output
-  Serial.print(accelerometerH[0]);
-  Serial.print(", ");
-  Serial.print(accelerometerH[1]);
-  Serial.print(", ");
-  Serial.print(accelerometerH[2]);
-  Serial.print(", ");
-  Serial.print(gyroscopeH[0]);
-  Serial.print(", ");
-  Serial.print(gyroscopeH[1]);
-  Serial.print(", ");
-  Serial.print(gyroscopeH[2]);
-  Serial.println("");
-  delay(500);
-
-  // Turn off LED
-  digitalWrite(LED, LOW);
-  delay(500);
-
+    // Small delay to avoid hammering I2C/ADC every cycle.
+    // UPDATE_INTERVAL_MS gate so this doesn't need to be precise.
+    delay(50);
 }

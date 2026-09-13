@@ -7,31 +7,10 @@
 #include "FanController.h"
 #include "IgnitorController.h"
 #include "PID.h"
-#include "DisplayController.h"
+#include "GrillTypes.h"
+#include "EncoderEvent.h"
 
-enum class GrillState : uint8_t {
-    IDLE,
-    IGNITION,
-    PREHEAT,
-    TEMP_HOLD,
-    LID_OPEN,
-    COOLDOWN,
-    ERROR
-};
-
-enum class ErrorCode : uint8_t {
-    NONE,
-    IGNITION_TIMEOUT,
-    OVERTEMP,
-    UNDERTEMP,
-    SENSOR_FAULT
-};
-
-struct EncoderEvent {
-    int8_t delta;
-    bool   pressed;
-    bool   hold;
-};
+class DisplayController;
 
 class StateMachine {
 public:
@@ -95,6 +74,7 @@ private:
     static constexpr float    TARGET_MAX       = 400.0f;
     static constexpr float    TARGET_STEP      = 5.0f;
     static constexpr float    COOLDOWN_TARGET  = 120.0f;
+    static constexpr uint16_t LID_OPEN_THRESH = 800;    // PLACEHOLDER
 
     // Fan/auger fixed rates per state
     static constexpr float IGNITION_AUGER = 0.30f;

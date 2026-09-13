@@ -1,4 +1,5 @@
 #include "StateMachine.h"
+#include "DisplayController.h"
 
 StateMachine::StateMachine(AugerController&   auger,
                             FanController&     fan,

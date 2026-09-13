@@ -1,4 +1,5 @@
 #include "DisplayController.h"
+#include "StateMachine.h"
 
 DisplayController::DisplayController()
     : _display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET) {}

@@ -22,7 +22,7 @@ private:
 public: 
     RTD(int analog_pin_plus, int analog_pin_minus, float v_ref, float r_ref);
 
-    void begin() override;
+    bool begin() override;
     void update() override;
 
     float getTemperature();

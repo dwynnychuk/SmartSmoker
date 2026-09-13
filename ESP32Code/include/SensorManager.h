@@ -14,7 +14,8 @@ public:
     SensorManager (IMU& imu,
                    LightSensor& lightsensor,
                    RTD& rtd,
-                   Thermocouple& thermocouple);
+                   Thermocouple& thermocouple,
+                   Telemetry& data);
 
     bool begin();       // init all sensors
     void update();      // tick all sensors

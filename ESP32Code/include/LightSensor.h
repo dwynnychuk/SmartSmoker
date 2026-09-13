@@ -14,7 +14,7 @@ private:
 public:
     LightSensor(uint8_t address);
 
-    void begin() override;
+    bool begin() override;
     void update() override;
 
     uint16_t getRawLux();

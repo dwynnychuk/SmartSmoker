@@ -14,7 +14,7 @@ private:
 public:
     IMU(TwoWire* wire, uint8_t addr);
 
-    void begin() override;
+    bool begin() override;
     void update() override;
     
     int32_t* getAcc();

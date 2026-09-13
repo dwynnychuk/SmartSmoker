@@ -3,12 +3,15 @@
 
 #include <Adafruit_SSD1306.h>
 #include <Adafruit_GFX.h>
-#include "StateMachine.h"
+#include "Telemetry.h"
+#include "GrillTypes.h"
 
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
 #define OLED_RESET -1
 #define OLED_ADDR 0x3C
+
+class StateMachine;
 
 class DisplayController {
 public:

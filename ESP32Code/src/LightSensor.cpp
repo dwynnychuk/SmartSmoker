@@ -17,11 +17,11 @@ uint8_t LightSensor::readReg(uint8_t reg) {
     return 0;
 }
 
-void LightSensor::begin() {
+bool LightSensor::begin() {
     Wire.beginTransmission(addr);
     Wire.write(0x80);       // Control Register
     Wire.write(0x0D);       // 8x Gain
-    Wire.endTransmission();
+    return Wire.endTransmission() == 0;
 }
 
 void LightSensor::update() {

@@ -3,10 +3,11 @@
 IMU::IMU(TwoWire* wire, uint8_t addr)
     : imu (wire, addr) {}
 
-void IMU::begin() {
+bool IMU::begin() {
     imu.begin();
     imu.Enable_X(); // accelerometer
     imu.Enable_G(); // gyroscope
+    return true;
 }
 
 void IMU::update() {

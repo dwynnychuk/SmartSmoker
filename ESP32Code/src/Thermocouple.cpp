@@ -3,10 +3,8 @@
 Thermocouple::Thermocouple(int clk, int cs, int miso)
     : tc(clk, cs, miso), temperature(0) {}
 
-void Thermocouple::begin() {
-    if(!tc.begin()) {
-        while(1);   // Stop if sensor fails
-    }
+bool Thermocouple::begin() {
+    return tc.begin();
 }
 
 void Thermocouple::update() {

@@ -13,7 +13,7 @@ private:
 public:
     Thermocouple(int clk, int cs, int miso);
 
-    void begin() override;
+    bool begin() override;
     void update() override;
 
     double getTemperature();

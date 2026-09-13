@@ -4,9 +4,10 @@ RTD::RTD(int analog_pin_plus, int analog_pin_minus, float v_ref, float r_ref)
     : pin_plus(analog_pin_plus), pin_minus(analog_pin_minus), v_ref(v_ref), r_ref(r_ref),
     temperature(0), voltage(0) {}
 
-void RTD::begin() {
+bool RTD::begin() {
     pinMode(pin_plus, INPUT);
     pinMode(pin_minus, INPUT);
+    return true;
 }
 
 float RTD::readVoltage(int pin) {
@@ -22,6 +23,14 @@ float RTD::voltageToResistance(float v_out) {
     if (x > 0.99f) x = 0.99f;
 
     return r_ref * (x / (1.0f - x));
+}
+
+float RTD::getTemperature() {
+    return temperature;
+}
+
+float RTD::getVoltage() {
+    return voltage;
 }
 
 void RTD::update() {
